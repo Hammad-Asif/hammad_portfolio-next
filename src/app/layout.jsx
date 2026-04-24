@@ -1,6 +1,7 @@
 
 // src/app/layout.jsx
 import ClientProviders from "@/components/ClientProviders";
+import { Analytics } from '@vercel/analytics/next';
 import './globals.css'
 export const metadata = {
   title: 'Muhammad Hammad Asif - Portfolio',
@@ -12,7 +13,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body suppressHydrationWarning><ClientProviders>
           {children}
-        </ClientProviders></body>
+        </ClientProviders>
+        <Analytics />
+        </body>
     </html>
   )
 }
