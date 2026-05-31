@@ -33,9 +33,10 @@ const Navbar = () => {
     { href: '#home', label: 'Home' },
     { href: '#services', label: 'Services' },
     { href: '#experience', label: 'Experience' },
-    { href: '#projects', label: 'Work Projects' },
-    { href: '#side-projects', label: 'Side Projects' },
+    { href: '#projects', label: 'Projects' },
+    // { href: '#side-projects', label: 'Side Projects' },
     { href: '#faq', label: 'FAQ\'s' },
+    { href: '#testimonials', label: 'Testimonials' },
     { href: '#contact', label: 'Contact' }
   ];
 
