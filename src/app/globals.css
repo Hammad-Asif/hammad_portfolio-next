@@ -717,16 +717,21 @@ select {
 .hero-title {
   font-size: clamp(40px, 6vw, 72px);
   line-height: 1.1;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .hero-description {
   font-size: 20px;
   color: var(--text-secondary);
-  margin-bottom: 40px;
+  margin-bottom: 22px;
   max-width: 500px;
 }
-
+.hero-description2 {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 15px;
+  max-width: 500px;
+}
 .hero-buttons {
   display: flex;
   gap: 16px;
@@ -2162,7 +2167,7 @@ body.mobile-menu-open {
 .floating-cta {
   position: fixed;
   bottom: 30px;
-  left: 30px;
+  right: 30px;
   z-index: 999;
   animation: float 3s ease-in-out infinite;
 }

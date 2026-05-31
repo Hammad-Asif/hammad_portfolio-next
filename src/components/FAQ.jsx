@@ -6,12 +6,16 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: 'What is your typical development process?',
-      answer: 'My development process follows an agile methodology: 1) Discovery & Planning - Understanding your requirements and goals. 2) Design & Prototyping - Creating wireframes and mockups. 3) Development - Building the solution in iterative sprints. 4) Testing - Thorough QA testing across devices. 5) Deployment - Launching to production. 6) Support - Ongoing maintenance and updates.'
+      question: "How do you work with clients across different timezones?",
+      answer: "I work PKT (UTC+5), which gives me natural overlap with US East Coast mornings (my afternoon) and full coverage of EU business hours. I use async-first workflows — daily written updates, Loom videos for demos, and a shared project board so you always know where things stand without needing a call. For time-sensitive projects, I'm flexible on hours."
     },
     {
-      question: 'How long does it take to build a web application?',
-      answer: 'Timeline depends on project complexity: Simple websites (1-3 pages): 1-2 weeks. Medium complexity applications (dashboards, e-commerce): 4-8 weeks. Complex enterprise applications: 8-16+ weeks. I provide detailed timelines during the proposal phase after understanding your specific requirements.'
+      question: "How do payments and invoicing work?",
+      answer: "I invoice in USD via Stripe, Wise, or PayPal — whichever works for your team. Milestone-based structure: 30% to start, 40% at mid-delivery, 30% on completion. Monthly invoicing available for ongoing work. No hidden fees, no currency conversion surprises on your end."
+    },
+    {
+      question: "Are you open to full-time remote roles, or only freelance?",
+      answer: "Both. I'm open to full-time remote positions, long-term contracts, and project-based freelance. I'm set up to work as a remote contractor through Deel, Remote.com, or direct contracts. If you're hiring for a senior AI/backend role and want someone fully embedded in your team, let's talk."
     },
     {
       question: 'Do you provide ongoing support and maintenance?',
@@ -24,10 +28,6 @@ const FAQ = () => {
     {
       question: 'Can you work with my existing team?',
       answer: 'Absolutely! I offer flexible engagement models including full project ownership, team augmentation, and technical consulting. I can integrate with your existing workflows using tools like Jira, Slack, and GitHub. I\'m comfortable working in both independent and collaborative environments.'
-    },
-    {
-      question: 'What is your payment structure?',
-      answer: 'I typically work with a milestone-based payment structure: 30% upfront to begin the project, 40% at the midpoint delivery, and 30% upon completion. For larger projects, we can arrange monthly billing. I accept bank transfers, PayPal, and Wise.'
     },
     {
       question: 'Do you sign NDAs and confidentiality agreements?',

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ShoppingCart, Smartphone, Code, Package, FileText, ChevronDown, ChevronUp, BrainCog } from 'lucide-react';
-
+import { FiGithub } from 'react-icons/fi';
 const SideProjects = () => {
   const [expandedProjects, setExpandedProjects] = useState({});
 
@@ -15,6 +15,7 @@ const SideProjects = () => {
     {
       id: 'portfolio-scraper-job-score-matcher',
       title: "Portfolio Scraper Job Score Matcher",
+      githubUrl: "https://github.com/Hammad-Asif/Portfolio_scrapper_Job_score_matcher",
       shortDescription: "FastAPI-based service that extracts developer portfolios and scores them against job descriptions using AI-driven analysis.",
       fullDescription: "This project is a production-ready backend service built with FastAPI that automates the extraction and evaluation of developer portfolios. It leverages web scraping tools like BeautifulSoup and Playwright to handle both static and JavaScript-heavy websites, ensuring comprehensive data retrieval. The system integrates Large Language Models (LLMs) via LangChain to analyze extracted content, including skills, experience, and projects, and compares it against job descriptions. It generates a compatibility score along with a detailed gap analysis, highlighting missing skills or mismatches. The architecture demonstrates strong capabilities in API design, asynchronous processing, AI integration, and database management using SQLite, all containerized with Docker for scalability and deployment.",
       icon: <BrainCog size={32} />,
@@ -33,6 +34,7 @@ const SideProjects = () => {
     {
       id: 'ecommerce-price-comparison',
       title: "Real-time Ecommerce Price Comparison Tool",
+      githubUrl:"https://github.com/Hammad-Asif/Real-time_Ecommerce_Price_Comparison_Tool",
       shortDescription: "Comprehensive web scraping tool that compares prices across multiple ecommerce platforms including Amazon and eBay in real-time.",
       fullDescription: "The tool is designed to scrape data from various Ecommerce websites, including but not limited to Amazon, eBay, and other relevant platforms. The focus is on extracting information based on unique product identifiers and names, allowing users to compare prices effortlessly. The system employs web scraping techniques to fetch up-to-date information from diverse Ecommerce websites. Regular and automated data updates ensure that users have access to the latest pricing information. This project is a powerful and efficient Real-time Ecommerce Price Comparison Tool, empowering users and buyers to make well-informed online purchasing decisions by easily comparing prices across multiple platforms.",
       icon: <ShoppingCart size={32} />,
@@ -51,6 +53,7 @@ const SideProjects = () => {
     {
       id: 'foodscan-saas',
       title: "FoodScanSAAS - Mobile Application",
+      githubUrl:"https://github.com/Hammad-Asif/FoodScanSAAS---Mobile-Application",
       shortDescription: "SAAS mobile application that scans food barcodes to provide detailed ingredient information and definitions using ChatGPT integration.",
       fullDescription: "FoodScanSAAS is a Software as a Service (SAAS) mobile application designed to simplify the process of understanding food items by scanning their barcodes. The app provides users with detailed information about the ingredients present in the scanned food products, along with their definitions. One of the key features of the application is its integration with ChatGPT, enhancing the user experience by providing accurate and comprehensive ingredient definitions through natural language processing. The app empowers users to make informed and healthier food choices, enhances transparency in understanding packaged food content, and offers a convenient solution for individuals with dietary restrictions or allergies.",
       icon: <Smartphone size={32} />,
@@ -87,6 +90,7 @@ const SideProjects = () => {
     {
       id: 'order-tracking-system',
       title: "Order Tracking Web Scraping System",
+      githubUrl:"https://github.com/Hammad-Asif/Order-Tracking-Web-Scraping-System",
       shortDescription: "Python-based centralized platform for real-time order tracking across multiple online platforms using web scraping and Airtable integration.",
       fullDescription: "The Order Tracking Web Scraping System is a Python-based web scraping project designed to provide users with a centralized platform for real-time tracking of their orders placed on various online platforms. The system utilizes web scraping techniques to extract order-related information from the client's personal website and aggregates the data seamlessly using Airtable. This web-based solution enables users to track their orders conveniently, even when delivered through different courier services, providing a unified tracking experience across multiple platforms.",
       icon: <Package size={32} />,
@@ -105,6 +109,7 @@ const SideProjects = () => {
     {
       id: 'text-summarization',
       title: "Abstractive and Extractive Summarization System",
+      githubUrl:"https://github.com/Hammad-Asif/Abstractive-and-Extractive-Summarization",
       shortDescription: "Bachelor's degree final project combining deep learning and LSA techniques for comprehensive text summarization with C# frontend integration.",
       fullDescription: "This project represents the culmination of the Bachelor's degree and focuses on abstractive and extractive summarization. For abstractive summarization, a deep learning neural network was trained on the CNN/Dailymail dataset using bidirectional LSTM. The model was designed to perform text summarization tasks using a machine translation algorithm. For extractive summarization, Latent Semantic Analysis (LSA) was employed to generate summaries of generic text using Singular Value Decomposition (SVD). The entire system was developed using Python Flask and connected to a C# n-tier application for Windows, facilitating communication between the backend and frontend components.",
       icon: <FileText size={32} />,
@@ -167,6 +172,34 @@ const SideProjects = () => {
                         {project.category}
                       </span>
                       <span className="project-status">{project.status}</span>
+                      {project.githubUrl && (<a href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="View on GitHub"
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          fontSize: '13px',
+                          color: '#9ca3af',
+                          textDecoration: 'none',
+                          border: '1px solid #374151',
+                          borderRadius: '8px',
+                          padding: '6px 12px',
+                          transition: 'color 0.2s, border-color 0.2s'
+                        }}
+                        onMouseEnter={e => {
+                          e.currentTarget.style.color = '#fff';
+                          e.currentTarget.style.borderColor = '#6b7280';
+                        }}
+                        onMouseLeave={e => {
+                          e.currentTarget.style.color = '#9ca3af';
+                          e.currentTarget.style.borderColor = '#374151';
+                        }}
+                      >
+                        <FiGithub size={14} />
+                        View on GitHub
+                      </a>)}
                     </div>
                   </div>
                 </div>

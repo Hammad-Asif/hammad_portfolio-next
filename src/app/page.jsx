@@ -11,6 +11,8 @@ import Process from "@/components/Process";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
+import Testimonials from "@/components/Testimonials";
+
 
 export default function Home() {
   return (
@@ -21,6 +23,7 @@ export default function Home() {
       <ExperienceTimeline />
       <Process />
       <FAQ />
+      <Testimonials/>
       <Projects />
       <SideProjects />
       <Publications />

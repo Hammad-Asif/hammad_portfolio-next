@@ -6,8 +6,8 @@ const Experience = () => {
     {
       title: "Machine Learning Engineer / AI Developer",
       company: "Turing.com",
-      location: "Remote",
-      period: "April 2024 – Present",
+      location: "Remote Contractor",
+      period: "April 2024 - Present",
       type: "Full-time",
       achievements: [
         "Spearheaded the development and optimization of a cutting-edge LLM-based system designed to train data analysts by integrating intelligent query understanding and adaptive learning pathways.",

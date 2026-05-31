@@ -8,13 +8,13 @@ const ExperienceTimeline = () => {
       "location": "Remote",
       "startDate": "2026-01-01T00:00:00.000Z",
       "endDate": "",
-      "description": "Open to freelance opportunities in full-stack web development and AI integration through Toptal's vetted network.",
+      "description": "Accepted into Toptal's top 3% network of global freelance engineers, vetted through a rigorous multi-stage technical screening. Available for senior full-stack and AI integration engagements through the network.",
       "current": false,
       "achievements": [
       ]
     }, {
       "company": "Scanify Dev",
-      "location": "Remote",
+      "location": "Remote contractor",
       "startDate": "2025-07-01T00:00:00.000Z",
       "endDate": "2025-11-30T00:00:00.000Z",
       "description": "Contributed to an AI-powered Shopify theme generation platform that used OpenAI APIs to automatically create store content and images for ecommerce clients.",
@@ -41,7 +41,7 @@ const ExperienceTimeline = () => {
     },
     {
       "company": "Recursive Data Ltd.",
-      "location": "Multan, Pakistan",
+      "location": "Remote contractor",
       "startDate": "2023-07-01T00:00:00.000Z",
       "endDate": "2024-03-30T00:00:00.000Z",
       "description": "Contributed to multiple short-term projects spanning web scraping, browser automation, and AI integration.",

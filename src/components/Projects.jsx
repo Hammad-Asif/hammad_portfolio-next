@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FileText, Cloud, Phone, Monitor, Shield, Brain, ChevronDown, ChevronUp } from 'lucide-react';
+import { FiGithub } from 'react-icons/fi';
 
 const Projects = () => {
   const [expandedProjects, setExpandedProjects] = useState({});
@@ -34,6 +35,7 @@ const Projects = () => {
       id: 'tenderml',
       title: "TenderML - AI Document Classification System",
       company: "Zaytrics (Pvt.) Limited",
+      githubUrl: "https://github.com/Hammad-Asif/tenderML",
       shortDescription: "Independently built from scratch — an AI system for real-time text classification and information extraction from German construction tender PDFs with 95% accuracy. Sole developer from ML training to production API deployment.",
       fullDescription: "Built a comprehensive AI system utilizing Support Vector Machines (SVM) to classify text within PDF documents containing German construction tender information. Processed over 1000 documents with varying formats but consistent contextual content. Employed tree data structures post-classification with DFS traversal for specific information identification. Implemented filtering mechanisms to refine extracted data and deployed the solution using FASTAPI on Ray cluster hosted on AWS EC2 with autoscaling capabilities.",
       icon: <FileText size={32} />,
@@ -53,6 +55,7 @@ const Projects = () => {
       id: 'gcp-insightdocs',
       title: "GCP InsightDocs - Document Extraction Platform",
       company: "Zaytrics (Pvt.) Limited",
+      githubUrl: "https://github.com/Hammad-Asif/GCP-InsightDocs",
       shortDescription: "Independently built from scratch — a comprehensive document analysis solution using Google Cloud Document AI and OCR. Sole developer, delivered as a client-facing API integrated into the client's existing system.",
       fullDescription: "Developed a full-stack solution utilizing Google Cloud Document AI and OCR for automated key-value extraction from PDF files and images. Built ReactJS frontend with document viewer and sidebar displaying extracted information. Implemented Flask Python backend for server-side logic and GCP service communication. The system provides users with an intuitive interface to view original documents while accessing comprehensive extracted data summaries.",
       icon: <Cloud size={32} />,
@@ -90,6 +93,7 @@ const Projects = () => {
       id: 'voip-voice-comparison',
       title: "VOIP Voice Comparison System",
       company: "Zaytrics (Pvt.) Limited",
+      githubUrl: "https://github.com/Hammad-Asif/VOIP-SAAS-Voice-Comparison",
       shortDescription: "Real-time voice comparison system for VOIP communications. Collaborated as part of the Zaytrics development team on this audio processing feature.",
       fullDescription: "Embedded within CHappie, this system performs real-time voice comparison between agents and customers during VOIP communication. Utilizes advanced audio processing techniques to separate voices and compares agent speech with predefined contracts to ensure rule compliance. Implements sophisticated speech recognition and rule verification mechanisms for immediate feedback and security enhancement.",
       icon: <Monitor size={32} />,
@@ -182,6 +186,34 @@ const Projects = () => {
                       >
                         {project.category}
                       </span>
+                      {project.githubUrl && (<a href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="View on GitHub"
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          fontSize: '13px',
+                          color: '#9ca3af',
+                          textDecoration: 'none',
+                          border: '1px solid #374151',
+                          borderRadius: '8px',
+                          padding: '6px 12px',
+                          transition: 'color 0.2s, border-color 0.2s'
+                        }}
+                        onMouseEnter={e => {
+                          e.currentTarget.style.color = '#fff';
+                          e.currentTarget.style.borderColor = '#6b7280';
+                        }}
+                        onMouseLeave={e => {
+                          e.currentTarget.style.color = '#9ca3af';
+                          e.currentTarget.style.borderColor = '#374151';
+                        }}
+                      >
+                        <FiGithub size={14} />
+                        View on GitHub
+                      </a>)}
                     </div>
                   </div>
                 </div>

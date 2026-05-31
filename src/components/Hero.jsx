@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-scroll';
 import { TypeAnimation } from 'react-type-animation';
 import { FaReact, FaNodeJs, FaPython, FaAws, FaDocker, FaJs } from 'react-icons/fa';
+import { FiDownload } from 'react-icons/fi';
 import {
     SiMongodb,
     SiFlask,
@@ -57,7 +58,7 @@ const Hero = () => {
 
     // Outer ring skills
     const outerSkills = [
-    
+
         { icon: <SiNginx />, name: "Nginx" },
         { icon: <SiPostman />, name: "Postman" },
         { icon: <SiPandas />, name: "Pandas" },
@@ -80,27 +81,29 @@ const Hero = () => {
 
 
                     <h1 className="hero-title">
-                        I'm <span className="gradient-text"><TypeAnimation
+                        I'm <span className="gradient-text">Muhammad Hammad Asif
+                            {/* <TypeAnimation
                             sequence={[
                                 'Muhammad Hammad Asif', 1000,
-                                'Full-Stack Developer', 1000,
-                                'AI Engineer', 1000,
-                                'MERN Stack Expert', 1000,
-                                'Python Developer', 1000,
-                                'LLM Integration Expert', 1000,
+                                'AI backend engineer', 2000,
+                                'LLM integration & production ML systems.', 2000,
+                                'Toptal-vetted', 2000,
                             ]}
                             wrapper="span"
                             speed={70}
                             deletingSpeed={70}
                             repeat={Infinity}
-                        /></span>
+                        /> */}
+                        </span>
 
                     </h1>
 
                     <p className="hero-description">
-                        I build scalable MERN stack, Python & AI-powered solutions that turn complex business challenges into elegant digital products.
+                        I take AI from prototype to deployed, FastAPI backends, RAG pipelines, fine-tuned models, and cloud infrastructure that clients can actually ship.
                     </p>
-
+                    <p className="hero-description2 text-sm text-gray-400 mt-2">
+                        Based in Pakistan (UTC+5) — available 9 AM-6 PM PKT, with 4-6 hr overlap with US East Coast mornings and full EU business hours.
+                    </p>
                     <div className="hero-buttons">
                         <Link
                             to="contact"
@@ -122,6 +125,16 @@ const Hero = () => {
                         >
                             View My Work
                         </Link>
+                        <a
+                            href="/HammadCV_inter.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            download
+                            className="btn btn-primary btn-large flex items-center gap-2"
+                        >
+                            <FiDownload size={16} />
+                            Download CV
+                        </a>
                     </div>
 
 
@@ -159,8 +172,8 @@ const Hero = () => {
 
                     <div className="hero-image">
                         <div className="hero-image-wrapper">
-                            <img src="/profile_pic.jpg" alt="Profile" className="avatar-image"/>
-                           
+                            <img src="/profile_pic.jpg" alt="Profile" className="avatar-image" />
+
                         </div>
                     </div>
                 </div>
@@ -180,7 +193,7 @@ const Hero = () => {
                 </div>
             </div>
 
-        </section>
+        </section >
     );
 };
 

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hammad-portfolio.recursivedata.com/sitemap.xml
