@@ -2,6 +2,7 @@
 // src/app/layout.jsx
 import ClientProviders from "@/components/ClientProviders";
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import './globals.css'
 export const metadata = {
   title: "Muhammad Hammad Asif — AI & Python Backend Engineer | Remote | Toptal",
@@ -69,6 +70,7 @@ export default function RootLayout({ children }) {
           {children}
         </ClientProviders>
         <Analytics />
+        <SpeedInsights />
         </body>
     </html>
   )
