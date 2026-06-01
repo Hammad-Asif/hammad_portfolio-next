@@ -3,6 +3,15 @@
 import ClientProviders from "@/components/ClientProviders";
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Space_Grotesk } from 'next/font/google'
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  display: 'swap',
+  preload: true,
+  weight: ['300', '400', '500', '600', '700'], // only weights you actually use
+  variable: '--font-space-grotesk',
+})
 import './globals.css'
 export const metadata = {
   title: "Muhammad Hammad Asif — AI & Python Backend Engineer | Remote | Toptal",
@@ -13,6 +22,9 @@ export const metadata = {
   alternates: {
     canonical: "https://hammad-portfolio.recursivedata.com/",
   },
+  verification: {
+  google: 'paste-your-code-here',
+},
   openGraph: {
     title: "Muhammad Hammad Asif — AI & Python Backend Engineer",
     description: "Toptal-vetted engineer specializing in LLM integration, ML systems, and production APIs. Open to remote roles with US, UK, and EU teams.",
