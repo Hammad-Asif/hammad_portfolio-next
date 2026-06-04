@@ -5,7 +5,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { to: 'services', label: 'Services' },
+    { to: 'expertise', label: 'Expertise' },
     { to: 'experience', label: 'Experience' },
     { to: 'faq', label: 'FAQ\'s' },
     { to: 'projects', label: 'Work Projects' },
@@ -14,11 +14,11 @@ const Footer = () => {
   ];
 
   const services = [
-    'Web Development',
-    'AI Development',
-    'Python Scripting',
-    'API Development',
-    'DevOps & Deployment'
+    'High-Performance APIs',
+    'LLM & RAG Pipelines',
+    'Data Automation & Mining',
+    'Distributed Computing',
+    'DevOps & Containerization'
   ];
 
   return (
@@ -28,7 +28,7 @@ const Footer = () => {
           <div className="footer-brand">
             <h3>Hammad.</h3>
             <p>
-              I build scalable MERN stack, Python & AI-powered solutions that turn complex business challenges into elegant digital products.
+              I build scalable Python backend architectures, high-performance APIs, and production-grade AI systems engineered for global scale.
             </p>
             <div className="footer-social">
               <a href="https://github.com/Hammad-Asif" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
@@ -52,11 +52,11 @@ const Footer = () => {
           </div>
 
           <div className="footer-links">
-            <h4>Services</h4>
+            <h4>Expertise</h4>
             <ul>
               {services.map((service, index) => (
                 <li key={index}>
-                  <a href="#services">{service}</a>
+                  <a href="#expertise">{service}</a>
                 </li>
               ))}
             </ul>
@@ -65,7 +65,7 @@ const Footer = () => {
           <div className="footer-links">
             <h4>Contact</h4>
             <ul>
-              <li><a href="mailto:Hammadcto786@gmail.com">Hammadcto786@gmail.com</a></li>
+              <li><a href="mailto:hammad@recursivedata.com">Hammad@recursivedata.com</a></li>
               <li><a href="tel:+923087724490">+92 308 7724490</a></li>
               <li>Pakistan (Available Worldwide - Remote)</li>
             </ul>

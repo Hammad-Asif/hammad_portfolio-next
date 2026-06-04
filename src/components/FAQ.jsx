@@ -27,7 +27,7 @@ const FAQ = () => {
     // },
     {
       question: 'What technologies do you specialize in?',
-      answer: 'I specialize in the MERN stack (MongoDB, Express.js, React, Node.js) and also work extensively with Python, Flask/FastAPI, AI/ML Development, LLM Integerations and AWS. For AI projects, I use various ML frameworks. I choose the best technology stack based on your project requirements.'
+      answer: 'I specialize in building production-ready Python backend architectures and AI systems. My day-to-day stack includes FastAPI, Flask, AWS, Docker, LangChain, and OpenAI/Gemini integrations. I also build robust frontends using ReactJS when a full-stack solution is required.'
     },
     {
       question: 'Can you work with my existing team?',
@@ -62,7 +62,7 @@ const FAQ = () => {
           <p className="section-subtitle">Questions?</p>
           <h2 className="section-title">Frequently Asked <span className="gradient-text">Questions</span></h2>
           <p className="section-description">
-            Find answers to common questions about my services and process.
+            Find answers to common questions about my expertise and process.
           </p>
         </div>
 

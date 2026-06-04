@@ -1,7 +1,7 @@
 "use client"
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Services from "@/components/Services";
+import Expertise from "@/components/Expertise";
 import Projects from "@/components/Projects";
 import SideProjects from "@/components/SideProjects";
 import Publications from "@/components/Publications";
@@ -19,7 +19,7 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
-      <Services />
+      <Expertise />
       <ExperienceTimeline />
       <Process />
       <FAQ />

@@ -81,7 +81,7 @@ const Hero = () => {
 
 
                     <h1 className="hero-title">
-                        I'm <span className="gradient-text">Muhammad Hammad Asif
+                        I'm <span className="gradient-text">Senior AI & Python Backend Engineer
                             {/* <TypeAnimation
                             sequence={[
                                 'Muhammad Hammad Asif', 1000,
@@ -99,13 +99,10 @@ const Hero = () => {
                     </h1>
 
                     <p className="hero-description">
-                        I take AI from prototype to deployed, FastAPI backends, RAG pipelines, fine-tuned models, and cloud infrastructure that can actually be shipped.
+                        I bridge the gap between AI prototypes and production-grade systems. Specializing in high-performance FastAPI backends, scalable RAG pipelines, and fine-tuned LLMs engineered for global scale.
                     </p>
                     <p className="hero-description2 text-sm text-gray-400 mt-2">
-                        LLM & AI Backend Engineer · Open to Full-Time Remote
-                    </p>
-                    <p className="hero-description2 text-sm text-gray-400 mt-2">
-                    Accepted into Toptal — Top 3% of Global Engineers
+                        Top 3% Vetted Toptal Engineer | Available for Full-Time Remote Roles (US / UK / EU Timezones) | Contract-Ready via Deel
                     </p>
                     <div className="hero-buttons">
                         {/* <Link
@@ -175,7 +172,7 @@ const Hero = () => {
 
                     <div className="hero-image">
                         <div className="hero-image-wrapper">
-                            <img src="/profile_pic.jpg" alt="Profile" className="avatar-image" />
+                            <img src="/profile_pic.jpg" alt="Muhammad Hammad Asif - Senior AI Backend Engineer" className="avatar-image" />
 
                         </div>
                     </div>
