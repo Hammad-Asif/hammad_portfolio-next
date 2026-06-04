@@ -11,6 +11,8 @@ const ExperienceTimeline = () => {
       "description": "Accepted into Toptal's top 3% network of global freelance engineers, vetted through a rigorous multi-stage technical screening. Available for senior full-stack and AI integration engagements through the network.",
       "current": false,
       "achievements": [
+        "Rigorously vetted into the top 3% of global engineering talent through a multi-stage technical and communication screening process.",
+        "Available for complex, high-scale AI integration and Python backend infrastructure engagements."
       ]
     }, {
       "company": "Scanify Dev",
@@ -20,23 +22,20 @@ const ExperienceTimeline = () => {
       "description": "Contributed to an AI-powered Shopify theme generation platform that used OpenAI APIs to automatically create store content and images for ecommerce clients.",
       "current": false,
       "achievements": [
-        "Integrated and maintained OpenAI API features in live production app",
-        "Resolved Python FastAPI backend bugs affecting AI feature delivery",
-        "Improved stability of OpenAI-powered content and image generation"
+        "Architected and maintained OpenAI API integrations for a production-level Shopify SaaS platform, enabling automated content and asset generation for active e-commerce storefronts.",
+        "Audited and optimized asynchronous Python FastAPI backend endpoints, reducing latency and eliminating bugs affecting real-time AI feature delivery.",
       ]
     },
     {
-      "company": "Turing.com",
+      "company": "Turing.com (Google Gemini Project) | AI Training Engineer (Remote)",
       "location": "Remote",
       "startDate": "2024-04-01T00:00:00.000Z",
       "endDate": "2025-05-31T00:00:00.000Z",
       "description": "Contributed to a Google-commissioned project through Turing to improve Gemini's data analysis reasoning capabilities.",
       "current": false,
       "achievements": [
-        "Contributed to Google x Turing project to train Gemini AI",
-        "Created supervised fine-tuning (SFT) datasets for data analytics tasks",
-        "Performed RLHF annotation and human-in-the-loop evaluation",
-        "Designed prompt evaluation frameworks for model assessment"
+        "Vetted by Turing to collaborate on a specialized engineering team training Google's Gemini models, specifically focusing on advanced data analytics and complex logical reasoning.",
+        "Engineered high-quality Supervised Fine-Tuning (SFT) datasets, designed evaluation frameworks, and performed Reinforcement Learning from Human Feedback (RLHF) annotations to maximize model accuracy."
       ]
     },
     {
@@ -53,17 +52,16 @@ const ExperienceTimeline = () => {
       ]
     },
     {
-      "company": "Zaytrics (Pvt.) Limited",
+      "company": "Zaytrics (Pvt.) Limited | Lead AI System Developer",
       "location": "Islamabad, Pakistan",
       "startDate": "2021-01-01T00:00:00.000Z",
       "endDate": "2023-06-30T00:00:00.000Z",
       "description": "Independently built and deployed multiple production AI systems as client-facing APIs.",
       "current": false,
       achievements: [
-        "Built TenderML solo - 95% accuracy PDF classification deployed on AWS EC2",
-        "Built GCP InsightDocs solo - Google Cloud Document AI extraction pipeline",
-        "Deployed FastAPI systems on AWS EC2 with Ray cluster autoscaling",
-        "Contributed backend and API components to VOIP call center (team project)"
+        "TenderML: Independently built, trained, and deployed an AI-driven text classification pipeline for parsing German construction PDFs, achieving a 95% production accuracy rate.",
+        "GCP InsightDocs: Designed an end-to-end cloud data extraction engine using Google Cloud Document AI and OCR, serving it as a high-throughput, client-facing API.",
+        "Orchestrated cloud infrastructure deployments on AWS EC2 leveraging Ray clusters for autoscaling distributed Python applications."
       ]
     }
   ]

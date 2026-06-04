@@ -715,7 +715,7 @@ select {
 }
 
 .hero-title {
-  font-size: clamp(40px, 6vw, 72px);
+  font-size: clamp(40px, 4vw, 72px);
   line-height: 1.1;
   margin-bottom: 20px;
 }
@@ -1087,7 +1087,9 @@ select {
   .hero-description {
     margin: 0 auto 40px;
   }
-
+.hero-description2 {
+    margin: 0 auto 40px;
+  }
   .hero-buttons {
     justify-content: center;
   }
@@ -1212,7 +1214,10 @@ select {
     font-size: 1rem;
     line-height: 1.6;
   }
-
+  .hero-description2 {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
   .hero-subtitle-container {
     flex-direction: column;
     gap: 0.5rem;
@@ -1357,7 +1362,9 @@ select {
   .hero-description {
     font-size: 0.95rem;
   }
-
+.hero-description2 {
+    font-size: 0.95rem;
+  }
   .hero-content {
     padding: 5rem 0.75rem 2rem 0.75rem;
   }
@@ -1848,7 +1855,7 @@ body.mobile-menu-open {
 @media (max-width: 1024px) {
   .services-grid,
   .process-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -2119,7 +2126,7 @@ body.mobile-menu-open {
 /* ===== Process Section ===== */
 .process-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 

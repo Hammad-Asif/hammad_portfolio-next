@@ -5,23 +5,18 @@ const Process = () => {
   const steps = [
     {
       icon: <FaLightbulb />,
-      title: 'Discovery & Planning',
-      description: 'Understanding your goals, target audience, and project requirements to create a comprehensive roadmap.'
+      title: 'Async-First Execution',
+      description: 'I utilize Slack, Loom video handovers, and clear Jira documentation so work moves forward without needing constant live synchronization.'
     },
     {
       icon: <FaCode />,
-      title: 'Design & Development',
-      description: 'Building your solution with clean code, modern technologies, and iterative feedback loops.'
+      title: 'Timezone Overlap',
+      description: 'I offer 4 to 5 hours of structured, synchronous daily overlap with EST, GMT, and CET business hours.'
     },
     {
       icon: <FaCheckCircle />,
-      title: 'Testing & QA',
-      description: 'Rigorous testing across devices and browsers to ensure flawless performance and user experience.'
-    },
-    {
-      icon: <FaRocket />,
-      title: 'Launch & Support',
-      description: 'Deploying your project and providing ongoing maintenance, updates, and technical support.'
+      title: 'Legal & Payroll Compliance',
+      description: 'Fully set up to onboard immediately as an international contractor via Deel, Remote.com, or direct corporate B2B contracts.'
     }
   ];
 
@@ -30,9 +25,9 @@ const Process = () => {
       <div className="container">
         <div className="section-header">
           <p className="section-subtitle">How I Work</p>
-          <h2 className="section-title">My Development <span className="gradient-text">Process</span></h2>
+          <h2 className="section-title">Frictionless Remote Collaboration</h2>
           <p className="section-description">
-            A proven methodology that ensures quality delivery, transparent communication, and client satisfaction.
+            Hiring globally shouldn't mean managing dependencies across time zones. I've designed my workflow to blend seamlessly into Western product teams.
           </p>
         </div>
 

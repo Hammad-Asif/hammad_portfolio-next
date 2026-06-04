@@ -28,7 +28,7 @@ const Footer = () => {
           <div className="footer-brand">
             <h3>Hammad.</h3>
             <p>
-              I build scalable MERN stack, Python & AI-powered solutions that turn complex business challenges into elegant digital products.
+              I build scalable Python backend architectures and production-grade AI systems...
             </p>
             <div className="footer-social">
               <a href="https://github.com/Hammad-Asif" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
