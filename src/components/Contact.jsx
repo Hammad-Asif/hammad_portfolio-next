@@ -45,8 +45,8 @@ const Contact = () => {
         {
             icon: <FaEnvelope />,
             title: 'Email',
-            detail: 'Hammadcto786@gmail.com',
-            link: 'mailto:Hammadcto786@gmail.com'
+            detail: 'hammad@recursivedata.com',
+            link: 'mailto:hammad@recursivedata.com'
         },
         {
             icon: <FaPhone />,
@@ -157,11 +157,11 @@ const Contact = () => {
                                 required
                             >
                                 <option value="">Select a service</option>
-                                <option value="Web Development">Web Development</option>
-                                <option value="AI Development">AI Development</option>
-                                <option value="Python Scripting">Python Scripting</option>
-                                <option value="API Development">API Development</option>
-                                <option value="DevOps & Deployment">DevOps & Deployment</option>
+                                <option value="High-Performance APIs">High-Performance APIs</option>
+                                <option value="LLM & RAG Pipelines">LLM & RAG Pipelines</option>
+                                <option value="Data Automation & Mining">Data Automation & Mining</option>
+                                <option value="Distributed Computing">Distributed Computing</option>
+                                <option value="DevOps & Containerization">DevOps & Containerization</option>
                                 <option value="Other">Other</option>
                             </select>
                         </div>

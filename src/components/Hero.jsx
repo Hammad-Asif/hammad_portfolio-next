@@ -172,7 +172,7 @@ const Hero = () => {
 
                     <div className="hero-image">
                         <div className="hero-image-wrapper">
-                            <img src="/profile_pic.jpg" alt="Profile" className="avatar-image" />
+                            <img src="/profile_pic.jpg" alt="Muhammad Hammad Asif - Senior AI Backend Engineer" className="avatar-image" />
 
                         </div>
                     </div>
