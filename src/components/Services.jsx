@@ -40,7 +40,7 @@ const Services = () => {
       <div className="container">
         <div className="section-header">
           <p className="section-subtitle">What I Offer</p>
-          <h2 className="section-title">Services That Drive <span className="gradient-text">Results</span></h2>
+          <h2 className="section-title">My Expertise </h2>
           <p className="section-description">
             From concept to deployment, I provide end-to-end development solutions tailored to your business needs.
           </p>

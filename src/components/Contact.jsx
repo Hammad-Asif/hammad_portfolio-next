@@ -10,7 +10,7 @@ const Contact = () => {
         phone: '',
         company: '',
         service: '',
-        budget: '',
+        // budget: '',
         message: ''
     });
     const [loading, setLoading] = useState(false);
@@ -73,11 +73,8 @@ const Contact = () => {
             <div className="container">
                 <div className="contact-info">
                     <p className="section-subtitle">Get In Touch</p>
-                    <h2>Let's Build Something <span className="gradient-text">Amazing Together</span></h2>
-                    <p>
-                        Have a project in mind? I'd love to hear about it. Fill out the form and I'll get back to you
-                        within 24 hours with a free consultation and quote.
-                    </p>
+                    <h2><span className="gradient-text">I'm currently open to full-time remote positions. Feel free to reach out directly.</span></h2>
+                    
 
                     <div className="contact-details">
                         {contactInfo.map((item, index) => (
@@ -168,7 +165,7 @@ const Contact = () => {
                                 <option value="Other">Other</option>
                             </select>
                         </div>
-                        <div className="form-group">
+                        {/* <div className="form-group">
                             <label htmlFor="budget">Budget Range</label>
                             <select
                                 id="budget"
@@ -183,7 +180,7 @@ const Contact = () => {
                                 <option value="$10,000 - $25,000">$10,000 - $25,000</option>
                                 <option value="$25,000+">$25,000+</option>
                             </select>
-                        </div>
+                        </div> */}
                     </div>
 
                     <div className="form-group">
@@ -199,7 +196,7 @@ const Contact = () => {
                     </div>
 
                     <button type="submit" className="form-submit" disabled={loading}>
-                        {loading ? 'Sending...' : 'Send Message & Get Free Quote'}
+                        {loading ? 'Sending...' : 'Send Message'}
                     </button>
                 </form>
             </div>

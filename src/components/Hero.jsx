@@ -99,13 +99,16 @@ const Hero = () => {
                     </h1>
 
                     <p className="hero-description">
-                        I take AI from prototype to deployed, FastAPI backends, RAG pipelines, fine-tuned models, and cloud infrastructure that clients can actually ship.
+                        I take AI from prototype to deployed, FastAPI backends, RAG pipelines, fine-tuned models, and cloud infrastructure that can actually be shipped.
                     </p>
                     <p className="hero-description2 text-sm text-gray-400 mt-2">
-                        Based in Pakistan (UTC+5) — available 9 AM-6 PM PKT, with 4-6 hr overlap with US East Coast mornings and full EU business hours.
+                        LLM & AI Backend Engineer · Open to Full-Time Remote
+                    </p>
+                    <p className="hero-description2 text-sm text-gray-400 mt-2">
+                    Accepted into Toptal — Top 3% of Global Engineers
                     </p>
                     <div className="hero-buttons">
-                        <Link
+                        {/* <Link
                             to="contact"
                             spy={true}
                             smooth={true}
@@ -114,7 +117,7 @@ const Hero = () => {
                             className="btn btn-primary btn-large"
                         >
                             Let's Work Together
-                        </Link>
+                        </Link> */}
                         <Link
                             to="projects"
                             spy={true}
@@ -180,7 +183,7 @@ const Hero = () => {
 
 
             </div>
-            <div className="hero-tech-stack">
+            {/* <div className="hero-tech-stack">
                 <div className="marquee-wrapper">
                     <div className="marquee-track">
                         {[...techStack, ...techStack].map((skill, index) => (
@@ -191,7 +194,7 @@ const Hero = () => {
                         ))}
                     </div>
                 </div>
-            </div>
+            </div> */}
 
         </section >
     );

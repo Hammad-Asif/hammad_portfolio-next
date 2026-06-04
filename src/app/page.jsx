@@ -28,7 +28,7 @@ export default function Home() {
       <SideProjects />
       <Publications />
       <Contact />
-      <FloatingCTA/>
+      {/* <FloatingCTA/> */}
       <Footer />
     </>
   );

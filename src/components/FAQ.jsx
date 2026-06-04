@@ -10,17 +10,21 @@ const FAQ = () => {
       answer: "I work PKT (UTC+5), which gives me natural overlap with US East Coast mornings (my afternoon) and full coverage of EU business hours. I use async-first workflows — daily written updates, Loom videos for demos, and a shared project board so you always know where things stand without needing a call. For time-sensitive projects, I'm flexible on hours."
     },
     {
-      question: "How do payments and invoicing work?",
-      answer: "I invoice in USD via Stripe, Wise, or PayPal — whichever works for your team. Milestone-based structure: 30% to start, 40% at mid-delivery, 30% on completion. Monthly invoicing available for ongoing work. No hidden fees, no currency conversion surprises on your end."
+      question: "Are you open to full-time remote employment?",
+      answer: "Yes, I'm actively looking for full-time remote roles. I can be hired directly or through Deel. I'm available immediately."
     },
     {
-      question: "Are you open to full-time remote roles, or only freelance?",
-      answer: "Both. I'm open to full-time remote positions, long-term contracts, and project-based freelance. I'm set up to work as a remote contractor through Deel, Remote.com, or direct contracts. If you're hiring for a senior AI/backend role and want someone fully embedded in your team, let's talk."
+      question: "How I Work?",
+      answer: "Open to full-time remote roles with US, UK, and EU teams."
     },
     {
-      question: 'Do you provide ongoing support and maintenance?',
-      answer: 'Yes! All projects include a free support period after launch (1-3 months depending on the package). After the free period, I offer affordable monthly maintenance plans that include bug fixes, security updates, performance monitoring, and minor feature additions.'
+      question: "Are you open to full-time remote roles?",
+      answer: "Both. I'm open to full-time remote positions and long-term contracts. I'm set up to work as a remote contractor through Deel, or direct contracts. If you're hiring for a senior AI/backend role and want someone fully embedded in your team, let's talk."
     },
+    // {
+    //   question: 'Do you provide ongoing support and maintenance?',
+    //   answer: 'Yes! All projects include a free support period after launch (1-3 months depending on the package). After the free period, I offer affordable monthly maintenance plans that include bug fixes, security updates, performance monitoring, and minor feature additions.'
+    // },
     {
       question: 'What technologies do you specialize in?',
       answer: 'I specialize in the MERN stack (MongoDB, Express.js, React, Node.js) and also work extensively with Python, Flask/FastAPI, AI/ML Development, LLM Integerations and AWS. For AI projects, I use various ML frameworks. I choose the best technology stack based on your project requirements.'
