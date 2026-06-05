@@ -130,6 +130,7 @@ const Hero = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             download
+                            suppressHydrationWarning={true}
                             className="btn btn-primary btn-large flex items-center gap-2"
                         >
                             <FiDownload size={16} />
