@@ -40,6 +40,7 @@ const Navbar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 download
+                suppressHydrationWarning={true}
                 className="border border-white/40 text-white text-sm px-4 py-1.5 rounded-md hover:bg-white/10 transition"
               >
                 Download CV
