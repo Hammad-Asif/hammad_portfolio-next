@@ -2,7 +2,6 @@ import React from 'react';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
 
   const quickLinks = [
     { to: 'expertise', label: 'Expertise' },
@@ -73,7 +72,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {currentYear} Hammad. All rights reserved. Built with ReactJS</p>
+          <p>&copy; 2026 Hammad. All rights reserved. </p>
         </div>
       </div>
     </footer>
