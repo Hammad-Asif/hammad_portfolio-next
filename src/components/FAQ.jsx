@@ -9,14 +9,14 @@ const FAQ = () => {
       question: "How do you work with clients across different timezones?",
       answer: "I work PKT (UTC+5), which gives me natural overlap with US East Coast mornings (my afternoon) and full coverage of EU business hours. I use async-first workflows — daily written updates, Loom videos for demos, and a shared project board so you always know where things stand without needing a call. For time-sensitive projects, I'm flexible on hours."
     },
-    {
-      question: "Are you open to full-time remote employment?",
-      answer: "Yes, I'm actively looking for full-time remote roles. I can be hired directly or through Deel. I'm available immediately."
-    },
-    {
-      question: "How I Work?",
-      answer: "Open to full-time remote roles with US, UK, and EU teams."
-    },
+    // {
+    //   question: "Are you open to full-time remote employment?",
+    //   answer: "Yes, I'm actively looking for full-time remote roles. I can be hired directly or through Deel. I'm available immediately."
+    // },
+    // {
+    //   question: "How I Work?",
+    //   answer: "Open to full-time remote roles with US, UK, and EU teams."
+    // },
     {
       question: "Are you open to full-time remote roles?",
       answer: "Both. I'm open to full-time remote positions and long-term contracts. I'm set up to work as a remote contractor through Deel, or direct contracts. If you're hiring for a senior AI/backend role and want someone fully embedded in your team, let's talk."
@@ -45,10 +45,10 @@ const FAQ = () => {
       question: 'Can you help with AI/ML integration in my existing application?',
       answer: 'Yes! I specialize in integrating AI capabilities into existing applications. This includes adding chatbots, recommendation systems, predictive analytics, image recognition, natural language processing, and more. I can assess your current system and recommend the best AI solutions for your needs.'
     },
-    {
-      question: 'How do we communicate during the project?',
-      answer: 'I believe in transparent communication. We\'ll have regular check-ins via video calls (weekly or bi-weekly), daily progress updates via your preferred channel (Slack, email), and access to a project management board. I\'m available during business hours (PKT) and flexible for timezone differences.'
-    }
+    // {
+    //   question: 'How do we communicate during the project?',
+    //   answer: 'I believe in transparent communication. We\'ll have regular check-ins via video calls (weekly or bi-weekly), daily progress updates via your preferred channel (Slack, email), and access to a project management board. I\'m available during business hours (PKT) and flexible for timezone differences.'
+    // }
   ];
 
   const toggleFAQ = (index) => {

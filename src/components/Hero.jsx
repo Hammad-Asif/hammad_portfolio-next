@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-scroll';
 import { TypeAnimation } from 'react-type-animation';
 import { FaReact, FaNodeJs, FaPython, FaAws, FaDocker, FaJs } from 'react-icons/fa';
-import { FiDownload } from 'react-icons/fi';
+import { FiDownload ,FiMail} from 'react-icons/fi';
 import {
     SiMongodb,
     SiFlask,
@@ -115,7 +115,7 @@ const Hero = () => {
                         >
                             Let's Work Together
                         </Link> */}
-                        <Link
+                        {/* <Link
                             to="projects"
                             spy={true}
                             smooth={true}
@@ -124,14 +124,17 @@ const Hero = () => {
                             className="btn btn-secondary btn-large"
                         >
                             View My Work
-                        </Link>
+                        </Link> */}
+                        <a suppressHydrationWarning={true} href="mailto:hammad@recursivedata.com" className="btn  btn-primary">
+                <FiMail size={26} /> Chat Directly
+              </a>
                         <a
                             href="/HammadCV_inter.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             download
                             suppressHydrationWarning={true}
-                            className="btn btn-primary btn-large flex items-center gap-2"
+                            className="btn btn-secondary  btn-large flex items-center gap-2"
                         >
                             <FiDownload size={16} />
                             Download CV

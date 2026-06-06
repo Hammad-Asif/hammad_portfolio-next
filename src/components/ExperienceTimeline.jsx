@@ -4,8 +4,8 @@ import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
 const ExperienceTimeline = () => {
   const experiences = [
     {
-      "company": "Toptal",
-      "location": "Remote",
+      "company": "Toptal Vetted Senior Engineer",
+      "location": "Available for Full-Time Engagement",
       "startDate": "2026-01-01T00:00:00.000Z",
       "endDate": "",
       "description": "Accepted into Toptal's top 3% network of global freelance engineers, vetted through a rigorous multi-stage technical screening. Available for senior full-stack and AI integration engagements through the network.",
@@ -16,7 +16,7 @@ const ExperienceTimeline = () => {
       ]
     }, {
       "company": "Scanify Dev",
-      "location": "Remote contractor",
+      "location": "Remote (Contract Concluded)",
       "startDate": "2025-07-01T00:00:00.000Z",
       "endDate": "2025-11-30T00:00:00.000Z",
       "description": "Contributed to an AI-powered Shopify theme generation platform that used OpenAI APIs to automatically create store content and images for ecommerce clients.",

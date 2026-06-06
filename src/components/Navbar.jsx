@@ -2,13 +2,13 @@
 // This file has zero JavaScript sent to the browser for the nav shell
 
 import MobileMenu from './MobileMenu';
-
+import { FiMail } from 'react-icons/fi';
 const navItems = [
   { href: '#home', label: 'Home' },
   { href: '#expertise', label: 'Expertise' },
   { href: '#experience', label: 'Experience' },
   { href: '#projects', label: 'Projects' },
-  { href: '#faq', label: "FAQ's" },
+  // { href: '#faq', label: "FAQ's" },
   { href: '#testimonials', label: 'Testimonials' },
   { href: '#contact', label: 'Contact' },
 ];

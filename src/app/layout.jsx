@@ -14,7 +14,7 @@ const spaceGrotesk = Space_Grotesk({
 })
 import './globals.css'
 export const metadata = {
-  title: "Muhammad Hammad Asif — AI & Python Backend Engineer | Remote | Toptal",
+  title: "Muhammad Hammad Asif — Senior AI Engineer & Python Backend Developer | Remote US/UK/EU",
   description: "Toptal-vetted AI and Python backend engineer with 5+ years of experience building LLM integrations, ML pipelines, and FastAPI systems. Seeking full-time remote roles with US, UK, and European teams.",
   keywords: "AI engineer for hire, Python backend developer, LLM integration developer, FastAPI developer, remote AI developer, ML engineer remote, hire Python developer Pakistan, NLP engineer, OpenAI API developer, machine learning engineer remote",
   authors: [{ name: "Muhammad Hammad Asif" }],

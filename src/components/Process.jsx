@@ -4,17 +4,26 @@ import { FaLightbulb, FaCode, FaCheckCircle, FaRocket } from 'react-icons/fa';
 const Process = () => {
   const steps = [
     {
-      icon: <FaLightbulb />,
+      title: 'No Visa/Tax Overhead',
+      description: 'Contract-ready immediately via Deel or B2B corporate billing. You don\'t deal with international payroll complexities.'
+    },
+    {
+      title: '100% IP & NDA Protection',
+      description: 'Fully compliant with US/EU intellectual property laws under standard international contractor agreements.'
+    },
+    {
+      title: 'Fully Equipped Setup',
+      description: 'Operating from a dedicated home office with secondary backup power (UPS/Solar) and high-speed fiber internet to ensure 100% uptime.'
+    },
+    {
       title: 'Async-First Execution',
       description: 'I utilize Slack, Loom video handovers, and clear Jira documentation so work moves forward without needing constant live synchronization.'
     },
     {
-      icon: <FaCode />,
       title: 'Timezone Overlap',
       description: 'I offer 4 to 5 hours of structured, synchronous daily overlap with EST, GMT, and CET business hours.'
     },
     {
-      icon: <FaCheckCircle />,
       title: 'Legal & Payroll Compliance',
       description: 'Fully set up to onboard immediately as an international contractor via Deel, Remote.com, or direct corporate B2B contracts.'
     }
