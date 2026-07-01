@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link } from 'react-scroll';
-import { TypeAnimation } from 'react-type-animation';
-import { FaReact, FaNodeJs, FaPython, FaAws, FaDocker, FaJs } from 'react-icons/fa';
-import { FiDownload ,FiMail} from 'react-icons/fi';
+import { FaReact, FaNodeJs, FaPython, FaAws, FaDocker, FaJs, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FiDownload, FiMail } from 'react-icons/fi';
 import {
     SiMongodb,
     SiFlask,
@@ -78,24 +76,17 @@ const Hero = () => {
         <section id="home" className="hero">
             <div className="container">
                 <div className="hero-content">
-
+                    {/* Remote Availability Badge */}
+                    <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 px-3.5 py-1.5 rounded-full text-xs font-medium mb-6 w-fit">
+                        <span className="relative flex h-2 w-2">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                        </span>
+                        Available for US/UK/EU remote roles & contract work (via Deel)
+                    </div>
 
                     <h1 className="hero-title">
-                        I'm <span className="gradient-text">Senior AI & Python Backend Engineer
-                            {/* <TypeAnimation
-                            sequence={[
-                                'Muhammad Hammad Asif', 1000,
-                                'AI backend engineer', 2000,
-                                'LLM integration & production ML systems.', 2000,
-                                'Toptal-vetted', 2000,
-                            ]}
-                            wrapper="span"
-                            speed={70}
-                            deletingSpeed={70}
-                            repeat={Infinity}
-                        /> */}
-                        </span>
-
+                        <span className="gradient-text">AI Engineer & Python Backend Architect | Remote Specialist</span>
                     </h1>
 
                     <p className="hero-description">
@@ -104,44 +95,37 @@ const Hero = () => {
                     <p className="hero-description2 text-sm text-gray-400 mt-2">
                         Top 3% Vetted Toptal Engineer | Available for Full-Time Remote Roles (US / UK / EU Timezones) | Contract-Ready via Deel
                     </p>
-                    <div className="hero-buttons">
-                        {/* <Link
-                            to="contact"
-                            spy={true}
-                            smooth={true}
-                            offset={-80}
-                            duration={500}
-                            className="btn btn-primary btn-large"
-                        >
-                            Let's Work Together
-                        </Link> */}
-                        {/* <Link
-                            to="projects"
-                            spy={true}
-                            smooth={true}
-                            offset={-80}
-                            duration={500}
-                            className="btn btn-secondary btn-large"
-                        >
-                            View My Work
-                        </Link> */}
-                        <a suppressHydrationWarning={true} href="mailto:hammad@recursivedata.com" className="btn  btn-primary">
-                <FiMail size={26} /> Chat Directly
-              </a>
+                    <div className="hero-buttons flex flex-wrap gap-3 mt-6">
+                        <a suppressHydrationWarning={true} href="mailto:hammadcto786@gmail.com" className="btn btn-primary flex items-center gap-2">
+                            <FiMail size={20} /> Chat Directly
+                        </a>
                         <a
                             href="/HammadCV_inter.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             download
                             suppressHydrationWarning={true}
-                            className="btn btn-secondary  btn-large flex items-center gap-2"
+                            className="btn btn-secondary flex items-center gap-2"
                         >
-                            <FiDownload size={16} />
-                            Download CV
+                            <FiDownload size={16} /> Download CV
+                        </a>
+                        <a
+                            href="https://github.com/Hammad-Asif"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn btn-secondary flex items-center gap-2"
+                        >
+                            <FaGithub size={18} /> GitHub
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/hammad-asif/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn btn-secondary flex items-center gap-2"
+                        >
+                            <FaLinkedin size={18} /> LinkedIn
                         </a>
                     </div>
-
-
                 </div>
                 <div className="avatar-container">
 

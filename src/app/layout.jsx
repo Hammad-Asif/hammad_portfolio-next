@@ -13,35 +13,140 @@ const spaceGrotesk = Space_Grotesk({
   variable: '--font-space-grotesk',
 })
 import './globals.css'
+import Navbar from "@/components/Navbar";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
+
 export const metadata = {
-  title: "Muhammad Hammad Asif — Senior AI Engineer & Python Backend Developer | Remote US/UK/EU",
-  description: "Toptal-vetted AI and Python backend engineer with 5+ years of experience building LLM integrations, ML pipelines, and FastAPI systems. Seeking full-time remote roles with US, UK, and European teams.",
-  keywords: "AI engineer for hire, Python backend developer, LLM integration developer, FastAPI developer, remote AI developer, ML engineer remote, hire Python developer Pakistan, NLP engineer, OpenAI API developer, machine learning engineer remote",
-  authors: [{ name: "Muhammad Hammad Asif" }],
-  robots: "index, follow",
-  alternates: {
-    canonical: "https://hammad-portfolio.recursivedata.com/",
+  metadataBase: new URL("https://hammad-portfolio.recursivedata.com"),
+
+  title: {
+    default:
+      "Muhammad Hammad Asif | AI Engineer, LLM Engineer & Python Backend Developer",
+    template: "%s | Muhammad Hammad Asif",
   },
+
+  description:
+    "Explore the portfolio of Muhammad Hammad Asif, an AI Engineer specializing in production LLM applications, AI agents, FastAPI, Python backend development, RAG pipelines, machine learning, OpenAI integrations, and scalable AI systems. Featuring real-world case studies, technical architecture, and production-ready solutions.",
+
+  applicationName: "Muhammad Hammad Asif Portfolio",
+
+  authors: [
+    {
+      name: "Muhammad Hammad Asif",
+      url: "https://hammad-portfolio.recursivedata.com",
+    },
+  ],
+
+  creator: "Muhammad Hammad Asif",
+
+  publisher: "Muhammad Hammad Asif",
+
+  category: "Technology",
+
+  classification:
+    "Artificial Intelligence, Machine Learning, Software Engineering",
+
+  referrer: "origin-when-cross-origin",
+
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+
+  alternates: {
+    canonical: "/",
+  },
+
+  keywords: [
+    "AI Engineer",
+    "Generative AI Engineer",
+    "LLM Engineer",
+    "Python Backend Developer",
+    "FastAPI Developer",
+    "OpenAI API",
+    "Claude API",
+    "Gemini API",
+    "AI Agents",
+    "RAG",
+    "Retrieval Augmented Generation",
+    "Machine Learning Engineer",
+    "Prompt Engineering",
+    "LangChain",
+    "LangGraph",
+    "MCP Server",
+    "AI Automation",
+    "Python",
+    "Next.js",
+    "Backend Engineer",
+    "REST API",
+    "Vector Database",
+    "Semantic Search",
+    "Production AI",
+    "Computer Vision",
+    "OCR",
+    "NLP",
+    "Portfolio",
+    "Case Studies",
+    "Remote AI Engineer",
+    "Remote Python Developer",
+    "Software Engineer",
+  ],
+
   openGraph: {
-    title: "Muhammad Hammad Asif — AI & Python Backend Engineer",
-    description: "Toptal-vetted engineer specializing in LLM integration, ML systems, and production APIs. Open to remote roles with US, UK, and EU teams.",
-    url: "https://hammad-portfolio.recursivedata.com/",
     type: "website",
+
+    locale: "en_US",
+
+    url: "https://hammad-portfolio.recursivedata.com",
+
+    siteName: "Muhammad Hammad Asif",
+
+    title:
+      "Muhammad Hammad Asif | AI Engineer, LLM Engineer & Python Backend Developer",
+
+    description:
+      "AI Engineer building production-ready LLM applications, AI agents, FastAPI backends, machine learning systems, and scalable Python architectures. Explore detailed case studies, technical blogs, and real-world AI projects.",
+
     images: [
       {
-        url: "https://hammad-portfolio.recursivedata.com/profile_pic.jpg",
+        url: "/profile_pic.jpg",
         width: 1200,
         height: 630,
-        alt: "Muhammad Hammad Asif — AI and Python Backend Engineer",
+        alt: "Muhammad Hammad Asif - AI Engineer Portfolio",
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Muhammad Hammad Asif — AI & Python Backend Engineer",
-    description: "Toptal-vetted. LLM integration, ML pipelines, FastAPI. Open to remote work.",
-    images: ["https://hammad-portfolio.recursivedata.com/profile_pic.jpg"],
+
+    creator: "@hammadasif1437",
+
+    title:
+      "Muhammad Hammad Asif | AI Engineer & LLM Specialist",
+
+    description:
+      "Production AI Engineer specializing in LLMs, AI agents, FastAPI, Python, RAG pipelines, machine learning, and scalable backend systems.",
+
+    images: ["/profile_pic.jpg"],
   },
+
+ 
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+
 };
 
 export default function RootLayout({ children }) {
@@ -49,38 +154,40 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Person",
-      name: "Muhammad Hammad Asif",
-      url: "https://hammad-portfolio.recursivedata.com",
-      image: "https://hammad-portfolio.recursivedata.com/profile_pic.jpg",
-      jobTitle: "AI & Python Backend Engineer",
-      description: "Toptal-vetted AI and backend engineer specializing in LLM integration, ML pipelines, and FastAPI systems.",
-      email: "Hammadcto786@gmail.com",
-      telephone: "+923087724490",
-      address: { "@type": "PostalAddress", addressCountry: "PK" },
-      sameAs: [
-        "https://github.com/Hammad-Asif",
-        "https://www.linkedin.com/in/hammad-asif/"
-      ],
-      knowsAbout: [
-        "Python", "FastAPI", "LLM Integration", "Machine Learning",
-        "NLP", "React", "Node.js", "AWS", "Docker", "OpenAI API"
-      ],
-      worksFor: { "@type": "Organization", name: "Toptal" }
-    })
-  }}
-/>
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Muhammad Hammad Asif",
+              url: "https://hammad-portfolio.recursivedata.com",
+              image: "https://hammad-portfolio.recursivedata.com/profile_pic.jpg",
+              jobTitle: "AI & Python Backend Engineer",
+              description: "Toptal-vetted AI and backend engineer specializing in LLM integration, ML pipelines, and FastAPI systems.",
+              email: "Hammadcto786@gmail.com",
+              telephone: "+923087724490",
+              address: { "@type": "PostalAddress", addressCountry: "PK" },
+              sameAs: [
+                "https://github.com/Hammad-Asif",
+                "https://www.linkedin.com/in/hammad-asif/"
+              ],
+              knowsAbout: [
+                "Python", "FastAPI", "LLM Integration", "Machine Learning",
+                "NLP", "React", "Node.js", "AWS", "Docker", "OpenAI API"
+              ],
+              worksFor: { "@type": "Organization", name: "Toptal" }
+            })
+          }}
+        />
       </head>
       <body suppressHydrationWarning><ClientProviders>
-          {children}
-        </ClientProviders>
+        <Navbar />
+        {children}
+        <Footer />
+      </ClientProviders>
         <Analytics />
         <SpeedInsights />
-        </body>
+      </body>
     </html>
   )
 }

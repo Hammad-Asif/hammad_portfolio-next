@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+import { FiMail } from 'react-icons/fi';
 import { toast } from 'react-toastify';
 import emailjs from '@emailjs/browser';
 const Contact = () => {
@@ -35,9 +36,9 @@ const Contact = () => {
             e.target.reset()
         } catch (error) {
             console.log(error)
-            toast.error( 'Something went wrong. Please try again.');
+            toast.error('Something went wrong. Please try again.');
         } finally {
-        
+
         }
     };
 
@@ -45,8 +46,8 @@ const Contact = () => {
         {
             icon: <FaEnvelope />,
             title: 'Email',
-            detail: 'hammad@recursivedata.com',
-            link: 'mailto:hammad@recursivedata.com'
+            detail: 'hammadcto786@gmail.com',
+            link: 'mailto:hammadcto786@gmail.com'
         },
         {
             icon: <FaPhone />,
@@ -74,7 +75,7 @@ const Contact = () => {
                 <div className="contact-info">
                     <p className="section-subtitle">Get In Touch</p>
                     <h2><span className="gradient-text">I'm currently open to full-time remote positions. Feel free to reach out directly.</span></h2>
-                    
+
 
                     <div className="contact-details">
                         {contactInfo.map((item, index) => (
@@ -90,6 +91,11 @@ const Contact = () => {
                                 </div>
                             </div>
                         ))}
+                    </div>
+                    <div className="chat-contact">
+                    <a suppressHydrationWarning={true} href="mailto:hammadcto786@gmail.com" className="btn  btn-primary">
+                        <FiMail size={26} /> Chat Directly
+                    </a>
                     </div>
                 </div>
 
@@ -146,7 +152,7 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    <div className="form-row">
+                    <div className="form-row2">
                         <div className="form-group">
                             <label htmlFor="service">Service Required *</label>
                             <select

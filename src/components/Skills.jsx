@@ -5,88 +5,65 @@ const Skills = () => {
   const skillCategories = [
     {
       icon: <Brain size={32} />,
-      title: "Machine Learning & AI",
+      title: "Generative AI & LLMs",
       skills: [
-        "Natural Language Processing",
-        "Information Retrieval",
-        "Deep Learning & Neural Networks",
-        "TensorFlow & Keras",
-        "Scikit-Learn & NLTK",
-        "LLM Training & Fine-tuning",
-        "Text Summarization (LSA, Seq2Seq)",
-        "Computer Vision",
-        "RLHF & Data Annotation",
-        "OpenAI API Integration",
-        "Prompt Engineering"
-      ]
-    },
-    {
-      icon: <Code size={32} />,
-      title: "Programming Languages",
-      skills: [
-        "Python (Advanced)",
-        "JavaScript (ES6+)",
-        "PHP",
-        "C# & .NET",
-        "C++",
-        "SQL",
-        "HTML5 & CSS3",
-        "TypeScript"
-      ]
-    },
-    {
-      icon: <Globe size={32} />,
-      title: "Frontend Development",
-      skills: [
-        "React.js & Redux",
-        "Modern JavaScript",
-        "Responsive Web Design",
-        "CSS3 & Sass",
-        "HTML5 Semantic Markup",
-        "UI/UX Design Principles",
-        "Cross-browser Compatibility",
-        "Performance Optimization"
+        "LLM Fine-Tuning & Alignment",
+        "RAG Pipelines & Optimization",
+        "LangChain & LangGraph",
+        "Vector DBs (Qdrant, Pinecone)",
+        "Prompt Engineering & Evaluation",
+        "RLHF & SFT Datasets",
+        "OpenAI & Gemini API Integration",
+        "Natural Language Processing"
       ]
     },
     {
       icon: <Server size={32} />,
       title: "Backend Development",
       skills: [
-        "FastAPI & Flask",
-        "Node.js & Express",
+        "Python (Advanced)",
+        "FastAPI & Flask (Async)",
         "RESTful API Design",
+        "Node.js & Express",
         "Microservices Architecture",
-        "Authentication & Authorization",
-        "API Documentation",
-        "Server-side Optimization"
+        "Web Scraping (Playwright/Selenium)",
+        "Distributed Ray Clusters"
       ]
     },
     {
       icon: <Database size={32} />,
       title: "Databases & Data",
       skills: [
-        "MySQL & PostgreSQL",
+        "PostgreSQL & MySQL",
         "MongoDB & NoSQL",
-        "Redis Caching",
-        "Firebase",
-        "Data Analysis & Mining",
+        "Redis Caching & Queues",
         "pandas & NumPy",
-        "Data Visualization",
-        "ETL Processes"
+        "Data Engineering & ETL",
+        "Airtable API Integration"
       ]
     },
     {
       icon: <Settings size={32} />,
-      title: "DevOps & Tools",
+      title: "DevOps & Cloud Tools",
       skills: [
-        "AWS (EC2, S3, Lambda)",
+        "AWS (EC2, S3, Lambda, IAM)",
         "Docker & Containerization",
         "CI/CD Pipelines",
-        "Git & GitHub",
-        "Linux/Unix Systems",
-        "Agile & Scrum",
-        "Technical Documentation",
-        "Performance Monitoring"
+        "Nginx & Server Setup",
+        "Git & GitFlow Version Control",
+        "Linux Systems & Shell Scripting"
+      ]
+    },
+    {
+      icon: <Globe size={32} />,
+      title: "Languages & Web",
+      skills: [
+        "JavaScript (ES6+) & TypeScript",
+        "React.js & Redux Toolkit",
+        "HTML5 Semantic Markup",
+        "CSS3 & Responsive Design",
+        "Client-Server State Sync",
+        "C# & .NET Framework"
       ]
     }
   ];

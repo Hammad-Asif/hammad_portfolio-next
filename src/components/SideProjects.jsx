@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react';
 import { ShoppingCart, Smartphone, Code, Package, FileText, ChevronDown, ChevronUp, BrainCog } from 'lucide-react';
 import { FiGithub } from 'react-icons/fi';
@@ -147,7 +148,7 @@ const SideProjects = () => {
   };
 
   return (
-    <section id="side-projects" className="section">
+    <section id="side-projects" className="section" style={{ backgroundColor: 'var(--bg-secondary)' }}>
       <div className="container">
         <h2 className="section-title">Side Projects</h2>
         <p className="section-subtitle">

@@ -1,5 +1,7 @@
+"use client";
 import React, { useState } from 'react';
-import { FileText, Cloud, Phone, Monitor, Shield, Brain, ChevronDown, ChevronUp } from 'lucide-react';
+import Link from "next/link";
+import { FileText, Cloud, Phone, Monitor, Shield, Brain, ChevronRight, ChevronUp } from 'lucide-react';
 import { FiGithub } from 'react-icons/fi';
 
 const Projects = () => {
@@ -17,6 +19,7 @@ const Projects = () => {
       id: 'turing-llm',
       title: "Gemini AI Trainer — Google x Turing Project",
       company: "Turing.com",
+      caseLink: "/case-studies/gemini-ai-trainer",
       shortDescription: "Contributed to a Google-commissioned project through Turing to improve Gemini's data analysis reasoning — creating training datasets, evaluation frameworks, and RLHF annotations.",
       fullDescription: "As part of a Google x Turing collaboration, worked on improving Gemini's ability to handle real-world data analysis tasks. Responsibilities included designing prompt evaluation frameworks to assess model responses across different analytical scenarios, creating high-quality supervised fine-tuning (SFT) datasets tailored to data analytics workflows, and performing RLHF (Reinforcement Learning from Human Feedback) annotation to align model outputs with business logic and analytical accuracy. Applied human-in-the-loop feedback methodology to iteratively improve model performance across multimodal AI workflows.",
       icon: <Brain size={32} />,
@@ -36,7 +39,8 @@ const Projects = () => {
       title: "TenderML - AI Document Classification System",
       company: "Zaytrics (Pvt.) Limited",
       githubUrl: "https://github.com/Hammad-Asif/tenderML",
-      shortDescription: "Independently built from scratch — an AI system for real-time text classification and information extraction from German construction tender PDFs with 95% accuracy. Sole developer from ML training to production API deployment.",
+      caseLink: "/case-studies/tenderml-ai-document-classification",
+      shortDescription: "An AI system for real-time text classification and information extraction from German construction tender PDFs with 95% accuracy.",
       fullDescription: "Built a comprehensive AI system utilizing Support Vector Machines (SVM) to classify text within PDF documents containing German construction tender information. Processed over 1000 documents with varying formats but consistent contextual content. Employed tree data structures post-classification with DFS traversal for specific information identification. Implemented filtering mechanisms to refine extracted data and deployed the solution using FASTAPI on Ray cluster hosted on AWS EC2 with autoscaling capabilities.",
       icon: <FileText size={32} />,
       technologies: ["Python", "SVM", "FASTAPI", "AWS EC2", "Ray Cluster", "PDF Processing", "Machine Learning"],
@@ -55,6 +59,7 @@ const Projects = () => {
       id: 'gcp-insightdocs',
       title: "GCP InsightDocs - Document Extraction Platform",
       company: "Zaytrics (Pvt.) Limited",
+      caseLink: "/case-studies/gcp-insightdocs",
       githubUrl: "https://github.com/Hammad-Asif/GCP-InsightDocs",
       shortDescription: "Independently built from scratch — a comprehensive document analysis solution using Google Cloud Document AI and OCR. Sole developer, delivered as a client-facing API integrated into the client's existing system.",
       fullDescription: "Developed a full-stack solution utilizing Google Cloud Document AI and OCR for automated key-value extraction from PDF files and images. Built ReactJS frontend with document viewer and sidebar displaying extracted information. Implemented Flask Python backend for server-side logic and GCP service communication. The system provides users with an intuitive interface to view original documents while accessing comprehensive extracted data summaries.",
@@ -161,9 +166,9 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="section" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+    <section id="projects" className="section" style={{ backgroundColor: 'var(--bg-primary)' }}>
       <div className="container">
-        <h2 className="section-title">Professional Projects</h2>
+        <h1 className="section-title">Professional Development Case Studies</h1>
         <p className="section-subtitle">
           Key projects from my professional experience at leading tech companies
         </p>
@@ -171,13 +176,13 @@ const Projects = () => {
         <div className="projects-grid">
           <div className="grid grid-1">
             {projects.map((project) => (
-              <div key={project.id} className="project-card card">
+              <div key={project.id} id={project.id} className="project-card card">
                 <div className="project-header">
                   <div className="project-icon" style={{ color: getCategoryColor(project.category) }}>
                     {project.icon}
                   </div>
                   <div className="project-title-section">
-                    <h3 className="project-title">{project.title}</h3>
+                    <h2 className="project-title">{project.title}</h2>
                     <div className="project-meta">
                       <span className="project-company">{project.company}</span>
                       <span
@@ -212,14 +217,14 @@ const Projects = () => {
                         }}
                       >
                         <FiGithub size={14} />
-                        View on GitHub
+                       
                       </a>)}
                     </div>
                   </div>
                 </div>
 
                 <p className="project-description">{project.shortDescription}</p>
-
+{/* 
                 {expandedProjects[project.id] && (
                   <div className="project-expanded-content">
                     <div className="project-full-description">
@@ -238,27 +243,17 @@ const Projects = () => {
                       </ul>
                     </div>
                   </div>
-                )}
-
-                <button
-                  className="read-more-btn"
-                  onClick={() => toggleProject(project.id)}
-                >
-                  {expandedProjects[project.id] ? (
-                    <>
-                      <ChevronUp size={16} />
-                      Read Less
-                    </>
-                  ) : (
-                    <>
-                      <ChevronDown size={16} />
+                )} */}
+                {project.caseLink ?
+                <Link href={project.caseLink} className="read-more-btn">
+               
+                      <ChevronRight size={16} />
                       Read More
-                    </>
-                  )}
-                </button>
+                      </Link> :<></>}
+                   
 
                 <div className="project-technologies">
-                  <h4 className="tech-title">Technologies Used:</h4>
+                  <h3 className="tech-title">Technologies Used:</h3>
                   <div className="tech-tags">
                     {project.technologies.map((tech, techIndex) => (
                       <span key={techIndex} className="tech-tag">
