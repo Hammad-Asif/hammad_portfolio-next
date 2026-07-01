@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react';
 import { FaChevronDown, FaQuestion } from 'react-icons/fa';
 
@@ -91,7 +92,7 @@ const FAQ = () => {
 
         <div className="faq-cta">
           <p>Still have questions?</p>
-          <a href="#contact" className="btn btn-primary">
+          <a href="/contact" className="btn btn-primary">
             Let's Talk
           </a>
         </div>

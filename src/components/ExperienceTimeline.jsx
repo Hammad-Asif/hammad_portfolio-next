@@ -4,18 +4,21 @@ import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
 const ExperienceTimeline = () => {
   const experiences = [
     {
-      "company": "Toptal Vetted Senior Engineer",
+      "company": "Toptal",
+      "title": "Vetted AI Engineer",
       "location": "Available for Full-Time Engagement",
       "startDate": "2026-01-01T00:00:00.000Z",
       "endDate": "",
       "description": "Accepted into Toptal's top 3% network of global freelance engineers, vetted through a rigorous multi-stage technical screening. Available for senior full-stack and AI integration engagements through the network.",
-      "current": false,
+      "current": true,
       "achievements": [
         "Rigorously vetted into the top 3% of global engineering talent through a multi-stage technical and communication screening process.",
         "Available for complex, high-scale AI integration and Python backend infrastructure engagements."
-      ]
+      ],
+      "technologies": ["Python", "FastAPI", "React", "Node.js", "Docker", "AWS", "LLM Integration", "AI Agents"]
     }, {
       "company": "Scanify Dev",
+      "title": "AI Integration Engineer",
       "location": "Remote (Contract Concluded)",
       "startDate": "2025-07-01T00:00:00.000Z",
       "endDate": "2025-11-30T00:00:00.000Z",
@@ -23,11 +26,13 @@ const ExperienceTimeline = () => {
       "current": false,
       "achievements": [
         "Architected and maintained OpenAI API integrations for a production-level Shopify SaaS platform, enabling automated content and asset generation for active e-commerce storefronts.",
-        "Audited and optimized asynchronous Python FastAPI backend endpoints, reducing latency and eliminating bugs affecting real-time AI feature delivery.",
-      ]
+        "Audited and optimized asynchronous Python FastAPI backend endpoints, reducing latency and eliminating bugs affecting real-time AI feature delivery."
+      ],
+      "technologies": ["Python", "FastAPI", "OpenAI API", "Shopify API", "SaaS Architecture", "Asynchronous Programming"]
     },
     {
-      "company": "Turing.com (Google Gemini Project) | AI Training Engineer (Remote)",
+      "company": "Turing.com (Google Gemini Project)",
+      "title": "AI Training Engineer",
       "location": "Remote",
       "startDate": "2024-04-01T00:00:00.000Z",
       "endDate": "2025-05-31T00:00:00.000Z",
@@ -36,10 +41,12 @@ const ExperienceTimeline = () => {
       "achievements": [
         "Vetted by Turing to collaborate on a specialized engineering team training Google's Gemini models, specifically focusing on advanced data analytics and complex logical reasoning.",
         "Engineered high-quality Supervised Fine-Tuning (SFT) datasets, designed evaluation frameworks, and performed Reinforcement Learning from Human Feedback (RLHF) annotations to maximize model accuracy."
-      ]
+      ],
+      "technologies": ["Python", "Gemini", "SFT", "RLHF", "Data Analytics", "Prompt Engineering", "Evaluation Frameworks"]
     },
     {
       "company": "Recursive Data Ltd.",
+      "title": "Full-stack Web and AI Developer",
       "location": "Remote contractor",
       "startDate": "2023-07-01T00:00:00.000Z",
       "endDate": "2024-03-30T00:00:00.000Z",
@@ -48,21 +55,24 @@ const ExperienceTimeline = () => {
       "achievements": [
         "Built a unified parcel tracking platform that scrapes real-time delivery data across multiple courier sites and Airtable using a single tracking ID.",
         "Integrated ChatGPT into a mobile app, enabling intelligent conversational features within the existing product.",
-        "Developed a real-time price comparison tool that scrapes and aggregates product listings across Amazon, eBay, and multiple ecommerce platforms simultaneously.",
-      ]
+        "Developed a real-time price comparison tool that scrapes and aggregates product listings across Amazon, eBay, and multiple ecommerce platforms simultaneously."
+      ],
+      "technologies": ["Python", "React", "Web Scraping", "Playwright", "Selenium", "Airtable API", "ChatGPT API"]
     },
     {
-      "company": "Zaytrics (Pvt.) Limited | Lead AI System Developer",
+      "company": "Zaytrics (Pvt.) Limited",
+      "title": "Lead AI System Developer",
       "location": "Islamabad, Pakistan",
       "startDate": "2021-01-01T00:00:00.000Z",
       "endDate": "2023-06-30T00:00:00.000Z",
       "description": "Independently built and deployed multiple production AI systems as client-facing APIs.",
       "current": false,
-      achievements: [
+      "achievements": [
         "TenderML: Independently built, trained, and deployed an AI-driven text classification pipeline for parsing German construction PDFs, achieving a 95% production accuracy rate.",
         "GCP InsightDocs: Designed an end-to-end cloud data extraction engine using Google Cloud Document AI and OCR, serving it as a high-throughput, client-facing API.",
         "Orchestrated cloud infrastructure deployments on AWS EC2 leveraging Ray clusters for autoscaling distributed Python applications."
-      ]
+      ],
+      "technologies": ["Python", "Machine Learning", "FastAPI", "Ray Cluster", "AWS EC2", "Document AI", "OCR", "Flask", "Node.js"]
     }
   ]
 

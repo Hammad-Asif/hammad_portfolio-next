@@ -4,13 +4,14 @@
 import MobileMenu from './MobileMenu';
 import { FiMail } from 'react-icons/fi';
 const navItems = [
-  { href: '#home', label: 'Home' },
-  { href: '#expertise', label: 'Expertise' },
-  { href: '#experience', label: 'Experience' },
-  { href: '#projects', label: 'Projects' },
+  { href: '/#home', label: 'Home' },
+  { href: '/#expertise', label: 'Expertise' },
+  { href: '/#experience', label: 'Experience' },
+  { href: '/case-studies', label: 'Case Studies' },
   // { href: '#faq', label: "FAQ's" },
-  { href: '#testimonials', label: 'Testimonials' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/#testimonials', label: 'Testimonials' },
+  { href: '/hire-me', label: 'Hire Me' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 const Navbar = () => {

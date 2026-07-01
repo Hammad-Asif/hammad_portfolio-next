@@ -24,8 +24,8 @@ const Process = () => {
       description: 'I offer 4 to 5 hours of structured, synchronous daily overlap with EST, GMT, and CET business hours.'
     },
     {
-      title: 'Legal & Payroll Compliance',
-      description: 'Fully set up to onboard immediately as an international contractor via Deel, Remote.com, or direct corporate B2B contracts.'
+      title: 'Professional English Communication',
+      description: 'Seamless async-first engineering updates, Slack/Loom check-ins, and direct alignment with technical stakeholders.'
     }
   ];
 

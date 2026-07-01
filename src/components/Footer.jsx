@@ -4,12 +4,12 @@ import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 const Footer = () => {
 
   const quickLinks = [
-    { to: 'expertise', label: 'Expertise' },
-    { to: 'experience', label: 'Experience' },
-    { to: 'faq', label: 'FAQ\'s' },
-    { to: 'projects', label: 'Work Projects' },
-    { to: 'side-projects', label: 'Side Projects' },
-    { to: 'contact', label: 'Contact' }
+    { to: '/#expertise', label: 'Expertise' },
+    { to: '/#experience', label: 'Experience' },
+    { to: '/#faq', label: 'FAQs' },
+    { to: '/case-studies', label: 'Case Studies' },
+    { to: '/hire-me', label: 'Hire Me' },
+    { to: '/contact', label: 'Contact' }
   ];
 
   const services = [
@@ -44,7 +44,7 @@ const Footer = () => {
             <ul>
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a href={`#${link.to}`}>{link.label}</a>
+                  <a href={`${link.to}`}>{link.label}</a>
                 </li>
               ))}
             </ul>
@@ -55,7 +55,7 @@ const Footer = () => {
             <ul>
               {services.map((service, index) => (
                 <li key={index}>
-                  <a href="#expertise">{service}</a>
+                  <a href="/#expertise">{service}</a>
                 </li>
               ))}
             </ul>
@@ -64,7 +64,7 @@ const Footer = () => {
           <div className="footer-links">
             <h4>Contact</h4>
             <ul>
-              <li><a href="mailto:hammad@recursivedata.com">Hammad@recursivedata.com</a></li>
+              <li><a href="mailto:hammadcto786@gmail.com">Hammadcto786@gmail.com</a></li>
               <li><a href="tel:+923087724490">+92 308 7724490</a></li>
               <li>Pakistan (Available Worldwide - Remote)</li>
             </ul>
