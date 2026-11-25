@@ -1,19 +1,9 @@
-"use client";
-import React, { useState } from 'react';
+import React from 'react';
 import Link from "next/link";
-import { FileText, Cloud, Phone, Monitor, Shield, Brain, ChevronRight, ChevronUp } from 'lucide-react';
+import { FileText, Cloud, Phone, Monitor, Shield, Brain, ChevronRight } from 'lucide-react';
 import { FiGithub } from 'react-icons/fi';
 
 const Projects = () => {
-  const [expandedProjects, setExpandedProjects] = useState({});
-
-  const toggleProject = (projectId) => {
-    setExpandedProjects(prev => ({
-      ...prev,
-      [projectId]: !prev[projectId]
-    }));
-  };
-
   const projects = [
     {
       id: 'turing-llm',
@@ -150,121 +140,58 @@ const Projects = () => {
     }
   ];
 
-  const getCategoryColor = (category) => {
-    switch (category) {
-      case 'AI/Machine Learning':
-        return '#3b82f6';
-      case 'Full-Stack Development':
-        return '#8b5cf6';
-      case 'AI/Audio Processing':
-        return '#f59e0b';
-      case 'Security/Monitoring':
-        return '#ef4444';
-      default:
-        return '#6b7280';
-    }
-  };
-
   return (
-    <section id="projects" className="section" style={{ backgroundColor: 'var(--bg-primary)' }}>
+    <section id="projects" className="section page-top">
+      <div className="page-glow page-glow-1" aria-hidden="true" />
       <div className="container">
-        <h1 className="section-title">Professional Development Case Studies</h1>
-        <p className="section-subtitle">
-          Key projects from my professional experience at leading tech companies
-        </p>
+        <div className="section-header">
+          <p className="section-subtitle">Case Studies</p>
+          <h1 className="section-title page-title">Professional <span className="gradient-text">Case Studies</span></h1>
+          <p className="section-description">
+            Key projects from my professional experience, from ML pipelines to production SaaS platforms.
+          </p>
+        </div>
 
-        <div className="projects-grid">
-          <div className="grid grid-1">
-            {projects.map((project) => (
-              <div key={project.id} id={project.id} className="project-card card">
-                <div className="project-header">
-                  <div className="project-icon" style={{ color: getCategoryColor(project.category) }}>
-                    {project.icon}
-                  </div>
-                  <div className="project-title-section">
-                    <h2 className="project-title">{project.title}</h2>
-                    <div className="project-meta">
-                      <span className="project-company">{project.company}</span>
-                      <span
-                        className="project-category"
-                        style={{ backgroundColor: getCategoryColor(project.category) }}
-                      >
-                        {project.category}
-                      </span>
-                      {project.githubUrl && (<a href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="View on GitHub"
-                        style={{
-                          display: 'inline-flex',
-                          alignItems: 'center',
-                          gap: '6px',
-                          fontSize: '13px',
-                          color: '#9ca3af',
-                          textDecoration: 'none',
-                          border: '1px solid #374151',
-                          borderRadius: '8px',
-                          padding: '6px 12px',
-                          transition: 'color 0.2s, border-color 0.2s'
-                        }}
-                        onMouseEnter={e => {
-                          e.currentTarget.style.color = '#fff';
-                          e.currentTarget.style.borderColor = '#6b7280';
-                        }}
-                        onMouseLeave={e => {
-                          e.currentTarget.style.color = '#9ca3af';
-                          e.currentTarget.style.borderColor = '#374151';
-                        }}
-                      >
-                        <FiGithub size={14} />
-                       
-                      </a>)}
-                    </div>
+        <div className="project-list">
+          {projects.map((project) => (
+            <article key={project.id} id={project.id} className="card project-card">
+              <div className="project-header">
+                <div className="icon-box" aria-hidden="true">{project.icon}</div>
+                <div className="project-title-section">
+                  <h2 className="project-title">{project.title}</h2>
+                  <div className="project-meta">
+                    <span className="card-kicker">{project.company}</span>
+                    <span className="pill pill-accent">{project.category}</span>
                   </div>
                 </div>
-
-                <p className="project-description">{project.shortDescription}</p>
-{/* 
-                {expandedProjects[project.id] && (
-                  <div className="project-expanded-content">
-                    <div className="project-full-description">
-                      <h4 className="description-title">Detailed Overview:</h4>
-                      <p>{project.fullDescription}</p>
-                    </div>
-
-                    <div className="project-achievements">
-                      <h4 className="achievements-title">Key Achievements:</h4>
-                      <ul className="achievements-list">
-                        {project.achievements.map((achievement, achIndex) => (
-                          <li key={achIndex} className="achievement-item">
-                            {achievement}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                )} */}
-                {project.caseLink ?
-                <Link href={project.caseLink} className="read-more-btn">
-               
-                      <ChevronRight size={16} />
-                      Read More
-                      </Link> :<></>}
-                   
-
-                <div className="project-technologies">
-                  <h3 className="tech-title">Technologies Used:</h3>
-                  <div className="tech-tags">
-                    {project.technologies.map((tech, techIndex) => (
-                      <span key={techIndex} className="tech-tag">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+                {project.githubUrl && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${project.title} on GitHub`}
+                    className="icon-btn"
+                  >
+                    <FiGithub size={16} />
+                  </a>
+                )}
               </div>
-            ))}
-          </div>
+
+              <p className="card-desc">{project.shortDescription}</p>
+
+              <ul className="chip-list chip-list-sm">
+                {project.technologies.map((tech) => (
+                  <li key={tech} className="chip">{tech}</li>
+                ))}
+              </ul>
+
+              {project.caseLink && (
+                <Link href={project.caseLink} className="text-link">
+                  Read full case study <ChevronRight size={16} aria-hidden="true" />
+                </Link>
+              )}
+            </article>
+          ))}
         </div>
       </div>
     </section>

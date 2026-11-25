@@ -107,7 +107,7 @@ const Navbar = () => {
               </li>
             ))}
             <li key='CV'>
-              <a href="/HammadCV_inter.pdf"
+              <a href="/Hammad_Asif_CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 download

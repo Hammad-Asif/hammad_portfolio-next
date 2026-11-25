@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import { FaChevronDown, FaQuestion } from 'react-icons/fa';
+import { FaChevronDown } from 'react-icons/fa';
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -57,7 +57,7 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="section faq">
+    <section id="faq" className="section section-alt">
       <div className="container">
         <div className="section-header">
           <p className="section-subtitle">Questions?</p>
@@ -67,33 +67,42 @@ const FAQ = () => {
           </p>
         </div>
 
-        <div className="faq-grid">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className={`faq-item ${openIndex === index ? 'open' : ''}`}
-              onClick={() => toggleFAQ(index)}
-            >
-              <div className="faq-question">
-                <div className="faq-question-icon">
-                  <FaQuestion />
-                </div>
-                <h3>{faq.question}</h3>
-                <div className="faq-toggle-icon">
-                  <FaChevronDown />
+        <div className="faq-list">
+          {faqs.map((faq, index) => {
+            const isOpen = openIndex === index;
+            return (
+              <div key={faq.question} className={`faq-item ${isOpen ? 'open' : ''}`}>
+                <h3 className="faq-heading">
+                  <button
+                    type="button"
+                    className="faq-question"
+                    aria-expanded={isOpen}
+                    aria-controls={`faq-answer-${index}`}
+                    id={`faq-question-${index}`}
+                    onClick={() => toggleFAQ(index)}
+                  >
+                    <span>{faq.question}</span>
+                    <FaChevronDown className="faq-toggle-icon" aria-hidden="true" />
+                  </button>
+                </h3>
+                <div
+                  className="faq-answer"
+                  id={`faq-answer-${index}`}
+                  role="region"
+                  aria-labelledby={`faq-question-${index}`}
+                  hidden={!isOpen}
+                >
+                  <p>{faq.answer}</p>
                 </div>
               </div>
-              <div className="faq-answer">
-                <p>{faq.answer}</p>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
-        <div className="faq-cta">
+        <div className="section-footer faq-cta">
           <p>Still have questions?</p>
           <a href="/contact" className="btn btn-primary">
-            Let's Talk
+            Let&apos;s Talk
           </a>
         </div>
       </div>

@@ -19,19 +19,19 @@ export const metadata = {
   authors: [
     {
       name: "Muhammad Hammad Asif",
-      url: "https://hammad-portfolio.recursivedata.com",
+      url: "https://www.hammadasif.dev",
     },
   ],
   openGraph: {
     title: "Gemini AI Trainer — Structured Data Reasoning Case Study",
     description: "Engineering SFT datasets and performing RLHF evaluations to train Google Gemini models to handle messy, real-world Excel and CSV hierarchies.",
-    url: "https://hammad-portfolio.recursivedata.com/case-studies/gemini-ai-trainer",
+    url: "https://www.hammadasif.dev/case-studies/gemini-ai-trainer",
     type: "article",
     siteName: "Muhammad Hammad Asif — Portfolio",
     locale: "en_US",
   },
   alternates: {
-    canonical: "https://hammad-portfolio.recursivedata.com/case-studies/gemini-ai-trainer",
+    canonical: "https://www.hammadasif.dev/case-studies/gemini-ai-trainer",
   },
 };
 
@@ -44,7 +44,7 @@ const jsonLd = {
   author: {
     "@type": "Person",
     name: "Muhammad Hammad Asif",
-    url: "https://hammad-portfolio.recursivedata.com",
+    url: "https://www.hammadasif.dev",
   },
 };
 
@@ -249,7 +249,7 @@ const GeminiCaseStudy = () => {
                 The engagement spanned over a year (April 2024 to May 2025). The rigorous selection process, requiring deep Python, data analysis, and language model validation skills, ensured that only top engineering contractors remained on the pipeline.
               </p>
               
-              <figure className="cs-result-callout" style={{ borderLeftColor: '#3b82f6' }}>
+              <figure className="cs-result-callout">
                 <blockquote>
                   <p>
                     Training modern frontier LLMs relies on premium, highly contextual SFT data that matches the exact edge cases encountered by real-world enterprise applications.

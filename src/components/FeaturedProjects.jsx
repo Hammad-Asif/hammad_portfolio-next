@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Brain, FileText, Cloud, ChevronRight } from 'lucide-react';
+import { Brain, FileText, Cloud, ArrowRight } from 'lucide-react';
 
 const FeaturedProjects = () => {
   const featured = [
@@ -9,35 +9,32 @@ const FeaturedProjects = () => {
       title: "Gemini AI Trainer — Structured Data Reasoning & Human Evaluation",
       company: "Google × Turing",
       description: "Contributed to Google's Gemini development for 1.2 years, engineering SFT datasets for complex structured data reasoning and performing RLHF evaluation on automated model outputs.",
-      icon: <Brain size={32} />,
+      icon: <Brain size={22} />,
       technologies: ["Python", "Gemini", "SFT Dataset Engineering", "RLHF Evaluation", "Tabular Reasoning"],
-      caseLink: "/case-studies/gemini-ai-trainer",
-      accentColor: "#3b82f6"
+      caseLink: "/case-studies/gemini-ai-trainer"
     },
     {
       id: 'tenderml',
-      title: "TenderML - AI Document Classification System",
+      title: "TenderML — AI Document Classification System",
       company: "Zaytrics (Pvt.) Limited",
       description: "Built a semi-supervised ML pipeline (SVM + CRF + DFS tree traversal) that classifies text and extracts data from German tender PDFs with 95% production accuracy.",
-      icon: <FileText size={32} />,
+      icon: <FileText size={22} />,
       technologies: ["Python", "FastAPI", "Ray Cluster", "AWS EC2", "Machine Learning", "SVM/CRF"],
-      caseLink: "/case-studies/tenderml-ai-document-classification",
-      accentColor: "#10b981"
+      caseLink: "/case-studies/tenderml-ai-document-classification"
     },
     {
       id: 'gcp-insightdocs',
-      title: "GCP InsightDocs - Document Extraction Platform",
+      title: "GCP InsightDocs — Document Extraction Platform",
       company: "Canadian Accountancy Client",
       description: "Independently built a full-stack document extraction engine using Google Cloud Document AI and OCR to automate tax form and contract data extraction.",
-      icon: <Cloud size={32} />,
+      icon: <Cloud size={22} />,
       technologies: ["ReactJS", "Flask", "Python", "Google Cloud Document AI", "OCR API"],
-      caseLink: "/case-studies/gcp-insightdocs",
-      accentColor: "#8b5cf6"
+      caseLink: "/case-studies/gcp-insightdocs"
     }
   ];
 
   return (
-    <section id="featured-projects" className="section featured-projects" style={{ backgroundColor: 'var(--bg-primary)' }}>
+    <section id="featured-projects" className="section">
       <div className="container">
         <div className="section-header">
           <p className="section-subtitle">My Work</p>
@@ -47,53 +44,32 @@ const FeaturedProjects = () => {
           </p>
         </div>
 
-        <div className="projects-grid">
-          <div className="grid grid-3">
-            {featured.map((project) => (
-              <div key={project.id} className="project-card card" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-                <div className="project-header">
-                  <div className="project-icon" style={{ color: project.accentColor }}>
-                    {project.icon}
-                  </div>
-                  <div className="project-title-section">
-                    <h3 className="project-title" style={{ fontSize: '18px', fontWeight: '600', color: '#fff', marginBottom: '4px' }}>
-                      {project.title}
-                    </h3>
-                    <span className="project-company" style={{ fontSize: '13px', color: '#9ca3af' }}>
-                      {project.company}
-                    </span>
-                  </div>
-                </div>
-
-                <p className="project-description" style={{ fontSize: '14px', color: '#d1d5db', lineHeight: '1.6', margin: '16px 0', flexGrow: 1 }}>
-                  {project.description}
-                </p>
-
-                <div className="project-technologies" style={{ marginBottom: '20px' }}>
-                  <div className="tech-tags flex flex-wrap gap-1.5">
-                    {project.technologies.map((tech, idx) => (
-                      <span key={idx} className="tech-tag" style={{ fontSize: '11px', padding: '3px 8px', borderRadius: '4px', background: '#1f2937', color: '#9ca3af' }}>
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <Link 
-                  href={project.caseLink} 
-                  className="read-more-btn flex items-center gap-1 text-sm font-semibold mt-auto" 
-                  style={{ color: project.accentColor, textDecoration: 'none', width: 'fit-content' }}
-                >
-                  Read Full Case Study <ChevronRight size={16} />
-                </Link>
+        <div className="card-grid">
+          {featured.map((project) => (
+            <article key={project.id} className="card card-link">
+              <div className="card-head">
+                <div className="icon-box" aria-hidden="true">{project.icon}</div>
+                <span className="card-kicker">{project.company}</span>
               </div>
-            ))}
-          </div>
+              <h3 className="card-title">
+                <Link href={project.caseLink} className="stretched-link">{project.title}</Link>
+              </h3>
+              <p className="card-desc card-grow">{project.description}</p>
+              <ul className="chip-list chip-list-sm">
+                {project.technologies.map((tech) => (
+                  <li key={tech} className="chip">{tech}</li>
+                ))}
+              </ul>
+              <span className="card-cta" aria-hidden="true">
+                Read case study <ArrowRight size={16} />
+              </span>
+            </article>
+          ))}
         </div>
 
-        <div style={{ textAlign: 'center', marginTop: '40px' }}>
+        <div className="section-footer">
           <Link href="/case-studies" className="btn btn-secondary">
-            View All Side Projects &amp; Archives
+            View all projects &amp; archives <ArrowRight size={16} aria-hidden="true" />
           </Link>
         </div>
       </div>

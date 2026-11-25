@@ -1,158 +1,121 @@
 'use client';
 // MobileMenu.jsx — Client Component
-// Handles: burger toggle, mobile overlay, scroll shrink (via useRef — no re-renders)
+// Handles: burger toggle, mobile overlay, scroll shrink (via DOM class — no re-renders)
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FiMail, FiDownload } from 'react-icons/fi';
 
 const MobileMenu = ({ navItems }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const navRef = useRef(null); // useRef instead of useState for scroll — no re-renders!
 
-  // ✅ Scroll shrink: toggles a CSS class via DOM ref (NOT useState)
-  // This means zero React re-renders on scroll — huge INP improvement
+  // Toggle the navbar's "scrolled" style without React re-renders
   useEffect(() => {
     const navbar = document.getElementById('main-navbar');
-
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        navbar?.classList.add('scrolled');
-      } else {
-        navbar?.classList.remove('scrolled');
-      }
+      navbar?.classList.toggle('scrolled', window.scrollY > 20);
     };
-
-    // passive: true tells the browser this won't call preventDefault
-    // allowing it to scroll without waiting for JS — improves scroll performance
+    handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
-
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // ✅ Prevent body scroll when mobile menu is open
+  // Lock body scroll + close on Escape while the menu is open
   useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.classList.add('mobile-menu-open');
-    } else {
-      document.body.classList.remove('mobile-menu-open');
-    }
+    document.body.classList.toggle('mobile-menu-open', isMobileMenuOpen);
+    if (!isMobileMenuOpen) return;
 
+    const onKey = (e) => {
+      if (e.key === 'Escape') setIsMobileMenuOpen(false);
+    };
+    window.addEventListener('keydown', onKey);
     return () => {
+      window.removeEventListener('keydown', onKey);
       document.body.classList.remove('mobile-menu-open');
     };
   }, [isMobileMenuOpen]);
 
-  // ✅ Smooth scroll handler — accounts for navbar height offset
-  const handleNavClick = (href) => {
-    // Close mobile menu if open
-    if (isMobileMenuOpen) {
-      setIsMobileMenuOpen(false);
-    }
+  // Same-page hash links scroll smoothly; everything else navigates normally
+  const handleNavClick = (e, href) => {
+    setIsMobileMenuOpen(false);
+    const hashIndex = href.indexOf('#');
+    if (hashIndex === -1) return;
 
-    const scrollToTarget = () => {
-      const element = document.querySelector(href);
-      if (!element) return;
+    const path = href.slice(0, hashIndex) || '/';
+    if (path !== window.location.pathname) return;
 
-      const navbarHeight = window.innerWidth <= 768 ? 60 : 70;
-      const offsetPosition = Math.max(0, element.offsetTop - navbarHeight);
+    const target = document.querySelector(href.slice(hashIndex));
+    if (!target) return;
 
-      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-    };
-
-    // If menu was open, wait for close animation before scrolling
-    if (isMobileMenuOpen) {
-      setTimeout(scrollToTarget, 350);
-    } else {
-      scrollToTarget();
-    }
+    e.preventDefault();
+    window.scrollTo({ top: Math.max(0, target.offsetTop - 72), behavior: 'smooth' });
+    history.replaceState(null, '', href.slice(hashIndex));
   };
 
   return (
     <>
-      {/* Burger button — only visible on mobile via CSS */}
       <button
         className="mobile-menu-btn"
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        aria-label="Toggle mobile menu"
+        aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
         aria-expanded={isMobileMenuOpen}
+        aria-controls="mobile-menu"
       >
-        {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
       </button>
 
-      {/* Full-screen mobile overlay */}
       {isMobileMenuOpen && (
-        <div className="mobile-menu-overlay">
-
+        <div className="mobile-menu-overlay" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Site menu">
           <div className="mobile-menu-header">
-            <a href="#home" className="mobile-menu-logo" onClick={() => setIsMobileMenuOpen(false)}>
-              Hammad.
+            <a href="/#home" className="nav-logo" onClick={(e) => handleNavClick(e, '/#home')}>
+              Hammad<span className="nav-logo-dot">.</span>
             </a>
             <button
-              className="mobile-menu-close"
+              className="mobile-menu-btn mobile-menu-close"
               onClick={() => setIsMobileMenuOpen(false)}
               aria-label="Close menu"
             >
-              ✕
+              <X size={22} />
             </button>
           </div>
 
-          <div className="mobile-menu">
+          <nav className="mobile-menu" aria-label="Mobile navigation">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="mobile-nav-link"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick(item.href);
-                }}
+                className={item.cta ? 'mobile-nav-link mobile-nav-link-cta' : 'mobile-nav-link'}
+                onClick={(e) => handleNavClick(e, item.href)}
               >
                 {item.label}
               </a>
             ))}
-          </div>
+            <a
+              href="/Hammad_Asif_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+              className="mobile-nav-link"
+            >
+              <FiDownload size={18} aria-hidden="true" /> Download CV
+            </a>
+          </nav>
 
           <div className="mobile-menu-footer">
             <div className="mobile-social-links">
-
-              <a
-                href="https://www.linkedin.com/in/hammad-asif/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mobile-social-link"
-                aria-label="LinkedIn"
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                </svg>
+              <a href="https://www.linkedin.com/in/hammad-asif/" target="_blank" rel="noopener noreferrer" className="icon-btn" aria-label="LinkedIn">
+                <FaLinkedin size={18} />
               </a>
-
-              <a
-                href="https://github.com/Hammad-Asif"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mobile-social-link"
-                aria-label="GitHub"
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                </svg>
+              <a href="https://github.com/Hammad-Asif" target="_blank" rel="noopener noreferrer" className="icon-btn" aria-label="GitHub">
+                <FaGithub size={18} />
               </a>
-
-              <a
-                href="mailto:Hammadcto786@gmail.com"
-                className="mobile-social-link"
-                aria-label="Email"
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h.91L12 10.09l9.454-6.269h.91c.904 0 1.636.732 1.636 1.636z" />
-                </svg>
+              <a href="mailto:hammadcto786@gmail.com" className="icon-btn" aria-label="Email">
+                <FiMail size={18} />
               </a>
-
             </div>
-            <p className="mobile-menu-text">AI Engineer & Full-Stack Developer</p>
+            <p className="mobile-menu-text">AI Engineer · LLM &amp; Generative AI · Python</p>
           </div>
-
         </div>
       )}
     </>

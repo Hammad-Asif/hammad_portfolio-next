@@ -2,11 +2,11 @@
 // FILE 1: app/sitemap.ts  (replaces any existing sitemap)
 // ============================================================
 // Next.js generates sitemap.xml automatically from this file.
-// Visit: https://yourdomain.com/sitemap.xml to verify it works.
+// Visit: https://www.hammadasif.dev/sitemap.xml to verify it works.
 
 import { MetadataRoute } from "next";
 
-const BASE_URL = "https://hammad-portfolio.recursivedata.com";
+const BASE_URL = "https://www.hammadasif.dev";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -63,7 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 // export default function robots(): MetadataRoute.Robots {
 //   return {
 //     rules: { userAgent: "*", allow: "/" },
-//     sitemap: "https://hammad-portfolio.recursivedata.com/sitemap.xml",
+//     sitemap: "https://www.hammadasif.dev/sitemap.xml",
 //   };
 // }
 
@@ -94,11 +94,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 // 2. Go to: https://search.google.com/search-console
 //
 // 3. In the left sidebar → "Sitemaps"
-//    Submit: https://hammad-portfolio.recursivedata.com/sitemap.xml
+//    Submit: https://www.hammadasif.dev/sitemap.xml
 //    (If you already submitted before, remove the old one first, then re-add.)
 //
 // 4. In the left sidebar → "URL Inspection"
-//    Paste: https://hammad-portfolio.recursivedata.com/case-studies/tenderml-ai-document-classification
+//    Paste: https://www.hammadasif.dev/case-studies/tenderml-ai-document-classification
 //    Click "Request Indexing" — this fast-tracks Google crawling the new page.
 //
 // 5. Repeat step 4 for each new case study URL as you add them.

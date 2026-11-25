@@ -128,135 +128,80 @@ const SideProjects = () => {
     }
   ];
 
-  const getCategoryColor = (category) => {
-    switch (category) {
-      case 'Web Scraping':
-        return '#10b981';
-      case 'Mobile Development':
-        return '#f59e0b';
-      case 'JavaScript Library':
-        return '#8b5cf6';
-      case 'Machine Learning':
-        return '#3b82f6';
-      case 'Web Development':
-        return '#06b6d4';
-      case 'AI Integration':
-        return '#3b82f6'
-      default:
-        return '#6b7280';
-    }
-  };
-
   return (
-    <section id="side-projects" className="section" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+    <section id="side-projects" className="section section-alt">
       <div className="container">
-        <h2 className="section-title">Side Projects</h2>
-        <p className="section-subtitle">
-          Personal projects and innovative solutions developed in my freelance Journey
-        </p>
+        <div className="section-header">
+          <p className="section-subtitle">Freelance &amp; Personal</p>
+          <h2 className="section-title">Side <span className="gradient-text">Projects</span></h2>
+          <p className="section-description">
+            Personal projects and solutions developed during my freelance journey.
+          </p>
+        </div>
 
-        <div className="projects-grid">
-          <div className="grid grid-1">
-            {sideProjects.map((project) => (
-              <div key={project.id} className="project-card card">
+        <div className="card-grid card-grid-2">
+          {sideProjects.map((project) => {
+            const isOpen = !!expandedProjects[project.id];
+            return (
+              <article key={project.id} className="card project-card">
                 <div className="project-header">
-                  <div className="project-icon" style={{ color: getCategoryColor(project.category) }}>
-                    {project.icon}
-                  </div>
+                  <div className="icon-box" aria-hidden="true">{project.icon}</div>
                   <div className="project-title-section">
                     <h3 className="project-title">{project.title}</h3>
                     <div className="project-meta">
-                      <span
-                        className="project-category"
-                        style={{ backgroundColor: getCategoryColor(project.category) }}
-                      >
-                        {project.category}
-                      </span>
-                      <span className="project-status">{project.status}</span>
-                      {project.githubUrl && (<a href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="View on GitHub"
-                        style={{
-                          display: 'inline-flex',
-                          alignItems: 'center',
-                          gap: '6px',
-                          fontSize: '13px',
-                          color: '#9ca3af',
-                          textDecoration: 'none',
-                          border: '1px solid #374151',
-                          borderRadius: '8px',
-                          padding: '6px 12px',
-                          transition: 'color 0.2s, border-color 0.2s'
-                        }}
-                        onMouseEnter={e => {
-                          e.currentTarget.style.color = '#fff';
-                          e.currentTarget.style.borderColor = '#6b7280';
-                        }}
-                        onMouseLeave={e => {
-                          e.currentTarget.style.color = '#9ca3af';
-                          e.currentTarget.style.borderColor = '#374151';
-                        }}
-                      >
-                        <FiGithub size={14} />
-                        View on GitHub
-                      </a>)}
+                      <span className="pill pill-accent">{project.category}</span>
+                      <span className="pill">{project.status}</span>
                     </div>
                   </div>
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${project.title} on GitHub`}
+                      className="icon-btn"
+                    >
+                      <FiGithub size={16} />
+                    </a>
+                  )}
                 </div>
 
-                <p className="project-description">{project.shortDescription}</p>
+                <p className="card-desc">{project.shortDescription}</p>
 
-                {expandedProjects[project.id] && (
-                  <div className="project-expanded-content">
-                    <div className="project-full-description">
-                      <h4 className="description-title">Detailed Overview:</h4>
-                      <p>{project.fullDescription}</p>
-                    </div>
-
-                    <div className="project-achievements">
-                      <h4 className="achievements-title">Key Achievements:</h4>
-                      <ul className="achievements-list">
-                        {project.achievements.map((achievement, achIndex) => (
-                          <li key={achIndex} className="achievement-item">
-                            {achievement}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                {isOpen && (
+                  <div className="project-expanded" id={`${project.id}-details`}>
+                    <p className="card-desc">{project.fullDescription}</p>
+                    <h4 className="block-title">Key Achievements</h4>
+                    <ul className="check-list">
+                      {project.achievements.map((achievement) => (
+                        <li key={achievement}>{achievement}</li>
+                      ))}
+                    </ul>
                   </div>
                 )}
 
+                <ul className="chip-list chip-list-sm card-grow-top">
+                  {project.technologies.map((tech) => (
+                    <li key={tech} className="chip">{tech}</li>
+                  ))}
+                </ul>
+
                 <button
-                  className="read-more-btn"
+                  type="button"
+                  className="text-link"
                   onClick={() => toggleProject(project.id)}
+                  aria-expanded={isOpen}
+                  aria-controls={`${project.id}-details`}
                 >
-                  {expandedProjects[project.id] ? (
-                    <>
-                      <ChevronUp size={16} />
-                      Read Less
-                    </>
+                  {isOpen ? (
+                    <>Show less <ChevronUp size={16} aria-hidden="true" /></>
                   ) : (
-                    <>
-                      <ChevronDown size={16} />
-                      Read More
-                    </>
+                    <>Read more <ChevronDown size={16} aria-hidden="true" /></>
                   )}
                 </button>
-
-                <div className="project-technologies">
-                  <h4 className="tech-title">Technologies Used:</h4>
-                  <div className="tech-tags">
-                    {project.technologies.map((tech, techIndex) => (
-                      <span key={techIndex} className="tech-tag">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

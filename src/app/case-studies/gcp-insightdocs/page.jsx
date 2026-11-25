@@ -19,19 +19,19 @@ export const metadata = {
   authors: [
     {
       name: "Muhammad Hammad Asif",
-      url: "https://hammad-portfolio.recursivedata.com",
+      url: "https://www.hammadasif.dev",
     },
   ],
   openGraph: {
     title: "GCP InsightDocs — Document Extraction Platform Case Study",
     description: "Automated CRA tax forms and legal contract parsing for a Canadian accountancy firm using Google Cloud Document AI, Flask, and React.",
-    url: "https://hammad-portfolio.recursivedata.com/case-studies/gcp-insightdocs",
+    url: "https://www.hammadasif.dev/case-studies/gcp-insightdocs",
     type: "article",
     siteName: "Muhammad Hammad Asif — Portfolio",
     locale: "en_US",
   },
   alternates: {
-    canonical: "https://hammad-portfolio.recursivedata.com/case-studies/gcp-insightdocs",
+    canonical: "https://www.hammadasif.dev/case-studies/gcp-insightdocs",
   },
 };
 
@@ -44,7 +44,7 @@ const jsonLd = {
   author: {
     "@type": "Person",
     name: "Muhammad Hammad Asif",
-    url: "https://hammad-portfolio.recursivedata.com",
+    url: "https://www.hammadasif.dev",
   },
 };
 
@@ -212,7 +212,7 @@ const GCPInsightDocsCaseStudy = () => {
                 By providing a direct side-by-side comparison screen, the system cut down transcription steps entirely and eliminated manual input errors, significantly increasing workflow speed.
               </p>
               
-              <figure className="cs-result-callout" style={{ borderLeftColor: '#8b5cf6' }}>
+              <figure className="cs-result-callout">
                 <blockquote>
                   <p>
                     Connecting pre-trained cloud vision processors with intuitive, verification-focused user interfaces is the fastest way to deliver measurable business automation.
@@ -239,7 +239,7 @@ const GCPInsightDocsCaseStudy = () => {
                   "JSON Data Parsing",
                   "Full-stack Web Integration"
                 ].map((tech) => (
-                  <li className="cs-tech-pill" key={tech} style={{ borderColor: '#8b5cf6' }}>
+                  <li className="cs-tech-pill" key={tech}>
                     {tech}
                   </li>
                 ))}
@@ -263,7 +263,7 @@ const GCPInsightDocsCaseStudy = () => {
           </div>
 
           {/* CTA Footer */}
-          <footer className="cs-cta" style={{ background: 'linear-gradient(135deg, #1f104d 0%, #090226 100%)' }}>
+          <footer className="cs-cta">
             <h2>Need an enterprise document processing platform?</h2>
             <p>
               I build custom Document AI integration pipelines and intuitive React frontends that automate manual extraction workflows for contracts, tax forms, and reports.

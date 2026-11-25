@@ -28,65 +28,57 @@ const Publications = () => {
   ];
 
   return (
-    <section id="publications" className="section" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+    <section id="publications" className="section section-alt">
       <div className="container">
-        <h2 className="section-title">Publications</h2>
-        <p className="section-subtitle">
-          Research contributions to the field of Natural Language Processing and Machine Learning
-        </p>
-        
+        <div className="section-header">
+          <p className="section-subtitle">Research</p>
+          <h2 className="section-title"><span className="gradient-text">Publications</span></h2>
+          <p className="section-description">
+            Research contributions to the field of Natural Language Processing and Machine Learning.
+          </p>
+        </div>
+
         <div className="publications-list">
-          {publications.map((publication, index) => (
-            <div key={index} className="publication-card card">
-              <div className="publication-header">
-                <div className="publication-icon">
-                  <BookOpen size={32} />
+          {publications.map((publication) => (
+            <article key={publication.title} className="card publication-card">
+              <div className="card-head">
+                <div className="icon-box" aria-hidden="true">
+                  <BookOpen size={22} />
                 </div>
-                <div className="publication-meta">
-                  <div className="publication-type">{publication.type}</div>
-                  <div className="publication-year">
-                    <Calendar size={16} />
-                    <span>{publication.year}</span>
-                  </div>
-                </div>
+                <span className="pill pill-accent">{publication.type}</span>
+                <span className="meta-item">
+                  <Calendar size={14} aria-hidden="true" />
+                  {publication.year}
+                </span>
               </div>
-              
-              <div className="publication-content">
-                <h3 className="publication-title">{publication.title}</h3>
-                <div className="publication-journal">
-                  <strong>Published in:</strong> {publication.journal}
-                </div>
-                
-                <p className="publication-description">{publication.description}</p>
-                
-                <div className="publication-abstract">
-                  <h4 className="abstract-title">Abstract</h4>
-                  <p className="abstract-text">{publication.abstract}</p>
-                </div>
-                
-                <div className="publication-contributions">
-                  <h4 className="contributions-title">Key Contributions:</h4>
-                  <ul className="contributions-list">
-                    {publication.contributions.map((contribution, contribIndex) => (
-                      <li key={contribIndex} className="contribution-item">
-                        {contribution}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div className="publication-keywords">
-                  <h4 className="keywords-title">Keywords:</h4>
-                  <div className="keywords-tags">
-                    {publication.keywords.map((keyword, keywordIndex) => (
-                      <span key={keywordIndex} className="keyword-tag">
-                        {keyword}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+
+              <h3 className="publication-title">{publication.title}</h3>
+              <p className="publication-journal">
+                <span className="card-kicker">Published in</span> {publication.journal}
+              </p>
+
+              <p className="card-desc">{publication.description}</p>
+
+              <div className="publication-block">
+                <h4 className="block-title">Abstract</h4>
+                <p className="card-desc">{publication.abstract}</p>
               </div>
-            </div>
+
+              <div className="publication-block">
+                <h4 className="block-title">Key Contributions</h4>
+                <ul className="check-list">
+                  {publication.contributions.map((contribution) => (
+                    <li key={contribution}>{contribution}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <ul className="chip-list chip-list-sm">
+                {publication.keywords.map((keyword) => (
+                  <li key={keyword} className="chip">{keyword}</li>
+                ))}
+              </ul>
+            </article>
           ))}
         </div>
       </div>

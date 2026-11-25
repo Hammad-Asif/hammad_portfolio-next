@@ -1,10 +1,10 @@
 import React from 'react';
-import { Brain, Code, Database, Server, Globe, Settings } from 'lucide-react';
+import { Brain, Database, Server, Globe, Settings } from 'lucide-react';
 
 const Skills = () => {
   const skillCategories = [
     {
-      icon: <Brain size={32} />,
+      icon: <Brain size={22} />,
       title: "Generative AI & LLMs",
       skills: [
         "LLM Fine-Tuning & Alignment",
@@ -18,7 +18,7 @@ const Skills = () => {
       ]
     },
     {
-      icon: <Server size={32} />,
+      icon: <Server size={22} />,
       title: "Backend Development",
       skills: [
         "Python (Advanced)",
@@ -31,7 +31,7 @@ const Skills = () => {
       ]
     },
     {
-      icon: <Database size={32} />,
+      icon: <Database size={22} />,
       title: "Databases & Data",
       skills: [
         "PostgreSQL & MySQL",
@@ -43,7 +43,7 @@ const Skills = () => {
       ]
     },
     {
-      icon: <Settings size={32} />,
+      icon: <Settings size={22} />,
       title: "DevOps & Cloud Tools",
       skills: [
         "AWS (EC2, S3, Lambda, IAM)",
@@ -55,7 +55,7 @@ const Skills = () => {
       ]
     },
     {
-      icon: <Globe size={32} />,
+      icon: <Globe size={22} />,
       title: "Languages & Web",
       skills: [
         "JavaScript (ES6+) & TypeScript",
@@ -69,31 +69,30 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="section" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+    <section id="skills" className="section section-alt">
       <div className="container">
-        <h2 className="section-title">Skills & Expertise</h2>
-        <p className="section-subtitle">
-          A comprehensive overview of my technical skills and areas of expertise
-        </p>
-        
-        <div className="skills-grid">
-          <div className="grid grid-3">
-            {skillCategories.map((category, index) => (
-              <div key={index} className="skill-category card">
-                <div className="skill-icon">
-                  {category.icon}
-                </div>
-                <h3 className="skill-title">{category.title}</h3>
-                <div className="skill-list">
-                  {category.skills.map((skill, skillIndex) => (
-                    <span key={skillIndex} className="skill-tag">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
+        <div className="section-header">
+          <p className="section-subtitle">Toolbox</p>
+          <h2 className="section-title">Skills &amp; <span className="gradient-text">Technologies</span></h2>
+          <p className="section-description">
+            A comprehensive overview of my technical skills and areas of expertise.
+          </p>
+        </div>
+
+        <div className="card-grid">
+          {skillCategories.map((category) => (
+            <div key={category.title} className="card">
+              <div className="card-head">
+                <div className="icon-box" aria-hidden="true">{category.icon}</div>
+                <h3 className="card-title">{category.title}</h3>
               </div>
-            ))}
-          </div>
+              <ul className="chip-list">
+                {category.skills.map((skill) => (
+                  <li key={skill} className="chip">{skill}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </section>

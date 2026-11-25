@@ -4,75 +4,95 @@ import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
 const ExperienceTimeline = () => {
   const experiences = [
     {
-      "company": "Toptal",
-      "title": "Vetted AI Engineer",
-      "location": "Available for Full-Time Engagement",
-      "startDate": "2026-01-01T00:00:00.000Z",
+      "company": "QASolution",
+      "title": "AI Web Developer (Project-based Contract)",
+      "location": "Remote (Contract in Progress)",
+      "startDate": "2026-11-01T00:00:00.000Z",
       "endDate": "",
-      "description": "Accepted into Toptal's top 3% network of global freelance engineers, vetted through a rigorous multi-stage technical screening. Available for senior full-stack and AI integration engagements through the network.",
+      "description": "Building an AI-powered web CMS project for a client.",
       "current": true,
+      "achievements": [],
+      "technologies": []
+    },
+    {
+      "company": "KeystoneSTS",
+      "title": "AI Engineer (Project-based Contract)",
+      "location": "Remote (Contract Completed)",
+      "startDate": "2026-09-01T00:00:00.000Z",
+      "endDate": "2026-10-31T00:00:00.000Z",
+      "description": "Solo-built an AI roof-measurement and holiday-lighting design platform for a client.",
+      "current": false,
       "achievements": [
-        "Rigorously vetted into the top 3% of global engineering talent through a multi-stage technical and communication screening process.",
-        "Available for complex, high-scale AI integration and Python backend infrastructure engagements."
+        "Built SAM-based roof segmentation, with roofline tracing and classification (eave, rake, hip, ridge, valley).",
+        "Built a React/TypeScript editor (zoom, pan, undo/redo, measuring tools) and a FastAPI/PostgreSQL backend with authentication and authorization.",
+        "Built a product library of bulbs and light images used when placing lights.",
+        "Implemented measurement in feet from a single photo and one known length."
       ],
-      "technologies": ["Python", "FastAPI", "React", "Node.js", "Docker", "AWS", "LLM Integration", "AI Agents"]
-    }, {
+      "technologies": ["Python", "FastAPI", "PostgreSQL", "React", "TypeScript", "SAM"]
+    },
+    {
       "company": "Scanify Dev",
-      "title": "AI Integration Engineer",
-      "location": "Remote (Contract Concluded)",
+      "title": "AI Backend Contractor",
+      "location": "Remote (Contract Completed)",
       "startDate": "2025-07-01T00:00:00.000Z",
       "endDate": "2025-11-30T00:00:00.000Z",
-      "description": "Contributed to an AI-powered Shopify theme generation platform that used OpenAI APIs to automatically create store content and images for ecommerce clients.",
+      "description": "Built the LLM and image-generation backend for highticket.io, a live platform that generates Shopify stores.",
       "current": false,
       "achievements": [
-        "Architected and maintained OpenAI API integrations for a production-level Shopify SaaS platform, enabling automated content and asset generation for active e-commerce storefronts.",
-        "Audited and optimized asynchronous Python FastAPI backend endpoints, reducing latency and eliminating bugs affecting real-time AI feature delivery."
+        "Built async FastAPI services and LLM pipelines for highticket.io. AI models generate each store's names, descriptions, logos and images, which are placed into a built-in theme design.",
+        "Integrated OpenAI, Gemini and OpenRouter models with automatic fallback, so generation continues if a provider fails or stops responding.",
+        "Designed prompts for each generation stage. About 10 stores were generated in the platform's initial stage."
       ],
-      "technologies": ["Python", "FastAPI", "OpenAI API", "Shopify API", "SaaS Architecture", "Asynchronous Programming"]
+      "technologies": ["Python", "FastAPI", "OpenAI", "Gemini", "OpenRouter"]
     },
     {
-      "company": "Turing.com (Google Gemini Project)",
+      "company": "Turing",
       "title": "AI Training Engineer",
-      "location": "Remote",
+      "location": "Remote (Contract Completed)",
       "startDate": "2024-04-01T00:00:00.000Z",
       "endDate": "2025-05-31T00:00:00.000Z",
-      "description": "Contributed to a Google-commissioned project through Turing to improve Gemini's data analysis reasoning capabilities.",
+      "description": "Large-scale LLM training project for a major AI lab.",
       "current": false,
       "achievements": [
-        "Vetted by Turing to collaborate on a specialized engineering team training Google's Gemini models, specifically focusing on advanced data analytics and complex logical reasoning.",
-        "Engineered high-quality Supervised Fine-Tuning (SFT) datasets, designed evaluation frameworks, and performed Reinforcement Learning from Human Feedback (RLHF) annotations to maximize model accuracy."
+        "Created data-analysis and visualization scenarios used to train and evaluate a large language model.",
+        "Contributed to SFT data and RLHF-style evaluation of model responses, using prompt engineering to judge correctness, instruction adherence and reasoning quality.",
+        "Briefly worked on agentic tool-use tasks, writing demo apps (such as Drive, Sheets and Slack) for the model to interact with, before the contract ended."
       ],
-      "technologies": ["Python", "Gemini", "SFT", "RLHF", "Data Analytics", "Prompt Engineering", "Evaluation Frameworks"]
+      "technologies": ["Python", "SFT", "RLHF", "Prompt Engineering", "Data Analysis", "LLM Evaluation"]
     },
     {
-      "company": "Recursive Data Ltd.",
-      "title": "Full-stack Web and AI Developer",
-      "location": "Remote contractor",
-      "startDate": "2023-07-01T00:00:00.000Z",
-      "endDate": "2024-03-30T00:00:00.000Z",
-      "description": "Contributed to multiple short-term projects spanning web scraping, browser automation, and AI integration.",
+      "company": "Fiverr",
+      "title": "Independent Developer",
+      "location": "Remote",
+      "startDate": "2023-06-01T00:00:00.000Z",
+      "endDate": "2024-04-30T00:00:00.000Z",
+      "description": "14 clients across the US, UK and UAE, with repeat orders.",
       "current": false,
       "achievements": [
-        "Built a unified parcel tracking platform that scrapes real-time delivery data across multiple courier sites and Airtable using a single tracking ID.",
-        "Integrated ChatGPT into a mobile app, enabling intelligent conversational features within the existing product.",
-        "Developed a real-time price comparison tool that scrapes and aggregates product listings across Amazon, eBay, and multiple ecommerce platforms simultaneously."
+        "FoodScanSaaS: built the AI integration layer in Python for a barcode-scanning food app, connecting to OpenAI through LangChain with prompts that generate ingredient definitions. Delivered to the client. (A teammate built the React Native app; the mobile backend was Node.js.)",
+        "Order tracking automation: React web app where users enter a tracking number. The system checks Airtable first, and if the order is not found, scrapes courier websites in Python, shows the live status and writes it back to Airtable. Deployed on DigitalOcean behind Nginx.",
+        "Also delivered web scraping projects, including an e-commerce price comparison tool (Python, Selenium, BeautifulSoup)."
       ],
-      "technologies": ["Python", "React", "Web Scraping", "Playwright", "Selenium", "Airtable API", "ChatGPT API"]
+      "technologies": ["Python", "OpenAI", "LangChain", "React", "Airtable", "Selenium", "BeautifulSoup", "DigitalOcean", "Nginx"]
     },
     {
       "company": "Zaytrics (Pvt.) Limited",
-      "title": "Lead AI System Developer",
+      "title": "Full Stack Developer → Team Lead → AI/ML Engineer",
       "location": "Islamabad, Pakistan",
       "startDate": "2021-01-01T00:00:00.000Z",
       "endDate": "2023-06-30T00:00:00.000Z",
-      "description": "Independently built and deployed multiple production AI systems as client-facing APIs.",
+      "description": "Grew from full-stack developer to team lead to AI/ML engineer, building document-AI pipelines and multi-tenant SaaS products for clients.",
       "current": false,
       "achievements": [
-        "TenderML: Independently built, trained, and deployed an AI-driven text classification pipeline for parsing German construction PDFs, achieving a 95% production accuracy rate.",
-        "GCP InsightDocs: Designed an end-to-end cloud data extraction engine using Google Cloud Document AI and OCR, serving it as a high-throughput, client-facing API.",
-        "Orchestrated cloud infrastructure deployments on AWS EC2 leveraging Ray clusters for autoscaling distributed Python applications."
+        "TenderML (solo, AI/ML): built a pipeline that classifies tender documents and extracts key information from about 1,000 German construction tender PDFs in varied formats. Trained an SVM with semi-supervised learning, since only a few PDFs were labeled. Regex extraction failed on unseen layouts, so I built a tree-based extractor using DFS, which also filtered the SVM's false positives.",
+        "Reached about 95% end-to-end accuracy, measured on a manual review of about 20 tenders in formats unseen during training. The client later tested it on further unseen tenders, and it remains in production.",
+        "Deployed as an API on AWS EC2 with FastAPI and a Ray cluster (master/worker) for load balancing and scaling, integrated into the client's existing system. Used Azure OCR and Azure Form Recognizer to read client information from the first pages.",
+        "Client review of this PDF-extraction project on Zaytrics' Clutch profile (5.0 rating; extraction quality checked manually against the client's own samples).",
+        "GCPInsight: built and deployed a web app on a GCP VM that extracts data from Canadian immigration forms using Google Document AI.",
+        "CHappie (full stack, then team lead): led a team of 4–5 developers on a multi-tenant SaaS platform for calling agents, assigning tasks and reviewing and merging code. Built role-based access control (super admin, admin, manager, team lead, calling agent) with per-company data isolation.",
+        "Built an admin-activity monitoring app (MERN) that records when admins log in and out and what they did."
       ],
-      "technologies": ["Python", "Machine Learning", "FastAPI", "Ray Cluster", "AWS EC2", "Document AI", "OCR", "Flask", "Node.js"]
+      "technologies": ["Python", "SVM", "Semi-supervised Learning", "FastAPI", "Ray", "AWS EC2", "Azure OCR", "Azure Form Recognizer", "Google Document AI", "GCP", "MERN"]
     }
   ]
 
@@ -80,12 +100,12 @@ const ExperienceTimeline = () => {
   const formatDate = (dateString) => {
     if (!dateString) return 'Present';
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+    return date.toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' });
   };
 
 
   return (
-    <section id="experience" className="section experience-timeline">
+    <section id="experience" className="section section-alt">
       <div className="container">
         <div className="section-header">
           <p className="section-subtitle">My Journey</p>
@@ -95,59 +115,54 @@ const ExperienceTimeline = () => {
           </p>
         </div>
 
-        <div className="timeline">
-          {experiences.map((exp, index) => (
-            <div key={index} className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}>
-              <div className="timeline-content">
-                <div className="timeline-dot"></div>
-                <div className={`timeline-card ${exp.current ? 'current' : ''}`}>
-                  <div className="timeline-header">
-                    <div className="timeline-icon">
-                      <FaBriefcase />
-                    </div>
-                    <div className="timeline-info">
-                      <h3>{exp.title}</h3>
-                      <p className="company">{exp.company}</p>
-                    </div>
+        <ol className="timeline">
+          {experiences.map((exp) => (
+            <li key={`${exp.company}-${exp.startDate}`} className={`timeline-item ${exp.current ? 'is-current' : ''}`}>
+              <span className="timeline-dot" aria-hidden="true" />
+              <article className="timeline-card">
+                <div className="timeline-header">
+                  <div className="icon-box" aria-hidden="true">
+                    <FaBriefcase />
                   </div>
+                  <div className="timeline-info">
+                    <h3>{exp.title}</h3>
+                    <p className="timeline-company">{exp.company}</p>
+                  </div>
+                  {exp.current && <span className="pill pill-accent">Current</span>}
+                </div>
 
-                  <div className="timeline-meta">
+                <div className="timeline-meta">
+                  <span className="meta-item">
+                    <FaCalendarAlt aria-hidden="true" />
+                    {formatDate(exp.startDate)} – {formatDate(exp.endDate)}
+                  </span>
+                  {exp.location && (
                     <span className="meta-item">
-                      <FaCalendarAlt />
-                      {formatDate(exp.startDate)} - {formatDate(exp.endDate)}
+                      <FaMapMarkerAlt aria-hidden="true" />
+                      {exp.location}
                     </span>
-                    {exp.location && (
-                      <span className="meta-item">
-                        <FaMapMarkerAlt />
-                        {exp.location}
-                      </span>
-                    )}
-                  </div>
-
-                  <p className="timeline-description">{exp.description}</p>
-                  <ul className="timeline-achievements">
-                    {exp.achievements.map((achievement, achIndex) => (
-                      <li key={achIndex}>{achievement}</li>
-                    ))}
-                  </ul>
-                  {exp.technologies && exp.technologies.length > 0 && (
-                    <div className="timeline-tech">
-                      {exp.technologies.map((tech, idx) => (
-                        <span key={idx} className="tech-tag">{tech}</span>
-                      ))}
-                    </div>
-                  )}
-
-                  {exp.current && (
-                    <div className="current-badge">
-                      <span className="badge">Current</span>
-                    </div>
                   )}
                 </div>
-              </div>
-            </div>
+
+                <p className="timeline-description">{exp.description}</p>
+                {exp.achievements.length > 0 && (
+                  <ul className="check-list">
+                    {exp.achievements.map((achievement) => (
+                      <li key={achievement}>{achievement}</li>
+                    ))}
+                  </ul>
+                )}
+                {exp.technologies.length > 0 && (
+                  <ul className="chip-list chip-list-sm">
+                    {exp.technologies.map((tech) => (
+                      <li key={tech} className="chip">{tech}</li>
+                    ))}
+                  </ul>
+                )}
+              </article>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
 
     </section>
