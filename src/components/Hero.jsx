@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { FaReact, FaPython, FaAws, FaDocker, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FiDownload, FiMail } from 'react-icons/fi';
 import {
@@ -68,12 +69,13 @@ const Hero = () => {
                     </div>
 
                     <h1 className="hero-title">
+                        <span className="hero-name">Muhammad Hammad Asif</span>
                         AI Engineer &amp;{' '}
-                        <span className="gradient-text">Python Backend Architect</span>
+                        <span className="gradient-text"><span className="nowrap">Full-Stack</span> Developer</span>
                     </h1>
 
                     <p className="hero-description">
-                        I bridge the gap between AI prototypes and production-grade systems. Specializing in high-performance FastAPI backends, scalable RAG pipelines, and fine-tuned LLMs engineered for global scale.
+                        I build production AI systems and the web products around them: LLM and generative-AI pipelines, document extraction and classification, and FastAPI backends with React frontends. About five years of hands-on work for clients in the US, UK, Europe and the UAE.
                     </p>
 
                     <p className="hero-meta">
@@ -127,12 +129,14 @@ const Hero = () => {
                     </div>
 
                     <div className="hero-image">
-                        <img
+                        <Image
                             src="/profile_pic.jpg"
-                            alt="Muhammad Hammad Asif, AI Engineer"
+                            alt="Muhammad Hammad Asif, AI engineer and full-stack developer"
                             className="avatar-image"
-                            width={240}
-                            height={240}
+                            width={230}
+                            height={230}
+                            sizes="(max-width: 480px) 150px, (max-width: 1024px) 200px, 230px"
+                            priority
                         />
                     </div>
                 </div>

@@ -1,14 +1,25 @@
 import Contact from "@/components/Contact";
+import { pageMetadata, breadcrumbJsonLd, jsonLdProps } from "@/lib/seo";
 
-export const metadata = {
-  title: "Hire & Contact | Muhammad Hammad Asif",
-  description: "Get in touch with Muhammad Hammad Asif, Senior AI and Python Backend Engineer. Available for full-time remote roles (US/UK/EU timezones) and contract engagements.",
-  alternates: {
-    canonical: "https://www.hammadasif.dev/contact",
-  },
-};
+export const metadata = pageMetadata({
+  title: "Contact",
+  description:
+    "Contact Muhammad Hammad Asif, freelance AI engineer and full-stack developer. Email, phone or the project form; replies within 24 hours. Open to remote roles.",
+  path: "/contact",
+});
 
-export default function contact(){
-    return <Contact/>
+export default function ContactPage() {
+  return (
+    <>
+      <script
+        {...jsonLdProps(
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Contact", path: "/contact" },
+          ])
+        )}
+      />
+      <Contact />
+    </>
+  );
 }
-

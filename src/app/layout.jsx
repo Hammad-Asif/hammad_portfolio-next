@@ -33,45 +33,26 @@ const jetbrainsMono = localFont({
 })
 import './globals.css'
 import Navbar from "@/components/Navbar";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import { SITE_URL, SITE_NAME, PERSON_NAME, siteJsonLd, jsonLdProps } from "@/lib/seo";
+
+const DEFAULT_TITLE = "Hammad Asif | Freelance AI Engineer & Full-Stack Developer";
+const DEFAULT_DESCRIPTION =
+  "Muhammad Hammad Asif is a freelance AI engineer and full-stack developer: LLM integration, document AI and PDF data extraction, FastAPI backends and React apps.";
 
 export const metadata = {
-  metadataBase: new URL("https://www.hammadasif.dev"),
-
-  title: {
-    default:
-      "Muhammad Hammad Asif | AI Engineer, LLM Engineer & Python Backend Developer",
-    template: "%s | Muhammad Hammad Asif",
-  },
-
-  description:
-    "Explore the portfolio of Muhammad Hammad Asif, an AI Engineer specializing in production LLM applications, AI agents, FastAPI, Python backend development, RAG pipelines, machine learning, OpenAI integrations, and scalable AI systems. Featuring real-world case studies, technical architecture, and production-ready solutions.",
-
-  applicationName: "Muhammad Hammad Asif Portfolio",
-
-  authors: [
-    {
-      name: "Muhammad Hammad Asif",
-      url: "https://www.hammadasif.dev",
-    },
-  ],
-
-  creator: "Muhammad Hammad Asif",
-
-  publisher: "Muhammad Hammad Asif",
-
+  metadataBase: new URL(SITE_URL),
+  title: { default: DEFAULT_TITLE, template: `%s | ${SITE_NAME}` },
+  description: DEFAULT_DESCRIPTION,
+  applicationName: SITE_NAME,
+  authors: [{ name: PERSON_NAME, url: SITE_URL }],
+  creator: PERSON_NAME,
+  publisher: PERSON_NAME,
   category: "Technology",
-
-  classification:
-    "Artificial Intelligence, Machine Learning, Software Engineering",
-
   referrer: "origin-when-cross-origin",
-
   robots: {
     index: true,
     follow: true,
-    nocache: false,
     googleBot: {
       index: true,
       follow: true,
@@ -80,130 +61,33 @@ export const metadata = {
       "max-snippet": -1,
     },
   },
-
-  alternates: {
-    canonical: "/",
-  },
-
-  keywords: [
-    "AI Engineer",
-    "Generative AI Engineer",
-    "LLM Engineer",
-    "Python Backend Developer",
-    "FastAPI Developer",
-    "OpenAI API",
-    "Claude API",
-    "Gemini API",
-    "AI Agents",
-    "RAG",
-    "Retrieval Augmented Generation",
-    "Machine Learning Engineer",
-    "Prompt Engineering",
-    "LangChain",
-    "LangGraph",
-    "MCP Server",
-    "AI Automation",
-    "Python",
-    "Next.js",
-    "Backend Engineer",
-    "REST API",
-    "Vector Database",
-    "Semantic Search",
-    "Production AI",
-    "Computer Vision",
-    "OCR",
-    "NLP",
-    "Portfolio",
-    "Case Studies",
-    "Remote AI Engineer",
-    "Remote Python Developer",
-    "Software Engineer",
-  ],
-
+  // Defaults for any route without its own metadata; pages override via pageMetadata().
   openGraph: {
     type: "website",
-
     locale: "en_US",
-
-    url: "https://www.hammadasif.dev",
-
-    siteName: "Muhammad Hammad Asif",
-
-    title:
-      "Muhammad Hammad Asif | AI Engineer, LLM Engineer & Python Backend Developer",
-
-    description:
-      "AI Engineer building production-ready LLM applications, AI agents, FastAPI backends, machine learning systems, and scalable Python architectures. Explore detailed case studies, technical blogs, and real-world AI projects.",
-
-    images: [
-      {
-        url: "/profile_pic.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Muhammad Hammad Asif - AI Engineer Portfolio",
-      },
-    ],
+    siteName: SITE_NAME,
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
   },
-
   twitter: {
     card: "summary_large_image",
-
-    creator: "@hammadasif1437",
-
-    title:
-      "Muhammad Hammad Asif | AI Engineer & LLM Specialist",
-
-    description:
-      "Production AI Engineer specializing in LLMs, AI agents, FastAPI, Python, RAG pipelines, machine learning, and scalable backend systems.",
-
-    images: ["/profile_pic.jpg"],
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
   },
-
- 
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
-
+  // Icons come from app/favicon.ico, app/icon.png and app/apple-icon.png.
   // Site-ownership verification for search engine webmaster tools
   verification: {
     other: {
       "msvalidate.01": "35298AD90EAFFE3F700486F253F54A02", // Bing Webmaster Tools
     },
   },
-
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              name: "Muhammad Hammad Asif",
-              url: "https://www.hammadasif.dev",
-              image: "https://www.hammadasif.dev/profile_pic.jpg",
-              jobTitle: "AI & Python Backend Engineer",
-              description: "AI and backend engineer specializing in LLM integration, ML pipelines, and FastAPI systems. Passed Toptal's coding assessment and listed in its talent marketplace.",
-              email: "Hammadcto786@gmail.com",
-              telephone: "+923087724490",
-              address: { "@type": "PostalAddress", addressCountry: "PK" },
-              sameAs: [
-                "https://github.com/Hammad-Asif",
-                "https://www.linkedin.com/in/hammad-asif/"
-              ],
-              knowsAbout: [
-                "Python", "FastAPI", "LLM Integration", "Machine Learning",
-                "NLP", "React", "Node.js", "AWS", "Docker", "OpenAI API"
-              ]
-            })
-          }}
-        />
+        <script {...jsonLdProps(siteJsonLd())} />
       </head>
       <body suppressHydrationWarning><ClientProviders>
         <Navbar />

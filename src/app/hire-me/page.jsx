@@ -1,6 +1,7 @@
 // src/app/hire-me/page.jsx
 import React from 'react';
 import HireMeForm from '@/components/HireMeForm';
+import { pageMetadata, breadcrumbJsonLd, absoluteUrl, PERSON_ID, WEBSITE_ID } from '@/lib/seo';
 import { 
   ShieldCheck, 
   Clock, 
@@ -13,68 +14,28 @@ import {
   Briefcase
 } from 'lucide-react';
 
-const Json_LD= {
-  "@context": "https://schema.org",
-  "@type": "ProfilePage",
-  "mainEntity": {
-    "@type": "Person",
-    "name": "Muhammad Hammad Asif",
-    "alternateName": "Hammad",
-    "jobTitle": "Senior AI & Python Backend Engineer",
-    "description": "AI & Python backend engineer (passed Toptal's coding assessment) specializing in high-performance FastAPI backends, production-grade RAG pipelines, and automated web scraping infrastructures.",
-    "url": "https://www.hammadasif.dev/hire-me",
-    "knowsAbout": [
-      "Python",
-      "FastAPI",
-      "Flask",
-      "LLMs",
-      "RAG Pipelines",
-      "AWS EC2",
-      "Ray Clusters",
-      "Google Cloud Document AI",
-      "OCR",
-      "Playwright",
-      "Web Scraping"
-    ],
-    "nationality": {
-      "@type": "Country",
-      "name": "Pakistan"
-    },
-    "seeking": {
-      "@type": "Demand",
-      "availability": "https://schema.org/OnlineOnly",
-      "areaServed": [
-        {
-          "@type": "Country",
-          "name": "United States"
-        },
-        {
-          "@type": "Country",
-          "name": "United Kingdom"
-        },
-        {
-          "@type": "Country",
-          "name": "European Union"
-        }
-      ]
-    }
-  }
-}
+export const metadata = pageMetadata({
+  title: "Hire an AI Engineer & Full-Stack Developer",
+  description:
+    "Hire Muhammad Hammad Asif, a freelance AI engineer and full-stack developer for LLM apps, document AI and FastAPI + React products. Remote, US/UK/EU overlap.",
+  path: "/hire-me",
+});
 
-export const metadata = {
-  title: "Hire Senior Remote AI & Python Developer (US/UK Overlap) | Hammad",
-  description: "Hire Muhammad Hammad Asif, an AI & Python backend engineer who passed Toptal's coding assessment, specializing in high-performance FastAPI backends, RAG pipelines, and LLMs. Contract-ready via Deel with guaranteed EST/GMT timezone overlap.",
-  keywords: [
-    "Hire Senior AI Engineer",
-    "Hire Python Backend Developer",
-    "Remote AI Developer US UK Overlap",
-    "Deel Remote Contractor Python",
-    "FastAPI RAG Developer"
-  ],
-  alternates: {
-    canonical: "https://www.hammadasif.dev/hire-me",
+const hireMeLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${absoluteUrl("/hire-me")}#webpage`,
+    url: absoluteUrl("/hire-me"),
+    name: "Hire an AI Engineer & Full-Stack Developer",
+    isPartOf: { "@id": WEBSITE_ID },
+    about: { "@id": PERSON_ID },
   },
-};
+  breadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Hire Me", path: "/hire-me" },
+  ]),
+];
 
 const HireMePage = () => {
   const frameworkPoints = [
@@ -121,7 +82,7 @@ const HireMePage = () => {
     <main className="hm-root">
        <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(Json_LD) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(hireMeLd) }}
       />
       {/* Background gradients */}
       <div className="hm-glow-1" />
@@ -141,7 +102,7 @@ const HireMePage = () => {
           </div>
 
           <h1 className="hm-title">
-            Premium, Core-Team AI &amp; Python Backend Engineering—<span className="hm-title-gradient">Without the Local Overhead</span>
+            Hire an AI Engineer &amp; Full-Stack Developer <span className="hm-title-gradient">without the local overhead</span>
           </h1>
 
           <p className="hm-subtitle">

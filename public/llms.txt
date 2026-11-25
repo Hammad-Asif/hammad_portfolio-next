@@ -1,0 +1,22 @@
+# Hammad Asif
+
+> Muhammad Hammad Asif is a freelance AI engineer and full-stack developer based in Pakistan, working remotely with clients in the US, UK, Europe and the UAE. About five years of experience building Python LLM, generative AI and document-AI systems end to end, plus React and FastAPI web applications. Open to long-term, full-time remote roles and contracts.
+
+## Services
+
+- [AI document & PDF data extraction](https://www.hammadasif.dev/services/document-ai): OCR, document classification and form extraction with Python, Google Document AI and Azure Form Recognizer, delivered as FastAPI services.
+- [Hire me](https://www.hammadasif.dev/hire-me): engagement model, time-zone overlap and the project intake form.
+
+## Case studies
+
+- [TenderML: AI document classification](https://www.hammadasif.dev/case-studies/tenderml-ai-document-classification): semi-supervised SVM + CRF pipeline with a DFS tree extractor for about 1,000 German construction tender PDFs; about 95% end-to-end accuracy; still in production.
+- [GCP InsightDocs](https://www.hammadasif.dev/case-studies/gcp-insightdocs): CRA tax form and contract extraction for a Canadian accountancy firm with Google Document AI.
+- [Gemini AI Trainer](https://www.hammadasif.dev/case-studies/gemini-ai-trainer): SFT datasets and RLHF evaluations through Turing to improve Google Gemini's structured data reasoning.
+- [All projects](https://www.hammadasif.dev/case-studies)
+
+## Contact
+
+- Email: hammadcto786@gmail.com
+- [Contact form](https://www.hammadasif.dev/contact)
+- [GitHub](https://github.com/Hammad-Asif)
+- [LinkedIn](https://www.linkedin.com/in/hammad-asif/)

@@ -88,7 +88,7 @@ const ExperienceTimeline = () => {
         "Reached about 95% end-to-end accuracy, measured on a manual review of about 20 tenders in formats unseen during training. The client later tested it on further unseen tenders, and it remains in production.",
         "Deployed as an API on AWS EC2 with FastAPI and a Ray cluster (master/worker) for load balancing and scaling, integrated into the client's existing system. Used Azure OCR and Azure Form Recognizer to read client information from the first pages.",
         "Client review of this PDF-extraction project on Zaytrics' Clutch profile (5.0 rating; extraction quality checked manually against the client's own samples).",
-        "GCPInsight: built and deployed a web app on a GCP VM that extracts data from Canadian immigration forms using Google Document AI.",
+        "GCPInsight: built and deployed a web app on a GCP VM that extracts data from CRA tax forms and contracts for a Canadian accountancy firm using Google Document AI.",
         "CHappie (full stack, then team lead): led a team of 4–5 developers on a multi-tenant SaaS platform for calling agents, assigning tasks and reviewing and merging code. Built role-based access control (super admin, admin, manager, team lead, calling agent) with per-company data isolation.",
         "Built an admin-activity monitoring app (MERN) that records when admins log in and out and what they did."
       ],
