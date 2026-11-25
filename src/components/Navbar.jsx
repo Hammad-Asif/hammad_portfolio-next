@@ -2,56 +2,51 @@
 // This file has zero JavaScript sent to the browser for the nav shell
 
 import MobileMenu from './MobileMenu';
-import { FiMail } from 'react-icons/fi';
+import { FiDownload } from 'react-icons/fi';
+
 const navItems = [
   { href: '/#home', label: 'Home' },
   { href: '/#expertise', label: 'Expertise' },
   { href: '/#experience', label: 'Experience' },
   { href: '/case-studies', label: 'Case Studies' },
-  // { href: '#faq', label: "FAQ's" },
   { href: '/#testimonials', label: 'Testimonials' },
-  { href: '/hire-me', label: 'Hire Me' },
   { href: '/contact', label: 'Contact' },
+  { href: '/hire-me', label: 'Hire Me', cta: true },
 ];
 
 const Navbar = () => {
   return (
-    // data-scrolled is toggled by a tiny CSS+JS trick in MobileMenu via useRef (no useState)
-    <nav className="navbar" id="main-navbar">
+    // The "scrolled" class is toggled by MobileMenu via the DOM (no re-renders)
+    <nav className="navbar" id="main-navbar" aria-label="Main navigation">
       <div className="container">
         <div className="nav-container">
-
-          {/* Logo — plain anchor, no JS needed */}
-          <a href="#home" className="nav-logo">
-            Hammad.
+          <a href="/#home" className="nav-logo" aria-label="Hammad Asif, home">
+            Hammad<span className="nav-logo-dot">.</span>
           </a>
 
-          {/* Desktop nav links — pure HTML, server rendered, zero JS */}
           <ul className="nav-menu">
             {navItems.map((item) => (
               <li key={item.href}>
-                <a href={item.href} className="nav-link">
+                <a href={item.href} className={item.cta ? 'nav-link nav-link-cta' : 'nav-link'}>
                   {item.label}
                 </a>
               </li>
             ))}
             <li>
               <a
-                href="/HammadCV_inter.pdf"
+                href="/Hammad_Asif_CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 download
                 suppressHydrationWarning={true}
-                className="border border-white/40 text-white text-sm px-4 py-1.5 rounded-md hover:bg-white/10 transition"
+                className="nav-cv"
               >
-                Download CV
+                <FiDownload size={14} aria-hidden="true" /> CV
               </a>
             </li>
           </ul>
 
-          {/* Only the interactive burger + mobile overlay is a client component */}
           <MobileMenu navItems={navItems} />
-
         </div>
       </div>
     </nav>

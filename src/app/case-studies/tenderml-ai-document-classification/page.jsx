@@ -35,7 +35,7 @@ export const metadata = {
   authors: [
     {
       name: "Muhammad Hammad Asif",
-      url: "https://hammad-portfolio.recursivedata.com",
+      url: "https://www.hammadasif.dev",
     },
   ],
 
@@ -45,14 +45,14 @@ export const metadata = {
       "TenderML: 95% Accurate AI Classification of German Construction PDFs",
     description:
       "Case study: semi-supervised SVM + CRF pipeline with DFS tree traversal that replaced manual tender review for a German construction firm. Built solo in 4+ months.",
-    url: "https://hammad-portfolio.recursivedata.com/case-studies/tenderml-ai-document-classification",
+    url: "https://www.hammadasif.dev/case-studies/tenderml-ai-document-classification",
     type: "article",
     siteName: "Muhammad Hammad Asif — Portfolio",
     locale: "en_US",
     images: [
       {
         // Replace with a real 1200x630 OG image once you have one.
-        url: "https://hammad-portfolio.recursivedata.com/og/tenderml-og.png",
+        url: "https://www.hammadasif.dev/og/tenderml-og.png",
         width: 1200,
         height: 630,
         alt: "TenderML — AI document classification system architecture by Muhammad Hammad Asif",
@@ -80,14 +80,14 @@ export const metadata = {
     description:
       "Semi-supervised SVM + CRF + DFS tree traversal. Solo project — ML training through FastAPI on AWS EC2. Case study by Muhammad Hammad Asif.",
     images: [
-      "https://hammad-portfolio.recursivedata.com/og/tenderml-og.png",
+      "https://www.hammadasif.dev/og/tenderml-og.png",
     ],
     creator: "@HammadAsif", // verify this is your real handle
   },
 
   alternates: {
     canonical:
-      "https://hammad-portfolio.recursivedata.com/case-studies/tenderml-ai-document-classification",
+      "https://www.hammadasif.dev/case-studies/tenderml-ai-document-classification",
   },
 };
 
@@ -108,7 +108,7 @@ const jsonLd = {
   author: {
     "@type": "Person",
     name: "Muhammad Hammad Asif",
-    url: "https://hammad-portfolio.recursivedata.com",
+    url: "https://www.hammadasif.dev",
     sameAs: [
       "https://www.linkedin.com/in/hammad-asif/",
       "https://github.com/Hammad-Asif",
@@ -128,7 +128,7 @@ const jsonLd = {
   mainEntityOfPage: {
     "@type": "WebPage",
     "@id":
-      "https://hammad-portfolio.recursivedata.com/case-studies/tenderml-ai-document-classification",
+      "https://www.hammadasif.dev/case-studies/tenderml-ai-document-classification",
   },
 };
 

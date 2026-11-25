@@ -3,14 +3,33 @@
 import ClientProviders from "@/components/ClientProviders";
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { Space_Grotesk } from 'next/font/google'
+import localFont from 'next/font/local'
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
+// Fonts are self-hosted from @fontsource-variable packages, so builds never
+// depend on reaching Google Fonts (which caused "Failed to download" warnings).
+const spaceGrotesk = localFont({
+  src: '../../node_modules/@fontsource-variable/space-grotesk/files/space-grotesk-latin-wght-normal.woff2',
+  weight: '300 700',
   display: 'swap',
-  preload: true,
-  weight: ['300', '400', '500', '600', '700'], // only weights you actually use
   variable: '--font-space-grotesk',
+  fallback: ['ui-sans-serif', 'system-ui', 'sans-serif'],
+})
+
+const inter = localFont({
+  src: '../../node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2',
+  weight: '100 900',
+  display: 'swap',
+  variable: '--font-inter',
+  fallback: ['ui-sans-serif', 'system-ui', 'sans-serif'],
+})
+
+const jetbrainsMono = localFont({
+  src: '../../node_modules/@fontsource-variable/jetbrains-mono/files/jetbrains-mono-latin-wght-normal.woff2',
+  weight: '100 800',
+  display: 'swap',
+  preload: false,
+  variable: '--font-mono',
+  fallback: ['ui-monospace', 'Consolas', 'monospace'],
 })
 import './globals.css'
 import Navbar from "@/components/Navbar";
@@ -18,7 +37,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  metadataBase: new URL("https://hammad-portfolio.recursivedata.com"),
+  metadataBase: new URL("https://www.hammadasif.dev"),
 
   title: {
     default:
@@ -34,7 +53,7 @@ export const metadata = {
   authors: [
     {
       name: "Muhammad Hammad Asif",
-      url: "https://hammad-portfolio.recursivedata.com",
+      url: "https://www.hammadasif.dev",
     },
   ],
 
@@ -106,7 +125,7 @@ export const metadata = {
 
     locale: "en_US",
 
-    url: "https://hammad-portfolio.recursivedata.com",
+    url: "https://www.hammadasif.dev",
 
     siteName: "Muhammad Hammad Asif",
 
@@ -151,7 +170,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
         <script
           type="application/ld+json"
@@ -160,10 +179,10 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Muhammad Hammad Asif",
-              url: "https://hammad-portfolio.recursivedata.com",
-              image: "https://hammad-portfolio.recursivedata.com/profile_pic.jpg",
+              url: "https://www.hammadasif.dev",
+              image: "https://www.hammadasif.dev/profile_pic.jpg",
               jobTitle: "AI & Python Backend Engineer",
-              description: "Toptal-vetted AI and backend engineer specializing in LLM integration, ML pipelines, and FastAPI systems.",
+              description: "AI and backend engineer specializing in LLM integration, ML pipelines, and FastAPI systems. Passed Toptal's coding assessment and listed in its talent marketplace.",
               email: "Hammadcto786@gmail.com",
               telephone: "+923087724490",
               address: { "@type": "PostalAddress", addressCountry: "PK" },
@@ -174,8 +193,7 @@ export default function RootLayout({ children }) {
               knowsAbout: [
                 "Python", "FastAPI", "LLM Integration", "Machine Learning",
                 "NLP", "React", "Node.js", "AWS", "Docker", "OpenAI API"
-              ],
-              worksFor: { "@type": "Organization", name: "Toptal" }
+              ]
             })
           }}
         />

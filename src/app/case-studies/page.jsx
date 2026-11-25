@@ -5,7 +5,7 @@ export const metadata = {
   title: "Case Studies & Technical Projects | Muhammad Hammad Asif",
   description: "Explore in-depth technical case studies and side projects covering AI document classification, NLP pipelines, data mining, API development, and distributed systems by Senior AI Backend Engineer Muhammad Hammad Asif.",
   alternates: {
-    canonical: "https://hammad-portfolio.recursivedata.com/case-studies",
+    canonical: "https://www.hammadasif.dev/case-studies",
   },
 };
 

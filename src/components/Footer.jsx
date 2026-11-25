@@ -1,8 +1,8 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FiMail, FiArrowRight } from 'react-icons/fi';
 
 const Footer = () => {
-
   const quickLinks = [
     { to: '/#expertise', label: 'Expertise' },
     { to: '/#experience', label: 'Experience' },
@@ -13,48 +13,61 @@ const Footer = () => {
   ];
 
   const services = [
-    'High-Performance APIs',
-    'LLM & RAG Pipelines',
-    'Data Automation & Mining',
-    'Distributed Computing',
-    'DevOps & Containerization'
+    'LLM & Generative AI Apps',
+    'Document AI & OCR',
+    'FastAPI Backends',
+    'AI Automation & Integration',
+    'Computer Vision'
   ];
 
   return (
     <footer className="footer">
       <div className="container">
+        <div className="footer-cta">
+          <div>
+            <h2 className="footer-cta-title">Have a role or project in mind?</h2>
+            <p className="footer-cta-text">Open to long-term, full-time remote roles with US, UK and EU overlap.</p>
+          </div>
+          <a href="/hire-me" className="btn btn-primary">
+            Start a conversation <FiArrowRight aria-hidden="true" />
+          </a>
+        </div>
+
         <div className="footer-grid">
           <div className="footer-brand">
-            <h3>Hammad.</h3>
+            <a href="/#home" className="nav-logo">Hammad<span className="nav-logo-dot">.</span></a>
             <p>
-              I build scalable Python backend architectures, high-performance APIs, and production-grade AI systems engineered for global scale.
+              AI engineer building Python LLM, generative AI and document-AI systems end to end.
             </p>
             <div className="footer-social">
-              <a href="https://github.com/Hammad-Asif" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <a href="https://github.com/Hammad-Asif" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="icon-btn">
                 <FaGithub />
               </a>
-              <a href="https://www.linkedin.com/in/hammad-asif/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/hammad-asif/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="icon-btn">
                 <FaLinkedin />
+              </a>
+              <a href="mailto:hammadcto786@gmail.com" aria-label="Email" className="icon-btn">
+                <FiMail />
               </a>
             </div>
           </div>
 
           <div className="footer-links">
-            <h4>Quick Links</h4>
+            <h3>Navigate</h3>
             <ul>
-              {quickLinks.map((link, index) => (
-                <li key={index}>
-                  <a href={`${link.to}`}>{link.label}</a>
+              {quickLinks.map((link) => (
+                <li key={link.to}>
+                  <a href={link.to}>{link.label}</a>
                 </li>
               ))}
             </ul>
           </div>
 
           <div className="footer-links">
-            <h4>Expertise</h4>
+            <h3>Expertise</h3>
             <ul>
-              {services.map((service, index) => (
-                <li key={index}>
+              {services.map((service) => (
+                <li key={service}>
                   <a href="/#expertise">{service}</a>
                 </li>
               ))}
@@ -62,17 +75,18 @@ const Footer = () => {
           </div>
 
           <div className="footer-links">
-            <h4>Contact</h4>
+            <h3>Contact</h3>
             <ul>
-              <li><a href="mailto:hammadcto786@gmail.com">Hammadcto786@gmail.com</a></li>
+              <li><a href="mailto:hammadcto786@gmail.com">hammadcto786@gmail.com</a></li>
               <li><a href="tel:+923087724490">+92 308 7724490</a></li>
-              <li>Pakistan (Available Worldwide - Remote)</li>
+              <li><span>Pakistan · Remote worldwide</span></li>
             </ul>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2026 Hammad. All rights reserved. </p>
+          <p>&copy; 2026 Muhammad Hammad Asif. All rights reserved.</p>
+          <p className="footer-bottom-mono">Built with Next.js</p>
         </div>
       </div>
     </footer>

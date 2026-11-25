@@ -21,8 +21,8 @@ const Json_LD= {
     "name": "Muhammad Hammad Asif",
     "alternateName": "Hammad",
     "jobTitle": "Senior AI & Python Backend Engineer",
-    "description": "Top 3% Vetted Toptal Engineer specializing in high-performance FastAPI backends, production-grade RAG pipelines, and automated web scraping infrastructures.",
-    "url": "https://yourdomain.com/hire-me",
+    "description": "AI & Python backend engineer (passed Toptal's coding assessment) specializing in high-performance FastAPI backends, production-grade RAG pipelines, and automated web scraping infrastructures.",
+    "url": "https://www.hammadasif.dev/hire-me",
     "knowsAbout": [
       "Python",
       "FastAPI",
@@ -63,17 +63,16 @@ const Json_LD= {
 
 export const metadata = {
   title: "Hire Senior Remote AI & Python Developer (US/UK Overlap) | Hammad",
-  description: "Hire Muhammad Hammad Asif, a top 3% vetted Toptal Engineer specializing in high-performance FastAPI backends, RAG pipelines, and LLMs. Contract-ready via Deel with guaranteed EST/GMT timezone overlap.",
+  description: "Hire Muhammad Hammad Asif, an AI & Python backend engineer who passed Toptal's coding assessment, specializing in high-performance FastAPI backends, RAG pipelines, and LLMs. Contract-ready via Deel with guaranteed EST/GMT timezone overlap.",
   keywords: [
     "Hire Senior AI Engineer",
     "Hire Python Backend Developer",
     "Remote AI Developer US UK Overlap",
-    "Toptal AI Engineer",
     "Deel Remote Contractor Python",
     "FastAPI RAG Developer"
   ],
   alternates: {
-    canonical: "https://hammad-portfolio.recursivedata.com/hire-me",
+    canonical: "https://www.hammadasif.dev/hire-me",
   },
 };
 
@@ -146,7 +145,7 @@ const HireMePage = () => {
           </h1>
 
           <p className="hm-subtitle">
-            Top 3% Vetted Toptal Engineer available for full-time remote roles or long-term contract engagements. 
+            AI &amp; Python backend engineer (passed Toptal's coding assessment, listed in its talent marketplace) available for full-time remote roles or long-term contract engagements. 
             Direct, senior-level ownership of your AI infrastructure, backend APIs, and pipeline deployments.
           </p>
 
@@ -155,7 +154,7 @@ const HireMePage = () => {
               Book a Technical Discovery Call <ArrowRight size={18} />
             </a>
             <a 
-              href="/HammadCV_inter.pdf" 
+              href="/Hammad_Asif_CV.pdf" 
               target="_blank"
               rel="noopener noreferrer"
               download
