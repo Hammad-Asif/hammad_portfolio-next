@@ -1,52 +1,46 @@
 // src/app/case-studies/gcp-insightdocs/page.jsx
 import Link from "next/link";
+import { pageMetadata, breadcrumbJsonLd, absoluteUrl, PERSON_ID, WEBSITE_ID } from "@/lib/seo";
 import { Cloud, Server, Layout, FileSpreadsheet } from "lucide-react";
 import { LuBrainCircuit } from "react-icons/lu";
 import { TbBinaryTree } from "react-icons/tb";
 import { GrDeploy } from "react-icons/gr";
 
-export const metadata = {
-  title: "GCP InsightDocs — Document Extraction Platform Case Study | Muhammad Hammad Asif",
-  description: "Case study: Full-stack document extraction platform built with Flask, React, and Google Cloud Document AI for parsing Canadian CRA tax forms and legal contracts.",
-  keywords: [
-    "Google Cloud Document AI case study",
-    "GCP OCR Python API",
-    "Flask Document Extraction Backend",
-    "React PDF side by side viewer",
-    "CRA forms automated extraction",
-    "sole developer SaaS contract"
-  ],
-  authors: [
-    {
-      name: "Muhammad Hammad Asif",
-      url: "https://www.hammadasif.dev",
-    },
-  ],
-  openGraph: {
-    title: "GCP InsightDocs — Document Extraction Platform Case Study",
-    description: "Automated CRA tax forms and legal contract parsing for a Canadian accountancy firm using Google Cloud Document AI, Flask, and React.",
-    url: "https://www.hammadasif.dev/case-studies/gcp-insightdocs",
-    type: "article",
-    siteName: "Muhammad Hammad Asif — Portfolio",
-    locale: "en_US",
+export const metadata = pageMetadata({
+  title: "GCP InsightDocs: Google Document AI Extraction",
+  description:
+    "How I built a Google Document AI and OCR platform that extracts data from CRA tax forms and contracts for a Canadian accountancy firm, with Flask and React.",
+  path: "/case-studies/gcp-insightdocs",
+  type: "article",
+  article: {
+    publishedTime: "2024-03-30T00:00:00.000Z",
+    modifiedTime: "2026-11-26T00:00:00.000Z",
+    tags: ['Google Document AI', 'OCR', 'Form extraction', 'Flask', 'React'],
   },
-  alternates: {
-    canonical: "https://www.hammadasif.dev/case-studies/gcp-insightdocs",
-  },
-};
+});
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "TechArticle",
-  headline: "GCP InsightDocs — Building an Enterprise Document Extraction Platform",
-  description: "A full-stack case study illustrating how Google Cloud Document AI Form Parser and OCR were orchestrated with Flask and React to extract key-value data from tax forms and contracts.",
-  datePublished: "2024-03-30",
-  author: {
-    "@type": "Person",
-    name: "Muhammad Hammad Asif",
-    url: "https://www.hammadasif.dev",
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "@id": `${absoluteUrl("/case-studies/gcp-insightdocs")}#article`,
+    headline: "GCP InsightDocs: CRA Tax Form Extraction with Google Document AI",
+    description: "How I built a Google Document AI and OCR platform that extracts data from CRA tax forms and contracts for a Canadian accountancy firm, with Flask and React.",
+    datePublished: "2024-03-30",
+    dateModified: "2026-11-26",
+    author: { "@id": PERSON_ID },
+    publisher: { "@id": PERSON_ID },
+    isPartOf: { "@id": WEBSITE_ID },
+    image: absoluteUrl("/case-studies/gcp-insightdocs/opengraph-image"),
+    mainEntityOfPage: absoluteUrl("/case-studies/gcp-insightdocs"),
+    keywords: "Google Document AI, OCR, Form extraction, Flask, React",
   },
-};
+  breadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Case Studies", path: "/case-studies" },
+    { name: "GCP InsightDocs", path: "/case-studies/gcp-insightdocs" },
+  ]),
+];
 
 function StatCard({ value, label }) {
   return (
@@ -278,6 +272,11 @@ const GCPInsightDocsCaseStudy = () => {
         <aside className="cs-related" aria-labelledby="cs-related-heading">
           <h2 id="cs-related-heading">Related case studies</h2>
           <div className="cs-related-grid">
+            <Link href="/services/document-ai" className="cs-related-card">
+              <span className="cs-related-tag">Service</span>
+              <h3>AI document &amp; PDF data extraction</h3>
+              <p>Need a pipeline like this for your own documents? See how I scope, measure and deliver document-AI projects.</p>
+            </Link>
             <Link href="/case-studies/tenderml-ai-document-classification" className="cs-related-card">
               <span className="cs-related-tag">Machine Learning</span>
               <h3>TenderML — PDF Text Classification</h3>

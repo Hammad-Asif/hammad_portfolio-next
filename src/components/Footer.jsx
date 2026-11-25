@@ -13,11 +13,11 @@ const Footer = () => {
   ];
 
   const services = [
-    'LLM & Generative AI Apps',
-    'Document AI & OCR',
-    'FastAPI Backends',
-    'AI Automation & Integration',
-    'Computer Vision'
+    { label: 'LLM & Generative AI', href: '/#expertise' },
+    { label: 'Document AI & PDF Extraction', href: '/services/document-ai' },
+    { label: 'FastAPI Backends', href: '/#expertise' },
+    { label: 'Full-Stack Development', href: '/#expertise' },
+    { label: 'AI Automation & Scraping', href: '/#expertise' },
   ];
 
   return (
@@ -64,11 +64,11 @@ const Footer = () => {
           </div>
 
           <div className="footer-links">
-            <h3>Expertise</h3>
+            <h3>Services</h3>
             <ul>
               {services.map((service) => (
-                <li key={service}>
-                  <a href="/#expertise">{service}</a>
+                <li key={service.label}>
+                  <a href={service.href}>{service.label}</a>
                 </li>
               ))}
             </ul>

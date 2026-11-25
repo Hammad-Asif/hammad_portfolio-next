@@ -17,9 +17,9 @@ const FeaturedProjects = () => {
       id: 'tenderml',
       title: "TenderML — AI Document Classification System",
       company: "Zaytrics (Pvt.) Limited",
-      description: "Built a semi-supervised ML pipeline (SVM + CRF + DFS tree traversal) that classifies text and extracts data from German tender PDFs with 95% production accuracy.",
+      description: "Built a semi-supervised ML pipeline (SVM + CRF + DFS tree traversal) that classifies and extracts data from about 1,000 German tender PDFs, at about 95% accuracy on unseen layouts.",
       icon: <FileText size={22} />,
-      technologies: ["Python", "FastAPI", "Ray Cluster", "AWS EC2", "Machine Learning", "SVM/CRF"],
+      technologies: ["Python", "FastAPI", "Ray Cluster", "AWS EC2", "SVM/CRF", "Azure OCR"],
       caseLink: "/case-studies/tenderml-ai-document-classification"
     },
     {

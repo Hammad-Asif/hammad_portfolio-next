@@ -1,52 +1,46 @@
 // src/app/case-studies/gemini-ai-trainer/page.jsx
 import Link from "next/link";
+import { pageMetadata, breadcrumbJsonLd, absoluteUrl, PERSON_ID, WEBSITE_ID } from "@/lib/seo";
 import { Brain, Database, CheckCircle, GraduationCap } from "lucide-react";
 import { LuBrainCircuit } from "react-icons/lu";
 import { TbBinaryTree } from "react-icons/tb";
 import { GrDeploy } from "react-icons/gr";
 
-export const metadata = {
-  title: "Gemini AI Trainer — Structured Data Reasoning Case Study | Muhammad Hammad Asif",
-  description: "Case study: 1.2 years engineering SFT datasets and performing RLHF human evaluations to improve Google Gemini's reasoning capabilities over structured tabular data.",
-  keywords: [
-    "Gemini AI training case study",
-    "SFT dataset engineering",
-    "RLHF human evaluation LLM",
-    "tabular reasoning language models",
-    "Turing Google contractor portfolio",
-    "reinforcement learning human feedback"
-  ],
-  authors: [
-    {
-      name: "Muhammad Hammad Asif",
-      url: "https://www.hammadasif.dev",
-    },
-  ],
-  openGraph: {
-    title: "Gemini AI Trainer — Structured Data Reasoning Case Study",
-    description: "Engineering SFT datasets and performing RLHF evaluations to train Google Gemini models to handle messy, real-world Excel and CSV hierarchies.",
-    url: "https://www.hammadasif.dev/case-studies/gemini-ai-trainer",
-    type: "article",
-    siteName: "Muhammad Hammad Asif — Portfolio",
-    locale: "en_US",
+export const metadata = pageMetadata({
+  title: "Gemini AI Trainer: SFT & RLHF Case Study",
+  description:
+    "1.2 years engineering SFT datasets and RLHF evaluations through Turing to improve Google Gemini's reasoning over structured, tabular data.",
+  path: "/case-studies/gemini-ai-trainer",
+  type: "article",
+  article: {
+    publishedTime: "2025-05-31T00:00:00.000Z",
+    modifiedTime: "2026-11-26T00:00:00.000Z",
+    tags: ['Google Gemini', 'SFT', 'RLHF', 'LLM training', 'Prompt engineering'],
   },
-  alternates: {
-    canonical: "https://www.hammadasif.dev/case-studies/gemini-ai-trainer",
-  },
-};
+});
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "TechArticle",
-  headline: "Gemini AI Trainer — Improving Structured Data Reasoning via SFT & RLHF",
-  description: "A deep dive into SFT dataset engineering and RLHF human evaluations for training Google Gemini models to handle complex and ambiguous structured data.",
-  datePublished: "2025-05-31",
-  author: {
-    "@type": "Person",
-    name: "Muhammad Hammad Asif",
-    url: "https://www.hammadasif.dev",
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "@id": `${absoluteUrl("/case-studies/gemini-ai-trainer")}#article`,
+    headline: "Gemini AI Trainer: Improving Google Gemini's Structured Data Reasoning with SFT and RLHF",
+    description: "1.2 years engineering SFT datasets and RLHF evaluations through Turing to improve Google Gemini's reasoning over structured, tabular data.",
+    datePublished: "2025-05-31",
+    dateModified: "2026-11-26",
+    author: { "@id": PERSON_ID },
+    publisher: { "@id": PERSON_ID },
+    isPartOf: { "@id": WEBSITE_ID },
+    image: absoluteUrl("/case-studies/gemini-ai-trainer/opengraph-image"),
+    mainEntityOfPage: absoluteUrl("/case-studies/gemini-ai-trainer"),
+    keywords: "Google Gemini, SFT, RLHF, LLM training, Prompt engineering",
   },
-};
+  breadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Case Studies", path: "/case-studies" },
+    { name: "Gemini AI Trainer", path: "/case-studies/gemini-ai-trainer" },
+  ]),
+];
 
 function StatCard({ value, label }) {
   return (

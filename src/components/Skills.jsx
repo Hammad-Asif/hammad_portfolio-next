@@ -7,14 +7,15 @@ const Skills = () => {
       icon: <Brain size={22} />,
       title: "Generative AI & LLMs",
       skills: [
-        "LLM Fine-Tuning & Alignment",
-        "RAG Pipelines & Optimization",
-        "LangChain & LangGraph",
-        "Vector DBs (Qdrant, Pinecone)",
+        "OpenAI, Gemini & OpenRouter APIs",
+        "Multi-Provider LLM Fallback",
         "Prompt Engineering & Evaluation",
-        "RLHF & SFT Datasets",
-        "OpenAI & Gemini API Integration",
-        "Natural Language Processing"
+        "SFT Data & RLHF-Style Evaluation",
+        "LangChain",
+        "NLP & Text Classification",
+        "OCR & Google Document AI",
+        "Computer Vision (SAM)",
+        "RAG & Agentic Frameworks (project-level)"
       ]
     },
     {

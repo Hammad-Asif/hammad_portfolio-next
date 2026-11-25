@@ -2,135 +2,46 @@
 // Import the dedicated CSS — scoped class names so nothing leaks to rest of site
 
 import Link from "next/link";
+import { pageMetadata, breadcrumbJsonLd, absoluteUrl, PERSON_ID, WEBSITE_ID } from "@/lib/seo";
 import { LuBrainCircuit } from "react-icons/lu";
 import { TbBinaryTree } from "react-icons/tb";
 import { GrDeploy } from "react-icons/gr";
 
-// ── SEO + Social Metadata ──────────────────────────────────────────────────
-// NOTE on keywords below: these are reasoned long-tail candidates based on
-// page content, NOT pulled from a keyword-difficulty tool. Verify actual
-// search volume / competition in Ahrefs, Semrush, or Google Keyword Planner
-// before treating these as validated targets.
-export const metadata = {
-  title:
-    "TenderML: AI Document Classification for German Construction Tenders | Muhammad Hammad Asif",
+export const metadata = pageMetadata({
+  title: "TenderML: AI Document Classification Case Study",
   description:
-    "Case study: a semi-supervised SVM + CRF pipeline that classifies German construction tender PDFs at 95% production accuracy. Sole developer, FastAPI + AWS EC2 deployment.",
-  keywords: [
-    // Primary
-    "AI document classification case study",
-    "semi-supervised learning NLP pipeline",
-    "FastAPI machine learning deployment",
-    // Long-tail (lower competition — verify volume before relying on these)
-    "construction tender PDF automation Python",
-    "SVM CRF text classification pipeline",
-    "DFS tree traversal document parsing",
-    "German construction document AI extraction",
-    "freelance AI engineer case study FastAPI",
-    "Ray cluster AWS EC2 ML deployment example",
-    // Branded
-    "Muhammad Hammad Asif AI engineer portfolio",
-    "Zaytrics AI document classification project",
-  ],
-  authors: [
-    {
-      name: "Muhammad Hammad Asif",
-      url: "https://www.hammadasif.dev",
-    },
-  ],
+    "How a semi-supervised SVM + CRF pipeline with a DFS tree extractor classified about 1,000 German tender PDFs at about 95% accuracy, deployed with FastAPI on AWS.",
+  path: "/case-studies/tenderml-ai-document-classification",
+  type: "article",
+  article: {
+    publishedTime: "2023-06-01T00:00:00.000Z",
+    modifiedTime: "2026-11-26T00:00:00.000Z",
+    tags: ['Document classification', 'PDF data extraction', 'Machine learning', 'FastAPI', 'AWS'],
+  },
+});
 
-  // ── Open Graph (Facebook, LinkedIn, WhatsApp, Slack) ──────────────────
-  openGraph: {
-    title:
-      "TenderML: 95% Accurate AI Classification of German Construction PDFs",
-    description:
-      "Case study: semi-supervised SVM + CRF pipeline with DFS tree traversal that replaced manual tender review for a German construction firm. Built solo in 4+ months.",
-    url: "https://www.hammadasif.dev/case-studies/tenderml-ai-document-classification",
-    type: "article",
-    siteName: "Muhammad Hammad Asif — Portfolio",
-    locale: "en_US",
-    images: [
-      {
-        // Replace with a real 1200x630 OG image once you have one.
-        url: "https://www.hammadasif.dev/og/tenderml-og.png",
-        width: 1200,
-        height: 630,
-        alt: "TenderML — AI document classification system architecture by Muhammad Hammad Asif",
-      },
-    ],
-    article: {
-      publishedTime: "2023-06-01T00:00:00.000Z",
-      authors: ["https://www.linkedin.com/in/hammad-asif/"],
-      tags: [
-        "Machine Learning",
-        "NLP",
-        "Python",
-        "FastAPI",
-        "AWS",
-        "Document Classification",
-      ],
-    },
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "@id": `${absoluteUrl("/case-studies/tenderml-ai-document-classification")}#article`,
+    headline: "TenderML: AI Document Classification for German Construction Tender PDFs",
+    description: "How a semi-supervised SVM + CRF pipeline with a DFS tree extractor classified about 1,000 German tender PDFs at about 95% accuracy, deployed with FastAPI on AWS.",
+    datePublished: "2023-06-01",
+    dateModified: "2026-11-26",
+    author: { "@id": PERSON_ID },
+    publisher: { "@id": PERSON_ID },
+    isPartOf: { "@id": WEBSITE_ID },
+    image: absoluteUrl("/case-studies/tenderml-ai-document-classification/opengraph-image"),
+    mainEntityOfPage: absoluteUrl("/case-studies/tenderml-ai-document-classification"),
+    keywords: "Document classification, PDF data extraction, Machine learning, FastAPI, AWS",
   },
-
-  // ── Twitter / X card ──────────────────────────────────────────────────
-  twitter: {
-    card: "summary_large_image",
-    title:
-      "TenderML: AI Classification of German Construction Tender PDFs — 95% Accuracy",
-    description:
-      "Semi-supervised SVM + CRF + DFS tree traversal. Solo project — ML training through FastAPI on AWS EC2. Case study by Muhammad Hammad Asif.",
-    images: [
-      "https://www.hammadasif.dev/og/tenderml-og.png",
-    ],
-    creator: "@HammadAsif", // verify this is your real handle
-  },
-
-  alternates: {
-    canonical:
-      "https://www.hammadasif.dev/case-studies/tenderml-ai-document-classification",
-  },
-};
-
-// ── JSON-LD structured data (Google + AI/LLM crawlers) ─────────────────────
-// Using TechArticle rather than plain Article — more precise schema.org type
-// for a technical engineering write-up, which may help LLM-based crawlers
-// and Google's understanding of page intent. Verify this renders as expected
-// in Google's Rich Results Test before relying on it.
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "TechArticle",
-  headline:
-    "TenderML: Building a 95%-Accurate AI Classification System for German Construction Tender PDFs",
-  description:
-    "A case study on how a semi-supervised SVM and CRF pipeline with DFS-based tree traversal was used to automate information extraction from structurally inconsistent German construction tender PDFs.",
-  datePublished: "2023-06-01",
-  dateModified: "2026-06-30",
-  author: {
-    "@type": "Person",
-    name: "Muhammad Hammad Asif",
-    url: "https://www.hammadasif.dev",
-    sameAs: [
-      "https://www.linkedin.com/in/hammad-asif/",
-      "https://github.com/Hammad-Asif",
-    ],
-  },
-  publisher: {
-    "@type": "Person",
-    name: "Muhammad Hammad Asif",
-  },
-  keywords:
-    "AI document classification, SVM, CRF, FastAPI, semi-supervised learning, NLP, Python, AWS EC2, Ray",
-  about: [
-    { "@type": "Thing", name: "Machine Learning" },
-    { "@type": "Thing", name: "Natural Language Processing" },
-    { "@type": "Thing", name: "Document Classification" },
-  ],
-  mainEntityOfPage: {
-    "@type": "WebPage",
-    "@id":
-      "https://www.hammadasif.dev/case-studies/tenderml-ai-document-classification",
-  },
-};
+  breadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Case Studies", path: "/case-studies" },
+    { name: "TenderML", path: "/case-studies/tenderml-ai-document-classification" },
+  ]),
+];
 
 // ── Sub-components ────────────────────────────────────────────────────────
 
@@ -521,7 +432,7 @@ const TenderMLCaseStudy = () => {
                 >
                   View on GitHub →
                 </a>
-                <Link href="/#projects" className="cs-btn-secondary">
+                <Link href="/case-studies" className="cs-btn-secondary">
                   ← Back to Case Studies
                 </Link>
               </nav>
@@ -546,6 +457,11 @@ const TenderMLCaseStudy = () => {
         <aside className="cs-related" aria-labelledby="cs-related-heading">
           <h2 id="cs-related-heading">Related case studies</h2>
           <div className="cs-related-grid">
+            <Link href="/services/document-ai" className="cs-related-card">
+              <span className="cs-related-tag">Service</span>
+              <h3>AI document &amp; PDF data extraction</h3>
+              <p>Need a pipeline like this for your own documents? See how I scope, measure and deliver document-AI projects.</p>
+            </Link>
             <Link href="/case-studies/gcp-insightdocs" className="cs-related-card">
               <span className="cs-related-tag">Document AI</span>
               <h3>GCP InsightDocs — Document Extraction Platform</h3>
