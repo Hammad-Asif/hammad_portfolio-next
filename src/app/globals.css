@@ -1768,12 +1768,20 @@ ul.cs-prose li::marker { color: var(--c-accent-hi); }
 
 .cs-figure { margin-top: 16px; }
 
+/* Diagrams are drawn for a light background (dark text, transparent fill),
+   so give them a light panel instead of letting them sit on the dark page. */
 .cs-diagram-img {
   width: 100%;
   height: auto;
   margin-top: 16px;
+  padding: 20px;
+  background: #f8fafc;
   border-radius: var(--r-lg);
   border: 1px solid var(--c-border);
+}
+
+@media (max-width: 480px) {
+  .cs-diagram-img { padding: 10px; }
 }
 
 .cs-diagram-caption {
