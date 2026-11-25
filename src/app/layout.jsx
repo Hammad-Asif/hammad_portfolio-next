@@ -166,6 +166,13 @@ export const metadata = {
     apple: "/apple-touch-icon.png",
   },
 
+  // Site-ownership verification for search engine webmaster tools
+  verification: {
+    other: {
+      "msvalidate.01": "35298AD90EAFFE3F700486F253F54A02", // Bing Webmaster Tools
+    },
+  },
+
 };
 
 export default function RootLayout({ children }) {
