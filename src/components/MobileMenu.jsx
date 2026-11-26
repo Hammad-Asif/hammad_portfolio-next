@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FiMail, FiDownload } from 'react-icons/fi';
+import Logo from './Logo';
 
 const MobileMenu = ({ navItems }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -68,8 +69,8 @@ const MobileMenu = ({ navItems }) => {
       {isMobileMenuOpen && (
         <div className="mobile-menu-overlay" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Site menu">
           <div className="mobile-menu-header">
-            <a href="/#home" className="nav-logo" onClick={(e) => handleNavClick(e, '/#home')}>
-              Hammad<span className="nav-logo-dot">.</span>
+            <a href="/#home" className="nav-logo" aria-label="Hammad Asif, home" onClick={(e) => handleNavClick(e, '/#home')}>
+              <Logo />
             </a>
             <button
               className="mobile-menu-btn mobile-menu-close"

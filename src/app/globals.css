@@ -623,6 +623,13 @@ body.mobile-menu-open { overflow: hidden; }
 
 .nav-logo-dot { color: var(--c-accent); }
 
+.nav-logo { display: inline-flex; align-items: center; }
+.nav-logo-img { display: block; width: auto; height: 34px; }
+
+@media (max-width: 480px) {
+  .nav-logo-img { height: 30px; }
+}
+
 .nav-menu {
   display: flex;
   align-items: center;
