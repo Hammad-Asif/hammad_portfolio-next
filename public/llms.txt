@@ -9,6 +9,7 @@
 
 ## Case studies
 
+- [LightDesign: AI roof measurement from one photo](https://www.hammadasif.dev/case-studies/lightdesign-ai-roof-measurement): SAM 3 segmentation plus a vision LLM for typed roof lines, single-photo camera calibration for real lengths in feet, and a React canvas editor with a FastAPI/PostgreSQL backend; 0.88 roof-line F1 on held-out photos; sole developer for KeystoneSTS (Aug–Oct 2026).
 - [TenderML: AI document classification](https://www.hammadasif.dev/case-studies/tenderml-ai-document-classification): semi-supervised SVM + CRF pipeline with a DFS tree extractor for about 1,000 German construction tender PDFs; about 95% end-to-end accuracy; still in production.
 - [GCP InsightDocs](https://www.hammadasif.dev/case-studies/gcp-insightdocs): CRA tax form and contract extraction for a Canadian accountancy firm with Google Document AI.
 - [Gemini AI Trainer](https://www.hammadasif.dev/case-studies/gemini-ai-trainer): SFT datasets and RLHF evaluations through Turing to improve Google Gemini's structured data reasoning.

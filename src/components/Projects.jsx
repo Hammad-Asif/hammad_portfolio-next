@@ -1,10 +1,31 @@
 import React from 'react';
 import Link from "next/link";
-import { FileText, Cloud, Phone, Monitor, Shield, Brain, ChevronRight } from 'lucide-react';
+import { FileText, Cloud, Phone, Monitor, Shield, Brain, ScanEye, ChevronRight } from 'lucide-react';
 import { FiGithub } from 'react-icons/fi';
 
 const Projects = () => {
   const projects = [
+    {
+      id: 'lightdesign',
+      title: "LightDesign - AI Roof Measurement & Lighting Design Platform",
+      company: "KeystoneSTS",
+      caseLink: "/case-studies/lightdesign-ai-roof-measurement",
+      githubUrl: "https://github.com/Hammad-Asif/lightDesign-AI-App",
+      shortDescription: "Sole developer of a platform that turns one phone photo of a house into typed roof lines, real lengths in feet and a measured, editable holiday-lighting design drawn from the client's own product catalogue.",
+      fullDescription: "Combined SAM 3 instance segmentation (fal.ai) with a vision LLM (OpenRouter, strict JSON schema) that draws typed roof lines on a crop of the target house, refined by conservative classical computer vision and backed by an eight-stage geometric fallback so detection never fails. Implemented single-photo metrology from first principles: focal length from vanishing points, facade planes, wall-distance propagation from one known length, and independent consistency checks. Built a natural-language instruction reader (LLM plus deterministic rules) that can only name real catalogue products, a React + TypeScript canvas editor with 10+ tools, and a Dockerised nginx + FastAPI + PostgreSQL stack.",
+      icon: <ScanEye size={32} />,
+      technologies: ["Python", "FastAPI", "SAM 3", "Vision LLM", "OpenCV", "NumPy", "React", "TypeScript", "PostgreSQL", "Docker"],
+      achievements: [
+        "Roof-line F1 of 0.88 on held-out photos, measured with a purpose-built benchmark app",
+        "Real lengths from one photo: focal length within 3% and measured wall within 1% on synthetic ground truth",
+        "98% median overlap between the auto-picked house and a human's choice",
+        "Graceful fallback so detection never hard-fails when the LLM is unavailable",
+        "Content-addressed caching keeps hosted-AI spend predictable",
+        "About 37k lines of Python and TypeScript, 74 unit tests, shipped in 4 milestones"
+      ],
+      category: "AI/Machine Learning",
+      type: "Work Project"
+    },
     {
       id: 'turing-llm',
       title: "Gemini AI Trainer — Google x Turing Project",

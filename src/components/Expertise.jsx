@@ -34,7 +34,9 @@ const services = [
   {
     icon: <ScanEye size={20} />,
     title: 'Computer Vision',
-    description: 'SAM-based image segmentation with line tracing and classification, and real-world measurement from a single photo and one known length.',
+    description: 'SAM 3 segmentation fused with a vision LLM for typed line detection, and real-world measurement in feet from a single photo and one known length.',
+    href: '/case-studies/lightdesign-ai-roof-measurement',
+    cta: 'Read the case study',
   },
 ];
 
@@ -64,7 +66,7 @@ const Expertise = () => {
               <p className="card-desc card-grow">{service.description}</p>
               {service.href && (
                 <span className="card-cta" aria-hidden="true">
-                  Explore this service <ArrowRight size={16} />
+                  {service.cta || 'Explore this service'} <ArrowRight size={16} />
                 </span>
               )}
             </div>

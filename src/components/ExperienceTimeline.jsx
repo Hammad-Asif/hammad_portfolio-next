@@ -18,7 +18,7 @@ const ExperienceTimeline = () => {
       "company": "KeystoneSTS",
       "title": "AI Engineer (Project-based Contract)",
       "location": "Remote (Contract Completed)",
-      "startDate": "2026-09-01T00:00:00.000Z",
+      "startDate": "2026-08-01T00:00:00.000Z",
       "endDate": "2026-10-31T00:00:00.000Z",
       "description": "Solo-built an AI roof-measurement and holiday-lighting design platform for a client.",
       "current": false,

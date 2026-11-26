@@ -10,6 +10,7 @@ const pages = [
   { path: "/case-studies/tenderml-ai-document-classification", lastModified: "2026-11-26" },
   { path: "/case-studies/gcp-insightdocs", lastModified: "2026-11-26" },
   { path: "/case-studies/gemini-ai-trainer", lastModified: "2026-11-26" },
+  { path: "/case-studies/lightdesign-ai-roof-measurement", lastModified: "2026-11-26" },
   { path: "/contact", lastModified: "2026-11-26" },
 ];
 

@@ -272,6 +272,14 @@ const GCPInsightDocsCaseStudy = () => {
         <aside className="cs-related" aria-labelledby="cs-related-heading">
           <h2 id="cs-related-heading">Related case studies</h2>
           <div className="cs-related-grid">
+            <Link href="/case-studies/lightdesign-ai-roof-measurement" className="cs-related-card">
+              <span className="cs-related-tag">Computer Vision</span>
+              <h3>LightDesign: AI roof measurement</h3>
+              <p>
+                SAM 3 and a vision LLM find typed roof lines, and single-photo camera calibration
+                measures them in feet.
+              </p>
+            </Link>
             <Link href="/services/document-ai" className="cs-related-card">
               <span className="cs-related-tag">Service</span>
               <h3>AI document &amp; PDF data extraction</h3>
