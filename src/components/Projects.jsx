@@ -166,7 +166,7 @@ const Projects = () => {
       <div className="page-glow page-glow-1" aria-hidden="true" />
       <div className="container">
         <div className="section-header">
-          <p className="section-subtitle">Case Studies</p>
+          <p className="section-subtitle">Case studies</p>
           <h1 className="section-title page-title">Professional case studies</h1>
           <p className="section-description">
             Key projects from my professional experience, from ML pipelines to production SaaS platforms.

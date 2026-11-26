@@ -1,54 +1,48 @@
-// Navbar.jsx — Server Component (NO "use client" here)
-// This file has zero JavaScript sent to the browser for the nav shell
+// Navbar.jsx — Server Component shell.
+// Logo left, links centred, actions right. NavLinks (active marker) and
+// MobileMenu (burger + overlay + scroll state) are the only client parts.
 
 import MobileMenu from './MobileMenu';
+import NavLinks from './NavLinks';
 import Logo from './Logo';
-import { FiDownload } from 'react-icons/fi';
+import { FiDownload, FiArrowRight } from 'react-icons/fi';
 
-const navItems = [
-  { href: '/#home', label: 'Home' },
-  { href: '/#expertise', label: 'Expertise' },
-  { href: '/#experience', label: 'Experience' },
-  { href: '/case-studies', label: 'Case Studies' },
-  { href: '/#testimonials', label: 'Testimonials' },
+// `section` marks homepage anchors, used for scroll-spy highlighting
+export const navItems = [
+  { href: '/#expertise', label: 'Services', section: 'expertise' },
+  { href: '/case-studies', label: 'Case studies' },
+  { href: '/#experience', label: 'Experience', section: 'experience' },
+  { href: '/#testimonials', label: 'Testimonials', section: 'testimonials' },
   { href: '/contact', label: 'Contact' },
-  { href: '/hire-me', label: 'Hire Me', cta: true },
 ];
 
 const Navbar = () => {
   return (
-    // The "scrolled" class is toggled by MobileMenu via the DOM (no re-renders)
     <nav className="navbar" id="main-navbar" aria-label="Main navigation">
-      <div className="container">
-        <div className="nav-container">
-          <a href="/#home" className="nav-logo" aria-label="Hammad Asif, home">
-            <Logo priority />
+      <div className="container nav-container">
+        <a href="/" className="nav-logo" aria-label="Hammad Asif, home">
+          <Logo priority />
+        </a>
+
+        <NavLinks items={navItems} />
+
+        <div className="nav-actions">
+          <a
+            href="/Hammad_Asif_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download
+            suppressHydrationWarning={true}
+            className="nav-cv"
+          >
+            <FiDownload size={15} aria-hidden="true" /> CV
           </a>
-
-          <ul className="nav-menu">
-            {navItems.map((item) => (
-              <li key={item.href}>
-                <a href={item.href} className={item.cta ? 'nav-link nav-link-cta' : 'nav-link'}>
-                  {item.label}
-                </a>
-              </li>
-            ))}
-            <li>
-              <a
-                href="/Hammad_Asif_CV.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                download
-                suppressHydrationWarning={true}
-                className="nav-cv"
-              >
-                <FiDownload size={14} aria-hidden="true" /> CV
-              </a>
-            </li>
-          </ul>
-
-          <MobileMenu navItems={navItems} />
+          <a href="/hire-me" className="nav-hire">
+            Hire me <FiArrowRight size={15} aria-hidden="true" />
+          </a>
         </div>
+
+        <MobileMenu navItems={navItems} />
       </div>
     </nav>
   );
