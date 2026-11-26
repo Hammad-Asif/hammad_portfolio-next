@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FiMail, FiArrowRight } from 'react-icons/fi';
+import Logo from './Logo';
 
 const Footer = () => {
   const quickLinks = [
@@ -35,7 +36,7 @@ const Footer = () => {
 
         <div className="footer-grid">
           <div className="footer-brand">
-            <a href="/#home" className="nav-logo">Hammad<span className="nav-logo-dot">.</span></a>
+            <a href="/#home" className="nav-logo" aria-label="Hammad Asif, home"><Logo /></a>
             <p>
               AI engineer building Python LLM, generative AI and document-AI systems end to end.
             </p>
@@ -86,7 +87,7 @@ const Footer = () => {
 
         <div className="footer-bottom">
           <p>&copy; 2026 Muhammad Hammad Asif. All rights reserved.</p>
-          <p className="footer-bottom-mono">Built with Next.js</p>
+          
         </div>
       </div>
     </footer>

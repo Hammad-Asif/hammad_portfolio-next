@@ -2,6 +2,7 @@
 // This file has zero JavaScript sent to the browser for the nav shell
 
 import MobileMenu from './MobileMenu';
+import Logo from './Logo';
 import { FiDownload } from 'react-icons/fi';
 
 const navItems = [
@@ -21,7 +22,7 @@ const Navbar = () => {
       <div className="container">
         <div className="nav-container">
           <a href="/#home" className="nav-logo" aria-label="Hammad Asif, home">
-            Hammad<span className="nav-logo-dot">.</span>
+            <Logo priority />
           </a>
 
           <ul className="nav-menu">

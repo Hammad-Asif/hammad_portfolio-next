@@ -6,6 +6,15 @@ import { join } from "node:path";
 export const ogSize = { width: 1200, height: 630 };
 export const ogContentType = "image/png";
 
+let logoCache;
+async function brandLogo() {
+  if (!logoCache) {
+    const buf = await readFile(join(process.cwd(), "public", "hammad-logo-full.png"));
+    logoCache = `data:image/png;base64,${buf.toString("base64")}`;
+  }
+  return logoCache;
+}
+
 let photoCache;
 async function profilePhoto() {
   if (!photoCache) {
@@ -22,7 +31,7 @@ async function profilePhoto() {
  * @param {string} [opts.tags]  One line of keywords shown under the title
  */
 export async function renderOgImage({ kicker, title, tags }) {
-  const photo = await profilePhoto();
+  const [photo, logo] = await Promise.all([profilePhoto(), brandLogo()]);
 
   return new ImageResponse(
     (
@@ -40,8 +49,9 @@ export async function renderOgImage({ kicker, title, tags }) {
         }}
       >
         <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", flex: 1, paddingRight: 48 }}>
-          <div style={{ display: "flex", alignItems: "center", fontSize: 30, fontWeight: 700 }}>
-            Hammad<span style={{ color: "#10b981" }}>.</span>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            {/* 1119 × 232 source, shown 46px tall */}
+            <img src={logo} width={222} height={46} alt="" />
             <span style={{ marginLeft: 18, fontSize: 22, fontWeight: 400, color: "#94a3b8" }}>hammadasif.dev</span>
           </div>
 
