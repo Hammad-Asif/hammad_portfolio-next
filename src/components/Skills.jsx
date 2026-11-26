@@ -20,7 +20,7 @@ const Skills = () => {
     },
     {
       icon: <Server size={22} />,
-      title: "Backend Development",
+      title: "Backend development",
       skills: [
         "Python (Advanced)",
         "FastAPI & Flask (Async)",
@@ -33,7 +33,7 @@ const Skills = () => {
     },
     {
       icon: <Database size={22} />,
-      title: "Databases & Data",
+      title: "Databases & data",
       skills: [
         "PostgreSQL & MySQL",
         "MongoDB & NoSQL",
@@ -45,7 +45,7 @@ const Skills = () => {
     },
     {
       icon: <Settings size={22} />,
-      title: "DevOps & Cloud Tools",
+      title: "DevOps & cloud tools",
       skills: [
         "AWS (EC2, S3, Lambda, IAM)",
         "Docker & Containerization",
@@ -57,7 +57,7 @@ const Skills = () => {
     },
     {
       icon: <Globe size={22} />,
-      title: "Languages & Web",
+      title: "Languages & web",
       skills: [
         "JavaScript (ES6+) & TypeScript",
         "React.js & Redux Toolkit",
@@ -74,9 +74,9 @@ const Skills = () => {
       <div className="container">
         <div className="section-header">
           <p className="section-subtitle">Toolbox</p>
-          <h2 className="section-title">Skills &amp; <span className="gradient-text">Technologies</span></h2>
+          <h2 className="section-title">Skills and technologies</h2>
           <p className="section-description">
-            A comprehensive overview of my technical skills and areas of expertise.
+            The tools I use in production, grouped by where they sit in the stack.
           </p>
         </div>
 

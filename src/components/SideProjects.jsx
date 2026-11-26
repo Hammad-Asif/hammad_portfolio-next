@@ -132,8 +132,8 @@ const SideProjects = () => {
     <section id="side-projects" className="section section-alt">
       <div className="container">
         <div className="section-header">
-          <p className="section-subtitle">Freelance &amp; Personal</p>
-          <h2 className="section-title">Side <span className="gradient-text">Projects</span></h2>
+          <p className="section-subtitle">Freelance and personal</p>
+          <h2 className="section-title">Side projects</h2>
           <p className="section-description">
             Personal projects and solutions developed during my freelance journey.
           </p>
@@ -171,7 +171,7 @@ const SideProjects = () => {
                 {isOpen && (
                   <div className="project-expanded" id={`${project.id}-details`}>
                     <p className="card-desc">{project.fullDescription}</p>
-                    <h4 className="block-title">Key Achievements</h4>
+                    <h4 className="block-title">Key achievements</h4>
                     <ul className="check-list">
                       {project.achievements.map((achievement) => (
                         <li key={achievement}>{achievement}</li>

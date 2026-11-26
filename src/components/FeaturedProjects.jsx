@@ -6,7 +6,7 @@ const FeaturedProjects = () => {
   const featured = [
     {
       id: 'lightdesign',
-      title: "LightDesign — AI Roof Measurement & Lighting Design",
+      title: "LightDesign: AI roof measurement and lighting design",
       company: "KeystoneSTS",
       description: "Turns one house photo into typed roof lines, real lengths in feet and a bulb-by-bulb lighting estimate, using SAM 3, a vision LLM and single-photo camera calibration. 0.88 F1 on held-out photos.",
       icon: <ScanEye size={22} />,
@@ -15,7 +15,7 @@ const FeaturedProjects = () => {
     },
     {
       id: 'gemini-ai-trainer',
-      title: "Gemini AI Trainer — Structured Data Reasoning & Human Evaluation",
+      title: "Gemini AI Trainer: structured data reasoning and human evaluation",
       company: "Google × Turing",
       description: "Contributed to Google's Gemini development for 1.2 years, engineering SFT datasets for complex structured data reasoning and performing RLHF evaluation on automated model outputs.",
       icon: <Brain size={22} />,
@@ -24,7 +24,7 @@ const FeaturedProjects = () => {
     },
     {
       id: 'tenderml',
-      title: "TenderML — AI Document Classification System",
+      title: "TenderML: AI document classification system",
       company: "Zaytrics (Pvt.) Limited",
       description: "Built a semi-supervised ML pipeline (SVM + CRF + DFS tree traversal) that classifies and extracts data from about 1,000 German tender PDFs, at about 95% accuracy on unseen layouts.",
       icon: <FileText size={22} />,
@@ -33,7 +33,7 @@ const FeaturedProjects = () => {
     },
     {
       id: 'gcp-insightdocs',
-      title: "GCP InsightDocs — Document Extraction Platform",
+      title: "GCP InsightDocs: document extraction platform",
       company: "Canadian Accountancy Client",
       description: "Independently built a full-stack document extraction engine using Google Cloud Document AI and OCR to automate tax form and contract data extraction.",
       icon: <Cloud size={22} />,
@@ -46,8 +46,8 @@ const FeaturedProjects = () => {
     <section id="featured-projects" className="section">
       <div className="container">
         <div className="section-header">
-          <p className="section-subtitle">My Work</p>
-          <h2 className="section-title">Featured <span className="gradient-text">Case Studies</span></h2>
+          <p className="section-subtitle">Case studies</p>
+          <h2 className="section-title">Featured case studies</h2>
           <p className="section-description">
             Technical deep-dives into production-grade AI systems, datasets, and pipelines built for international clients.
           </p>
@@ -78,7 +78,7 @@ const FeaturedProjects = () => {
 
         <div className="section-footer">
           <Link href="/case-studies" className="btn btn-secondary">
-            View all projects &amp; archives <ArrowRight size={16} aria-hidden="true" />
+            View all projects <ArrowRight size={16} aria-hidden="true" />
           </Link>
         </div>
       </div>

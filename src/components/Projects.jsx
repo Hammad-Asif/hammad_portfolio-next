@@ -167,7 +167,7 @@ const Projects = () => {
       <div className="container">
         <div className="section-header">
           <p className="section-subtitle">Case Studies</p>
-          <h1 className="section-title page-title">Professional <span className="gradient-text">Case Studies</span></h1>
+          <h1 className="section-title page-title">Professional case studies</h1>
           <p className="section-description">
             Key projects from my professional experience, from ML pipelines to production SaaS platforms.
           </p>

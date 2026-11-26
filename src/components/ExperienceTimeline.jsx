@@ -108,8 +108,8 @@ const ExperienceTimeline = () => {
     <section id="experience" className="section section-alt">
       <div className="container">
         <div className="section-header">
-          <p className="section-subtitle">My Journey</p>
-          <h2 className="section-title">Work <span className="gradient-text">Experience</span></h2>
+          <p className="section-subtitle">Experience</p>
+          <h2 className="section-title">Work experience</h2>
           <p className="section-description">
             Over 5 years of professional experience building digital products.
           </p>

@@ -57,8 +57,8 @@ const Testimonials = () => {
     <section id="testimonials" className="section">
       <div className="container">
         <div className="section-header">
-          <p className="section-subtitle">Client Feedback</p>
-          <h2 className="section-title">What Clients <span className="gradient-text">Say</span></h2>
+          <p className="section-subtitle">Client feedback</p>
+          <h2 className="section-title">What clients say</h2>
           <p className="section-description">
             International clients across the US, Panama, and South Asia — several returning for multiple projects.
           </p>
