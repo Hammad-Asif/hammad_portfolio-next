@@ -11,17 +11,17 @@ const PATH = "/case-studies/lightdesign-ai-roof-measurement";
 const GITHUB_URL = "https://github.com/Hammad-Asif/lightDesign-AI-App";
 
 const DESCRIPTION =
-  "How SAM 3, a vision LLM and single-photo camera calibration turn one house photo into typed roof lines, real lengths in feet and a lighting estimate.";
+  "AI roof measurement and Christmas light design case study: SAM 3, a vision LLM and camera calibration turn one house photo into roof lengths in feet.";
 
 export const metadata = pageMetadata({
-  title: "LightDesign: AI Roof Measurement From One Photo",
+  title: "LightDesign: AI Roof Measurement From a Photo",
   description: DESCRIPTION,
   path: PATH,
   type: "article",
   article: {
     publishedTime: "2026-11-26T00:00:00.000Z",
     modifiedTime: "2026-11-26T00:00:00.000Z",
-    tags: ["Computer vision", "SAM 3", "Vision LLM", "Single-image metrology", "FastAPI", "React"],
+    tags: ["AI roof measurement", "Christmas light design software", "Computer vision", "Segment Anything 3", "Vision LLM", "FastAPI", "React"],
   },
 });
 
@@ -30,7 +30,7 @@ const jsonLd = [
     "@context": "https://schema.org",
     "@type": "TechArticle",
     "@id": `${absoluteUrl(PATH)}#article`,
-    headline: "LightDesign: AI Roof-Line Detection and Measurement From a Single House Photo",
+    headline: "LightDesign: AI Roof Measurement and Christmas Light Design From a Single Photo",
     description: DESCRIPTION,
     datePublished: "2026-11-26",
     dateModified: "2026-11-26",
@@ -40,7 +40,7 @@ const jsonLd = [
     image: absoluteUrl(`${PATH}/opengraph-image`),
     mainEntityOfPage: absoluteUrl(PATH),
     keywords:
-      "Computer vision, roof measurement from photo, SAM 3 segmentation, vision LLM, vanishing points, camera calibration, FastAPI, React, PostgreSQL",
+      "AI roof measurement, Christmas light design software, lighting estimate, computer vision, Segment Anything 3 (SAM 3), image segmentation, vision LLM, vanishing points, camera calibration, FastAPI, React, PostgreSQL",
   },
   breadcrumbJsonLd([
     { name: "Home", path: "/" },
@@ -194,11 +194,11 @@ const LightDesignCaseStudy = () => {
               </div>
 
               <h1 className="hero-title">
-                LightDesign: AI Roof Measurement and Lighting Design From a Single Photo
+                LightDesign: AI Roof Measurement and Christmas Light Design From a Single Photo
               </h1>
 
               <p className="cs-hero-lead">
-                KeystoneSTS, a holiday-lighting company, needed its sales team to quote jobs without a
+                KeystoneSTS, a Christmas and holiday-lighting installer, needed its sales team to quote jobs without a
                 ladder and a tape measure. I built a platform where a salesperson photographs
                 a house, types what they want in plain English, and gets back an editable,
                 measured design: every roof edge found and typed, its{" "}
@@ -222,7 +222,7 @@ const LightDesignCaseStudy = () => {
             <section className="cs-section" aria-labelledby="cs-challenge-heading">
               <SectionLabel>The Challenge</SectionLabel>
               <h2 id="cs-challenge-heading">
-                Quoting a lighting job needed a site visit, a tape measure and a manual mock-up
+                Quoting a Christmas lighting job needed a site visit, a tape measure and a manual mock-up
               </h2>
               <p className="cs-prose">
                 Holiday-lighting installers price each job by how many feet of roofline,
@@ -547,7 +547,7 @@ const LightDesignCaseStudy = () => {
 
           {/* ── CTA ─────────────────────────────────────────── */}
           <footer className="cs-cta">
-            <h2>Need a computer-vision or AI product built end to end?</h2>
+            <h2>Hire a computer vision engineer to build yours end to end</h2>
             <p>
               I combine foundation models, LLMs and classical computer vision into products
               that measure, explain and fall back gracefully, with the backend, editor and
