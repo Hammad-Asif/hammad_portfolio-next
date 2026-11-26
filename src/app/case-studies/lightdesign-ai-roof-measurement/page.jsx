@@ -194,7 +194,7 @@ const LightDesignCaseStudy = () => {
               </div>
 
               <h1 className="hero-title">
-                LightDesign: AI Roof Measurement and Christmas Light Design From a Single Photo
+                LightDesign: AI roof measurement and Christmas light design from a single photo
               </h1>
 
               <p className="cs-hero-lead">
@@ -220,7 +220,7 @@ const LightDesignCaseStudy = () => {
           <div className="cs-body">
             {/* THE CHALLENGE */}
             <section className="cs-section" aria-labelledby="cs-challenge-heading">
-              <SectionLabel>The Challenge</SectionLabel>
+              <SectionLabel>The challenge</SectionLabel>
               <h2 id="cs-challenge-heading">
                 Quoting a Christmas lighting job needed a site visit, a tape measure and a manual mock-up
               </h2>
@@ -260,7 +260,7 @@ const LightDesignCaseStudy = () => {
 
             {/* MY ROLE */}
             <section className="cs-section" aria-labelledby="cs-role-heading">
-              <SectionLabel>My Role</SectionLabel>
+              <SectionLabel>My role</SectionLabel>
               <h2 id="cs-role-heading">Sole developer, from architecture to deployment</h2>
               <p className="cs-prose">
                 I designed and delivered the whole product: architecture, the ML detection
@@ -286,7 +286,7 @@ const LightDesignCaseStudy = () => {
 
             {/* WORKFLOW */}
             <section className="cs-section" aria-labelledby="cs-workflow-heading">
-              <SectionLabel>User Workflow</SectionLabel>
+              <SectionLabel>User workflow</SectionLabel>
               <h2 id="cs-workflow-heading">From one photo to an approved estimate in five steps</h2>
               <p className="cs-prose">
                 A salesperson types something like{" "}
@@ -299,7 +299,7 @@ const LightDesignCaseStudy = () => {
 
             {/* ARCHITECTURE */}
             <section className="cs-section" aria-labelledby="cs-diagram-heading">
-              <SectionLabel>System Architecture</SectionLabel>
+              <SectionLabel>System architecture</SectionLabel>
               <h2 id="cs-diagram-heading">A three-container stack behind one origin</h2>
               <p className="cs-prose">
                 nginx serves the compiled React app and forwards API traffic, so the browser
@@ -326,7 +326,7 @@ const LightDesignCaseStudy = () => {
 
             {/* DETECTION PIPELINE */}
             <section className="cs-section" aria-labelledby="cs-detection-heading">
-              <SectionLabel>AI Detection Pipeline</SectionLabel>
+              <SectionLabel>AI detection pipeline</SectionLabel>
               <h2 id="cs-detection-heading">
                 A foundation segmentation model, a vision LLM and classical computer vision, each
                 doing what it does best
@@ -356,7 +356,7 @@ const LightDesignCaseStudy = () => {
 
             {/* MEASUREMENT */}
             <section className="cs-section" aria-labelledby="cs-measure-heading">
-              <SectionLabel>Single-Photo 3-D Measurement</SectionLabel>
+              <SectionLabel>Single-photo 3-D measurement</SectionLabel>
               <h2 id="cs-measure-heading">
                 Real lengths in feet from one ordinary photo and one tape-measured length
               </h2>
@@ -399,7 +399,7 @@ const LightDesignCaseStudy = () => {
 
             {/* INSTRUCTIONS + EDITOR */}
             <section className="cs-section" aria-labelledby="cs-editor-heading">
-              <SectionLabel>Instructions, Products &amp; Editor</SectionLabel>
+              <SectionLabel>Instructions, products &amp; editor</SectionLabel>
               <h2 id="cs-editor-heading">
                 Plain-English requests that can only name products the company sells
               </h2>
@@ -442,7 +442,7 @@ const LightDesignCaseStudy = () => {
 
             {/* BENCHMARK */}
             <section className="cs-section" aria-labelledby="cs-results-heading">
-              <SectionLabel>Metrics &amp; Outcomes</SectionLabel>
+              <SectionLabel>Metrics &amp; outcomes</SectionLabel>
               <h2 id="cs-results-heading">
                 Measured with a purpose-built benchmark, not impressions
               </h2>
@@ -474,7 +474,7 @@ const LightDesignCaseStudy = () => {
 
             {/* ENGINEERING PRACTICES */}
             <section className="cs-section" aria-labelledby="cs-practices-heading">
-              <SectionLabel>Engineering Practices</SectionLabel>
+              <SectionLabel>Engineering practices</SectionLabel>
               <h2 id="cs-practices-heading">Built to be tested, rolled out safely and kept cheap to run</h2>
               <div className="cs-highlight-stack">
                 <article className="cs-highlight-card">
@@ -516,7 +516,7 @@ const LightDesignCaseStudy = () => {
 
             {/* TECH STACK */}
             <section className="cs-section" aria-labelledby="cs-stack-heading">
-              <SectionLabel>Tech Stack</SectionLabel>
+              <SectionLabel>Tech stack</SectionLabel>
               <h2 id="cs-stack-heading">Technologies used</h2>
               <ul className="cs-tech-pills">
                 {techPills.map((tech) => (

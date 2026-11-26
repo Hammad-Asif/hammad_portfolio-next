@@ -99,8 +99,8 @@ const TenderMLCaseStudy = () => {
               </div>
 
               <h1 className="hero-title">
-                TenderML: AI Document Classification for German Construction
-                Tenders
+                TenderML: AI document classification for German construction
+                tenders
               </h1>
 
               <p className="cs-hero-lead">
@@ -136,7 +136,7 @@ const TenderMLCaseStudy = () => {
           <div className="cs-body">
             {/* THE CHALLENGE */}
             <section className="cs-section" aria-labelledby="cs-challenge-heading">
-              <SectionLabel>The Challenge</SectionLabel>
+              <SectionLabel>The challenge</SectionLabel>
               <h2 id="cs-challenge-heading">
                 Manual review of construction tenders was slow, inconsistent,
                 and error-prone
@@ -164,8 +164,8 @@ const TenderMLCaseStudy = () => {
 
             {/* MY ROLE */}
             <section className="cs-section" aria-labelledby="cs-role-heading">
-              <SectionLabel>My Role</SectionLabel>
-              <h2 id="cs-role-heading">Sole developer — end-to-end ownership</h2>
+              <SectionLabel>My role</SectionLabel>
+              <h2 id="cs-role-heading">Sole developer with end-to-end ownership</h2>
               <p className="cs-prose">
                 I owned this project entirely: problem framing, ML approach
                 selection, data preparation, model training, the tree and DFS
@@ -197,7 +197,7 @@ const TenderMLCaseStudy = () => {
 
             {/* ARCHITECTURE & STACK */}
             <section className="cs-section" aria-labelledby="cs-architecture-heading">
-              <SectionLabel>Architecture &amp; Stack</SectionLabel>
+              <SectionLabel>Architecture &amp; stack</SectionLabel>
               <h2 id="cs-architecture-heading">
                 How structural inconsistency was solved with semi-supervised
                 learning and tree traversal
@@ -272,7 +272,7 @@ const TenderMLCaseStudy = () => {
 
             {/* SYSTEM ARCHITECTURE DIAGRAM */}
             <section className="cs-section" aria-labelledby="cs-diagram-heading">
-              <SectionLabel>System Architecture</SectionLabel>
+              <SectionLabel>System architecture</SectionLabel>
               <h2 id="cs-diagram-heading">
                 Pipeline overview: offline training → online inference
               </h2>
@@ -302,7 +302,7 @@ const TenderMLCaseStudy = () => {
 
             {/* IMPLEMENTATION HIGHLIGHTS */}
             <section className="cs-section" aria-labelledby="cs-highlights-heading">
-              <SectionLabel>Implementation Highlights</SectionLabel>
+              <SectionLabel>Implementation highlights</SectionLabel>
               <h2 id="cs-highlights-heading">Key engineering decisions</h2>
 
               <div className="cs-highlight-stack">
@@ -362,7 +362,7 @@ const TenderMLCaseStudy = () => {
 
             {/* METRICS & OUTCOMES */}
             <section className="cs-section" aria-labelledby="cs-results-heading">
-              <SectionLabel>Metrics &amp; Outcomes</SectionLabel>
+              <SectionLabel>Metrics &amp; outcomes</SectionLabel>
               <h2 id="cs-results-heading">Delivered and integrated into production</h2>
               <p className="cs-prose">
                 The system achieved{" "}
@@ -398,7 +398,7 @@ const TenderMLCaseStudy = () => {
 
             {/* TECH STACK */}
             <section className="cs-section" aria-labelledby="cs-stack-heading">
-              <SectionLabel>Tech Stack</SectionLabel>
+              <SectionLabel>Tech stack</SectionLabel>
               <h2 id="cs-stack-heading">Technologies used</h2>
               <ul className="cs-tech-pills">
                 {[

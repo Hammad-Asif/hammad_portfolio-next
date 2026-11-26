@@ -59,9 +59,9 @@ const Contact = () => {
 
             <div className="container contact-grid">
                 <div className="contact-info">
-                    <p className="section-subtitle">Get In Touch</p>
+                    <p className="section-subtitle">Get in touch</p>
                     <h1 className="page-title">
-                        Open to full-time remote roles. <span className="gradient-text">Reach out directly.</span>
+                        Open to full-time remote roles. Reach out directly.
                     </h1>
                     <p className="section-description contact-lead">
                         Share the role or project and I&apos;ll get back to you within a day. Prefer email? Use the button below.

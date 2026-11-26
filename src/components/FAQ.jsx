@@ -60,8 +60,8 @@ const FAQ = () => {
     <section id="faq" className="section section-alt">
       <div className="container">
         <div className="section-header">
-          <p className="section-subtitle">Questions?</p>
-          <h2 className="section-title">Frequently Asked <span className="gradient-text">Questions</span></h2>
+          <p className="section-subtitle">FAQ</p>
+          <h2 className="section-title">Frequently asked questions</h2>
           <p className="section-description">
             Find answers to common questions about my expertise and process.
           </p>

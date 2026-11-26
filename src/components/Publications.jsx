@@ -32,7 +32,7 @@ const Publications = () => {
       <div className="container">
         <div className="section-header">
           <p className="section-subtitle">Research</p>
-          <h2 className="section-title"><span className="gradient-text">Publications</span></h2>
+          <h2 className="section-title">Publications</h2>
           <p className="section-description">
             Research contributions to the field of Natural Language Processing and Machine Learning.
           </p>
@@ -65,7 +65,7 @@ const Publications = () => {
               </div>
 
               <div className="publication-block">
-                <h4 className="block-title">Key Contributions</h4>
+                <h4 className="block-title">Key contributions</h4>
                 <ul className="check-list">
                   {publication.contributions.map((contribution) => (
                     <li key={contribution}>{contribution}</li>

@@ -4,34 +4,34 @@ import { DollarSign, ShieldCheck, Zap, Video, Clock, MessageSquare } from 'lucid
 const Process = () => {
   const steps = [
     {
-      icon: <DollarSign size={20} />,
-      title: 'No Visa/Tax Overhead',
-      description: 'Contract-ready immediately via Deel or B2B corporate billing. You don\'t deal with international payroll complexities.'
+      icon: <DollarSign size={18} />,
+      title: 'Contracts and payroll',
+      description: 'Contract-ready through Deel or direct B2B billing, so you don\'t take on international payroll or tax admin.'
     },
     {
-      icon: <ShieldCheck size={20} />,
-      title: '100% IP & NDA Protection',
-      description: 'Fully compliant with US/EU intellectual property laws under standard international contractor agreements.'
+      icon: <Clock size={18} />,
+      title: 'Time-zone overlap',
+      description: '4 to 5 hours of live overlap every day with EST, GMT and CET business hours.'
     },
     {
-      icon: <Zap size={20} />,
-      title: 'Fully Equipped Setup',
-      description: 'Operating from a dedicated home office with secondary backup power (UPS/Solar) and high-speed fiber internet to ensure 100% uptime.'
+      icon: <ShieldCheck size={18} />,
+      title: 'IP and NDAs',
+      description: 'Standard international contractor agreements and NDAs that cover US and EU intellectual-property terms.'
     },
     {
-      icon: <Video size={20} />,
-      title: 'Async-First Execution',
-      description: 'I utilize Slack, Loom video handovers, and clear Jira documentation so work moves forward without needing constant live synchronization.'
+      icon: <Zap size={18} />,
+      title: 'Backup power and internet',
+      description: 'A dedicated home office with UPS and solar backup and fiber internet, so power cuts don\'t stop work.'
     },
     {
-      icon: <Clock size={20} />,
-      title: 'Timezone Overlap',
-      description: 'I offer 4 to 5 hours of structured, synchronous daily overlap with EST, GMT, and CET business hours.'
+      icon: <Video size={18} />,
+      title: 'Async by default',
+      description: 'Slack updates, Jira tickets and Loom handovers, so work keeps moving with fewer meetings.'
     },
     {
-      icon: <MessageSquare size={20} />,
-      title: 'Professional English Communication',
-      description: 'Seamless async-first engineering updates, Slack/Loom check-ins, and direct alignment with technical stakeholders.'
+      icon: <MessageSquare size={18} />,
+      title: 'Clear technical English',
+      description: 'Direct written and spoken updates for engineers, product managers and stakeholders.'
     }
   ];
 
@@ -39,25 +39,22 @@ const Process = () => {
     <section id="process" className="section">
       <div className="container">
         <div className="section-header">
-          <p className="section-subtitle">How I Work</p>
-          <h2 className="section-title">Frictionless Remote <span className="gradient-text">Collaboration</span></h2>
+          <p className="section-subtitle">How I work</p>
+          <h2 className="section-title">Remote work, set up before we start</h2>
           <p className="section-description">
-            Hiring globally shouldn&apos;t mean managing dependencies across time zones. I&apos;ve designed my workflow to blend seamlessly into Western product teams.
+            Contracts, time zones and power are already handled, so you can work with me like a teammate down the hall.
           </p>
         </div>
 
-        <ol className="card-grid process-grid">
-          {steps.map((step, index) => (
-            <li key={step.title} className="card">
-              <div className="card-head">
-                <div className="icon-box" aria-hidden="true">{step.icon}</div>
-                <span className="card-index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
-              </div>
-              <h3 className="card-title">{step.title}</h3>
-              <p className="card-desc">{step.description}</p>
+        <ul className="terms terms-3">
+          {steps.map((step) => (
+            <li key={step.title}>
+              <span className="terms-icon" aria-hidden="true">{step.icon}</span>
+              <h3 className="terms-title">{step.title}</h3>
+              <p className="terms-desc">{step.description}</p>
             </li>
           ))}
-        </ol>
+        </ul>
       </div>
     </section>
   );

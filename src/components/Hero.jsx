@@ -1,41 +1,17 @@
 import React from 'react';
 import Image from 'next/image';
-import { FaReact, FaPython, FaAws, FaDocker, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FiDownload, FiMail } from 'react-icons/fi';
-import {
-    SiMongodb,
-    SiFlask,
-    SiFastapi,
-    SiOpenai,
-    SiGit,
-    SiNginx,
-    SiPostman,
-    SiPandas,
-    SiNumpy,
-    SiMysql,
-    SiSpacy,
-} from 'react-icons/si';
 
-const innerSkills = [
-    { icon: <FaReact />, name: "React" },
-    { icon: <SiMongodb />, name: "MongoDB" },
-    { icon: <FaPython />, name: "Python" },
-    { icon: <SiFlask />, name: "Flask" },
-    { icon: <SiFastapi />, name: "FastAPI" },
-    { icon: <FaAws />, name: "AWS" },
-    { icon: <FaDocker />, name: "Docker" },
-    { icon: <SiOpenai />, name: "OpenAI" },
-    { icon: <SiGit />, name: "Git" },
-];
-
-const outerSkills = [
-    { icon: <SiNginx />, name: "Nginx" },
-    { icon: <SiPostman />, name: "Postman" },
-    { icon: <SiPandas />, name: "Pandas" },
-    { icon: <SiNumpy />, name: "NumPy" },
-    { icon: <SiMysql />, name: "MySQL" },
-    { icon: <SiSpacy />, name: "NLP" },
-];
+// Hero portrait: a transparent cut-out trimmed to the figure. width and
+// height must match the real file in /public; the box is sized by height
+// (--portrait-h in globals.css) and takes its width from this ratio.
+// Untrimmed originals are kept in /assets (not deployed).
+const PORTRAIT = {
+    src: '/hammad-portrait.png',
+    width: 420,
+    height: 1382,
+};
 
 const stats = [
     { value: "5+", label: "Years building AI systems" },
@@ -44,20 +20,9 @@ const stats = [
     { value: "5.0", label: "Clutch client rating" },
 ];
 
-// Position icons evenly around the ring
-const getPosition = (index, total, radius) => {
-    const angle = (index / total) * (2 * Math.PI) - Math.PI / 2;
-    const x = Math.cos(angle) * radius + 50;
-    const y = Math.sin(angle) * radius + 50;
-    return { left: `${x}%`, top: `${y}%` };
-};
-
 const Hero = () => {
     return (
         <section id="home" className="hero">
-            <div className="page-glow page-glow-1" aria-hidden="true" />
-            <div className="page-glow page-glow-2" aria-hidden="true" />
-
             <div className="container hero-grid">
                 <div className="hero-content">
                     <div className="status-badge">
@@ -65,30 +30,29 @@ const Hero = () => {
                             <span className="status-ping-ring" />
                             <span className="status-ping-dot" />
                         </span>
-                        Available for US/UK/EU remote roles &amp; contract work
+                        Available for US, UK and EU remote roles and contracts
                     </div>
 
                     <h1 className="hero-title">
                         <span className="hero-name">Muhammad Hammad Asif</span>
                         AI Engineer &amp;{' '}
-                        <span className="gradient-text"><span className="nowrap">Full-Stack</span> Developer</span>
+                        <span className="nowrap">Full-Stack</span> Developer
                     </h1>
 
                     <p className="hero-description">
-                        I build production AI systems and the web products around them: LLM and generative-AI pipelines, document extraction and classification, and FastAPI backends with React frontends. About five years of hands-on work for clients in the US, UK, Europe and the UAE.
+                        I build production AI systems and the web products around them: LLM and generative-AI pipelines, document extraction and classification, computer vision, and FastAPI backends with React frontends. About five years of hands-on work for clients in the US, UK, Europe and the UAE.
                     </p>
 
-                    <p className="hero-meta">
-                        <span>Passed Toptal&apos;s coding assessment</span>
-                        <span aria-hidden="true">/</span>
-                        <span>US · UK · EU overlap</span>
-                        <span aria-hidden="true">/</span>
-                        <span>Contract-ready via Deel</span>
-                    </p>
+                    <ul className="hero-meta">
+                        <li>Passed Toptal&apos;s coding assessment</li>
+                        <li>Remote from Pakistan (UTC+5)</li>
+                        <li>4–5 h overlap with US, UK &amp; EU</li>
+                        <li>Contract-ready via Deel</li>
+                    </ul>
 
                     <div className="hero-buttons">
                         <a suppressHydrationWarning={true} href="mailto:hammadcto786@gmail.com" className="btn btn-primary">
-                            <FiMail size={18} aria-hidden="true" /> Chat Directly
+                            <FiMail size={18} aria-hidden="true" /> Email me
                         </a>
                         <a
                             href="/Hammad_Asif_CV.pdf"
@@ -100,46 +64,33 @@ const Hero = () => {
                         >
                             <FiDownload size={16} aria-hidden="true" /> Download CV
                         </a>
-                        <a href="https://github.com/Hammad-Asif" target="_blank" rel="noopener noreferrer" className="icon-btn icon-btn-lg" aria-label="GitHub profile">
-                            <FaGithub size={20} />
-                        </a>
-                        <a href="https://www.linkedin.com/in/hammad-asif/" target="_blank" rel="noopener noreferrer" className="icon-btn icon-btn-lg" aria-label="LinkedIn profile">
-                            <FaLinkedin size={20} />
-                        </a>
                     </div>
+
+                    <p className="hero-links">
+                        <a href="https://github.com/Hammad-Asif" target="_blank" rel="noopener noreferrer">
+                            <FaGithub size={16} aria-hidden="true" /> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/hammad-asif/" target="_blank" rel="noopener noreferrer">
+                            <FaLinkedin size={16} aria-hidden="true" /> LinkedIn
+                        </a>
+                    </p>
                 </div>
 
-                <div className="avatar-container" aria-hidden="true">
-                    <div className="orbit-ring">
-                        {innerSkills.map((skill, i) => (
-                            <div key={skill.name} className="orbit-icon" style={getPosition(i, innerSkills.length, 50)}>
-                                {skill.icon}
-                                <span className="tooltip">{skill.name}</span>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className="orbit-ring-reverse">
-                        {outerSkills.map((skill, i) => (
-                            <div key={skill.name} className="orbit-icon" style={getPosition(i, outerSkills.length, 50)}>
-                                {skill.icon}
-                                <span className="tooltip">{skill.name}</span>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className="hero-image">
+                <figure className="portrait">
+                    <div
+                        className="portrait-frame"
+                        style={{ '--portrait-r': PORTRAIT.width / PORTRAIT.height }}
+                    >
                         <Image
-                            src="/profile_pic.jpg"
-                            alt="Muhammad Hammad Asif, AI engineer and full-stack developer"
-                            className="avatar-image"
-                            width={230}
-                            height={230}
-                            sizes="(max-width: 480px) 150px, (max-width: 1024px) 200px, 230px"
+                            src={PORTRAIT.src}
+                            alt="Muhammad Hammad Asif, freelance AI engineer and full-stack developer"
+                            className="portrait-img"
+                            fill
+                            sizes="(max-width: 1024px) 180px, 240px"
                             priority
                         />
                     </div>
-                </div>
+                </figure>
             </div>
 
             <div className="container">

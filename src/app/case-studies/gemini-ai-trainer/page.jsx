@@ -76,14 +76,14 @@ const GeminiCaseStudy = () => {
               </div>
 
               <h1 className="hero-title">
-                Gemini AI Trainer — Structured Data Reasoning &amp; Human Evaluation
+                Gemini AI Trainer: structured data reasoning and human evaluation
               </h1>
 
               <p className="cs-hero-lead">
-                Large language models struggle to read and parse messy, real-world spreadsheet files. 
-                Over a sustained 1.2-year engagement, I engineered high-quality Supervised Fine-Tuning (SFT) 
-                datasets and conducted Reinforcement Learning from Human Feedback (RLHF) evaluations, 
-                specifically training Google's Gemini models to handle complex tabular structures, 
+                Large language models struggle to read and parse messy, real-world spreadsheet files.
+                Over a sustained 1.2-year engagement, I engineered high-quality Supervised Fine-Tuning (SFT)
+                datasets and conducted Reinforcement Learning from Human Feedback (RLHF) evaluations,
+                specifically training Google's Gemini models to handle complex tabular structures,
                 ambiguous column definitions, and multi-row header hierarchies.
               </p>
 
@@ -110,25 +110,25 @@ const GeminiCaseStudy = () => {
           <div className="cs-body">
             {/* THE CHALLENGE */}
             <section className="cs-section" aria-labelledby="cs-challenge-heading">
-              <SectionLabel>The Challenge</SectionLabel>
+              <SectionLabel>The challenge</SectionLabel>
               <h2 id="cs-challenge-heading">
                 Spreadsheets in the wild do not conform to clean database schemas
               </h2>
               <p className="cs-prose">
-                For a language model, answering questions about a structured table goes far beyond basic text parsing. 
-                Real-world files (CSV, Excel) are notoriously messy. They frequently arrive with missing headers, leading metadata blocks (e.g. report names, export parameters), and multi-row header hierarchies. 
+                For a language model, answering questions about a structured table goes far beyond basic text parsing.
+                Real-world files (CSV, Excel) are notoriously messy. They frequently arrive with missing headers, leading metadata blocks (e.g. report names, export parameters), and multi-row header hierarchies.
                 If a model cannot correctly rebuild the logical structure of a sheet, it cannot extract data, apply calculations, or generate accurate code representations.
               </p>
               <p className="cs-prose" style={{ marginTop: "16px" }}>
-                The training objective was to teach Gemini to navigate these edge cases safely. 
+                The training objective was to teach Gemini to navigate these edge cases safely.
                 Instead of guessing blindly when confronted with ambiguous column layouts, the model needed to learn when to make structured assumptions, when to merge hierarchical headers, and when to pause and ask the user for clarification.
               </p>
             </section>
 
             {/* MY ROLE */}
             <section className="cs-section" aria-labelledby="cs-role-heading">
-              <SectionLabel>My Role</SectionLabel>
-              <h2 id="cs-role-heading">Independent Contractor — Two Operational Tracks</h2>
+              <SectionLabel>My role</SectionLabel>
+              <h2 id="cs-role-heading">Independent contractor on two tracks</h2>
               <p className="cs-prose">
                 I worked as an independent contractor vetted by Turing, collaborating on a specialized team training Google's Gemini models. My responsibilities were split into two core disciplines:
               </p>
@@ -156,7 +156,7 @@ const GeminiCaseStudy = () => {
 
             {/* DEEP DIVE: SFT DATASET ENGINEERING */}
             <section className="cs-section" aria-labelledby="cs-sft-heading">
-              <SectionLabel>Dataset Engineering</SectionLabel>
+              <SectionLabel>Dataset engineering</SectionLabel>
               <h2 id="cs-sft-heading">
                 Designing prompt-response pairs for structured data edge cases
               </h2>
@@ -205,7 +205,7 @@ const GeminiCaseStudy = () => {
 
             {/* DEEP DIVE: HUMAN EVALUATION */}
             <section className="cs-section" aria-labelledby="cs-evaluation-heading">
-              <SectionLabel>Human Evaluation</SectionLabel>
+              <SectionLabel>Human evaluation</SectionLabel>
               <h2 id="cs-evaluation-heading">
                 RLHF human feedback loops for automated pipeline validation
               </h2>
@@ -237,12 +237,12 @@ const GeminiCaseStudy = () => {
 
             {/* METRICS & SUMMARY */}
             <section className="cs-section" aria-labelledby="cs-summary-heading">
-              <SectionLabel>Engagement Summary</SectionLabel>
-              <h2 id="cs-summary-heading">Sustained High-Quality Output</h2>
+              <SectionLabel>Engagement summary</SectionLabel>
+              <h2 id="cs-summary-heading">Sustained high-quality output</h2>
               <p className="cs-prose">
                 The engagement spanned over a year (April 2024 to May 2025). The rigorous selection process, requiring deep Python, data analysis, and language model validation skills, ensured that only top engineering contractors remained on the pipeline.
               </p>
-              
+
               <figure className="cs-result-callout">
                 <blockquote>
                   <p>
@@ -257,8 +257,8 @@ const GeminiCaseStudy = () => {
 
             {/* TECH STACK */}
             <section className="cs-section" aria-labelledby="cs-stack-heading">
-              <SectionLabel>Core Disciplines</SectionLabel>
-              <h2 id="cs-stack-heading">Skills &amp; Methodologies</h2>
+              <SectionLabel>Core disciplines</SectionLabel>
+              <h2 id="cs-stack-heading">Skills and methods</h2>
               <ul className="cs-tech-pills">
                 {[
                   "SFT Dataset Engineering",

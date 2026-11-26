@@ -2,14 +2,14 @@
 import React from 'react';
 import HireMeForm from '@/components/HireMeForm';
 import { pageMetadata, breadcrumbJsonLd, absoluteUrl, PERSON_ID, WEBSITE_ID } from '@/lib/seo';
-import { 
-  ShieldCheck, 
-  Clock, 
-  DollarSign, 
-  Zap, 
-  Video, 
-  MessageSquare, 
-  Check, 
+import {
+  ShieldCheck,
+  Clock,
+  DollarSign,
+  Zap,
+  Video,
+  MessageSquare,
+  Check,
   ArrowRight,
   Briefcase
 } from 'lucide-react';
@@ -40,42 +40,43 @@ const hireMeLd = [
 const HireMePage = () => {
   const frameworkPoints = [
     {
-      title: "Zero Payroll/Tax Complexity",
-      description: "100% contract-ready immediately via Deel, Remote.com, or direct corporate B2B billing. No administrative international hiring overhead.",
-      icon: <DollarSign className="text-emerald-400" size={20} />
+      title: "Contracts and payroll",
+      description: "Contract-ready through Deel, Remote.com or direct B2B billing. You don't take on international payroll or tax admin.",
+      icon: <DollarSign size={18} />
     },
     {
-      title: "Timezone Synchronicity",
-      description: "Guaranteed 4 to 5 hours of structured, synchronous daily overlap with EST, GMT, and CET standard business hours.",
-      icon: <Clock className="text-emerald-400" size={20} />
+      title: "Time-zone overlap",
+      description: "4 to 5 hours of live overlap every day with EST, GMT and CET business hours.",
+      icon: <Clock size={18} />
     },
     {
-      title: "Legal & IP Protection",
-      description: "Fully compliant with US/EU intellectual property and data sovereignty laws under standard international contractor NDAs.",
-      icon: <ShieldCheck className="text-emerald-400" size={20} />
+      title: "IP and NDAs",
+      description: "Standard international contractor agreements and NDAs that cover US and EU intellectual-property and data terms.",
+      icon: <ShieldCheck size={18} />
     },
     {
-      title: "Mission-Critical Uptime",
-      description: "Operating from a dedicated home office equipped with secondary solar/UPS battery systems and redundant high-speed fiber lines.",
-      icon: <Zap className="text-emerald-400" size={20} />
+      title: "Backup power and internet",
+      description: "A dedicated home office with UPS and solar backup and redundant fiber lines, so power cuts don't stop work.",
+      icon: <Zap size={18} />
     },
     {
-      title: "Async-First Workflow",
-      description: "Deep integration with Slack documentation, Jira sprint management, and Loom video handovers to maximize execution and minimize meetings.",
-      icon: <Video className="text-emerald-400" size={20} />
+      title: "Async by default",
+      description: "Slack updates, Jira tickets and Loom handovers, so work keeps moving with fewer meetings.",
+      icon: <Video size={18} />
     },
     {
-      title: "Native-Level Technical English",
-      description: "Clear, direct, and unhindered verbal and written alignment with engineering stakeholders, product managers, and executive leadership.",
-      icon: <MessageSquare className="text-emerald-400" size={20} />
+      title: "Clear technical English",
+      description: "Direct written and spoken updates for engineers, product managers and leadership.",
+      icon: <MessageSquare size={18} />
     }
   ];
 
   const expertiseBullets = [
-    "Production LLM Pipelines & Advanced RAG System Architectures (LangChain, vector indexing, semantic search optimization)",
-    "Asynchronous, low-latency Python REST APIs & backend engines (FastAPI, Flask, complex threading, and worker tasks)",
-    "Scalable, high-throughput web scraping & data mining infrastructures (Playwright, Selenium browser automation, extraction pipelines)",
-    "Distributed machine learning workloads & deployments (Ray clusters, AWS EC2 autoscaling groups, Docker, Nginx)"
+    "LLM pipelines and RAG prototypes with OpenAI, Gemini and OpenRouter, including provider fallback (LangChain where it helps)",
+    "Async Python REST APIs and backends with FastAPI and Flask, background workers and role-based access control",
+    "Document AI and computer vision: PDF classification and extraction, OCR, SAM 3 segmentation and single-photo measurement",
+    "Web scraping and data pipelines with Playwright, Selenium and BeautifulSoup",
+    "ML deployments on Ray clusters, AWS EC2 autoscaling, Docker and Nginx"
   ];
 
   return (
@@ -84,12 +85,9 @@ const HireMePage = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(hireMeLd) }}
       />
-      {/* Background gradients */}
-      <div className="hm-glow-1" />
-      <div className="hm-glow-2" />
 
       <div className="hm-container">
-        
+
         {/* ── HERO SECTION ────────────────────────────────────────── */}
         <section className="hm-hero">
           {/* Pulsing Availability Badge */}
@@ -98,68 +96,64 @@ const HireMePage = () => {
               <span className="hm-badge-ping"></span>
               <span className="hm-badge-dot"></span>
             </span>
-            Active Availability: B2B / Deel Contractor
+            Available for B2B and Deel contracts
           </div>
 
           <h1 className="hm-title">
-            Hire an AI Engineer &amp; Full-Stack Developer <span className="hm-title-gradient">without the local overhead</span>
+            Hire an AI engineer &amp; full-stack developer <span className="hm-title-gradient">without the local overhead</span>
           </h1>
 
           <p className="hm-subtitle">
-            AI &amp; Python backend engineer (passed Toptal's coding assessment, listed in its talent marketplace) available for full-time remote roles or long-term contract engagements. 
-            Direct, senior-level ownership of your AI infrastructure, backend APIs, and pipeline deployments.
+            AI and Python backend engineer who passed Toptal&apos;s coding assessment and is listed in its talent marketplace.
+            Available for full-time remote roles or long-term contracts, owning your AI pipelines, backend APIs and deployments end to end.
           </p>
 
           <div className="hm-buttons">
             <a href="#discovery-form" className="hm-btn-primary">
-              Book a Technical Discovery Call <ArrowRight size={18} />
+              Book a discovery call <ArrowRight size={18} />
             </a>
-            <a 
-              href="/Hammad_Asif_CV.pdf" 
+            <a
+              href="/Hammad_Asif_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               download
               className="hm-btn-secondary"
             >
-              Download CV / Resume
+              Download CV
             </a>
           </div>
         </section>
 
-        {/* ── THE FRICTIONLESS REMOTE FRAMEWORK ───────────────────── */}
-        <section style={{ marginBottom: '6rem' }}>
+        {/* ── WHAT'S ALREADY HANDLED ─────────────────────────────── */}
+        <section className="hm-terms-wrap">
           <div className="hm-section-title-wrap">
-            <h2 className="hm-section-title">The Frictionless Remote Framework</h2>
+            <h2 className="hm-section-title">What&apos;s already handled before we start</h2>
             <p className="hm-section-subtitle">
-              Hiring globally shouldn't introduce delivery overhead. My workflow is engineered to merge seamlessly into Western product teams from day one.
+              Contracts, time zones and power are sorted, so the work can start on day one.
             </p>
           </div>
 
-          <div className="hm-grid">
-            {frameworkPoints.map((point, index) => (
-              <div key={index} className="hm-card">
-                <div className="hm-icon-box">
-                  {point.icon}
-                </div>
-                <div>
-                  <h3 className="hm-card-title">{point.title}</h3>
-                  <p className="hm-card-desc">{point.description}</p>
-                </div>
-              </div>
+          <ul className="terms terms-3">
+            {frameworkPoints.map((point) => (
+              <li key={point.title}>
+                <span className="terms-icon" aria-hidden="true">{point.icon}</span>
+                <h3 className="terms-title">{point.title}</h3>
+                <p className="terms-desc">{point.description}</p>
+              </li>
             ))}
-          </div>
+          </ul>
         </section>
 
-        {/* ── CORE ARCHITECTURAL EXPERTISE ───────────────────────── */}
+        {/* ── CORE EXPERTISE ─────────────────────────────────────── */}
         <section className="hm-expertise">
           <div className="hm-expertise-left">
             <div className="hm-expertise-left-icon">
               <Briefcase size={20} />
             </div>
-            <h2 className="hm-section-title" style={{ textAlign: 'left', marginBottom: '0' }}>Core Architectural Expertise</h2>
+            <h2 className="hm-section-title" style={{ textAlign: 'left', marginBottom: '0' }}>Core expertise</h2>
             <p className="hm-card-desc">
-              When you hire a Senior Engineer, you are buying execution and decision-making maturity. 
-              My engineering stack covers the entire pipeline from prototyping to cloud-deployed production.
+              About five years of shipping AI and backend systems for clients, from the first prototype
+              to a monitored deployment in the cloud.
             </p>
           </div>
 
@@ -182,9 +176,9 @@ const HireMePage = () => {
         {/* ── CTA FORM SECTION ───────────────────────────────────── */}
         <section id="discovery-form" style={{ scrollMarginTop: '6rem' }}>
           <div className="hm-section-title-wrap" style={{ marginBottom: '2.5rem' }}>
-            <h2 className="hm-section-title">Let's Discuss Technical Fit</h2>
+            <h2 className="hm-section-title">Tell me about the role or project</h2>
             <p className="hm-section-subtitle">
-              Average response time for verified business inquiries is under 12 hours.
+              I usually reply to business inquiries within 12 hours.
             </p>
           </div>
 

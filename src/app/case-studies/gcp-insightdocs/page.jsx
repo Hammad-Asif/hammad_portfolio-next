@@ -76,19 +76,19 @@ const GCPInsightDocsCaseStudy = () => {
               </div>
 
               <h1 className="hero-title">
-                GCP InsightDocs: Automated Document Extraction Platform
+                GCP InsightDocs: automated document extraction platform
               </h1>
 
               <p className="cs-hero-lead">
-                Canadian accountancy and business firms handle high volumes of critical documents. 
-                I independently built GCP InsightDocs from scratch — a full-stack platform that combines 
-                Google Cloud Document AI and OCR with a side-by-side React UI, automating structured key-value 
+                Canadian accountancy and business firms handle high volumes of critical documents.
+                I independently built GCP InsightDocs from scratch — a full-stack platform that combines
+                Google Cloud Document AI and OCR with a side-by-side React UI, automating structured key-value
                 extraction from CRA tax forms and legal contracts to eliminate manual transcription workflows.
               </p>
 
               <div className="cs-stats" role="list" aria-label="Project results at a glance">
                 <div role="listitem">
-                  <StatCard value="100%" label="Manual Entry Eliminated" />
+                  <StatCard value="100%" label="Manual data entry removed" />
                 </div>
                 <div role="listitem">
                   <StatCard value="Solo" label="End-to-End Ownership" />
@@ -109,24 +109,24 @@ const GCPInsightDocsCaseStudy = () => {
           <div className="cs-body">
             {/* THE CHALLENGE */}
             <section className="cs-section" aria-labelledby="cs-challenge-heading">
-              <SectionLabel>The Challenge</SectionLabel>
+              <SectionLabel>The challenge</SectionLabel>
               <h2 id="cs-challenge-heading">
                 Brittle rules and manual transcription bottlenecks
               </h2>
               <p className="cs-prose">
-                The client, a Canadian accounting and business advisory firm, regularly parses high volumes of Canada Revenue Agency (CRA) tax forms, legal contracts, and financial records. 
+                The client, a Canadian accounting and business advisory firm, regularly parses high volumes of Canada Revenue Agency (CRA) tax forms, legal contracts, and financial records.
                 Because these documents come from varying sources and scanning layouts, standard regex patterns or template-based document matching fail constantly.
               </p>
               <p className="cs-prose" style={{ marginTop: "16px" }}>
-                Staff spent hours copy-pasting numbers from scanned PDFs into their internal tax and ledger systems. 
+                Staff spent hours copy-pasting numbers from scanned PDFs into their internal tax and ledger systems.
                 They needed a unified web application that could ingest multiple input formats, extract key-value data reliably without custom model training costs, and present the output in a side-by-side layout for instant visual verification.
               </p>
             </section>
 
             {/* MY ROLE */}
             <section className="cs-section" aria-labelledby="cs-role-heading">
-              <SectionLabel>My Role</SectionLabel>
-              <h2 id="cs-role-heading">Sole Developer — Full-Stack Ownership</h2>
+              <SectionLabel>My role</SectionLabel>
+              <h2 id="cs-role-heading">Sole developer with full-stack ownership</h2>
               <p className="cs-prose">
                 I owned this project entirely as the sole developer, architecting and implementing the entire solution from scoping through deployment:
               </p>
@@ -154,7 +154,7 @@ const GCPInsightDocsCaseStudy = () => {
 
             {/* ARCHITECTURE & STACK */}
             <section className="cs-section" aria-labelledby="cs-architecture-heading">
-              <SectionLabel>Architecture &amp; Stack</SectionLabel>
+              <SectionLabel>Architecture &amp; stack</SectionLabel>
               <h2 id="cs-architecture-heading">
                 Orchestrating cloud processors behind a decoupled API
               </h2>
@@ -165,7 +165,7 @@ const GCPInsightDocsCaseStudy = () => {
                     Flask Backend &amp; GCP Orchestration
                   </h3>
                   <p className="cs-prose">
-                    The backend was built in Python using Flask to keep the service footprint lightweight. 
+                    The backend was built in Python using Flask to keep the service footprint lightweight.
                     Its primary job is API routing and data transformation: it receives uploaded files (PDFs and images), checks mime types, routes them to the correct GCP Document AI endpoints, and deserializes the structured JSON response into a clean schema the frontend can consume.
                   </p>
                 </section>
@@ -188,9 +188,9 @@ const GCPInsightDocsCaseStudy = () => {
                     ReactJS Side-by-Side Panel UX
                   </h3>
                   <p className="cs-prose">
-                    The UI was built with ReactJS to deliver a seamless verify-and-confirm workflow. 
-                    It displays the original PDF or image inside an interactive viewer panel on the left. 
-                    On the right, a structured extraction sidebar lists all the parsed key-value pairs. 
+                    The UI was built with ReactJS to deliver a side-by-side verify-and-confirm workflow.
+                    It displays the original PDF or image inside an interactive viewer panel on the left.
+                    On the right, a structured extraction sidebar lists all the parsed key-value pairs.
                     This UI allows users to easily confirm the extracted data against the source without toggling external windows or tools.
                   </p>
                 </section>
@@ -200,12 +200,12 @@ const GCPInsightDocsCaseStudy = () => {
             {/* METRICS & SUMMARY */}
             <section className="cs-section" aria-labelledby="cs-summary-heading">
               <SectionLabel>Outcomes</SectionLabel>
-              <h2 id="cs-summary-heading">Frictionless manual workflow automation</h2>
+              <h2 id="cs-summary-heading">Manual transcription replaced by a verify-and-confirm step</h2>
               <p className="cs-prose">
-                The platform successfully automated structured data extraction for the client's two target document classes (CRA forms and legal contracts). 
+                The platform successfully automated structured data extraction for the client's two target document classes (CRA forms and legal contracts).
                 By providing a direct side-by-side comparison screen, the system cut down transcription steps entirely and eliminated manual input errors, significantly increasing workflow speed.
               </p>
-              
+
               <figure className="cs-result-callout">
                 <blockquote>
                   <p>
@@ -220,7 +220,7 @@ const GCPInsightDocsCaseStudy = () => {
 
             {/* TECH STACK */}
             <section className="cs-section" aria-labelledby="cs-stack-heading">
-              <SectionLabel>Technologies Used</SectionLabel>
+              <SectionLabel>Technologies used</SectionLabel>
               <h2 id="cs-stack-heading">Stack details</h2>
               <ul className="cs-tech-pills">
                 {[

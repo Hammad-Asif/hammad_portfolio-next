@@ -57,16 +57,16 @@ const HireMeForm = () => {
             <div className="hm-form-glow-2" />
 
             <div className="hm-form-inner">
-                <h3 className="hm-form-title">Initiate A Technical Discovery</h3>
+                <h3 className="hm-form-title">Project brief</h3>
                 <p className="hm-form-subtitle">
-                    Fill out the brief scope below. If there is a fit, we'll schedule a direct technical alignment call.
+                    Share the scope below. If it's a fit, we'll book a technical call.
                 </p>
 
                 <form onSubmit={handleSubmit}>
                     <div className="hm-form-row">
                         <div className="hm-form-group">
                             <label htmlFor="name" className="hm-form-label">
-                                <User size={13} className="text-emerald-400" /> Full Name *
+                                <User size={13} /> Full name *
                             </label>
                             <input
                                 type="text"
@@ -82,7 +82,7 @@ const HireMeForm = () => {
 
                         <div className="hm-form-group">
                             <label htmlFor="email" className="hm-form-label">
-                                <Mail size={13} className="text-emerald-400" /> Company Email *
+                                <Mail size={13} /> Work email *
                             </label>
                             <input
                                 type="email"
@@ -99,14 +99,14 @@ const HireMeForm = () => {
 
                     <div className="hm-form-group">
                         <label htmlFor="description" className="hm-form-label">
-                            <Briefcase size={13} className="text-emerald-400" /> Project / Role Context *
+                            <Briefcase size={13} /> Project or role *
                         </label>
                         <textarea
                             id="description"
                             name="description"
                             value={formData.description}
                             onChange={handleChange}
-                            placeholder="Describe the technical challenges, stack, and scope of engagement..."
+                            placeholder="Stack, problem and scope"
                             required
                             rows={4}
                             className="hm-form-input"
@@ -116,7 +116,7 @@ const HireMeForm = () => {
 
                     <div className="hm-form-group">
                         <label htmlFor="budgetTimeline" className="hm-form-label">
-                            <Calendar size={13} className="text-emerald-400" /> Budget &amp; Timeline Expectations *
+                            <Calendar size={13} /> Budget and timeline *
                         </label>
                         <input
                             type="text"
@@ -135,7 +135,7 @@ const HireMeForm = () => {
                         disabled={loading}
                         className="hm-form-submit"
                     >
-                        {loading ? 'Submitting Scope...' : 'Submit Scope & Book Call'}
+                        {loading ? 'Sending…' : 'Send brief'}
                     </button>
                 </form>
             </div>
