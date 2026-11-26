@@ -1,9 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
-import { Brain, FileText, Cloud, ArrowRight } from 'lucide-react';
+import { Brain, FileText, Cloud, ScanEye, ArrowRight } from 'lucide-react';
 
 const FeaturedProjects = () => {
   const featured = [
+    {
+      id: 'lightdesign',
+      title: "LightDesign — AI Roof Measurement & Lighting Design",
+      company: "KeystoneSTS",
+      description: "Turns one house photo into typed roof lines, real lengths in feet and a bulb-by-bulb lighting estimate, using SAM 3, a vision LLM and single-photo camera calibration. 0.88 F1 on held-out photos.",
+      icon: <ScanEye size={22} />,
+      technologies: ["SAM 3", "Vision LLM", "OpenCV", "FastAPI", "React + TypeScript", "PostgreSQL"],
+      caseLink: "/case-studies/lightdesign-ai-roof-measurement"
+    },
     {
       id: 'gemini-ai-trainer',
       title: "Gemini AI Trainer — Structured Data Reasoning & Human Evaluation",
@@ -44,7 +53,7 @@ const FeaturedProjects = () => {
           </p>
         </div>
 
-        <div className="card-grid">
+        <div className="card-grid card-grid-2">
           {featured.map((project) => (
             <article key={project.id} className="card card-link">
               <div className="card-head">

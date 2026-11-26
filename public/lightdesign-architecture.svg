@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" width="1000" height="620" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', -apple-system, sans-serif">
+  <title id="t">LightDesign system architecture</title>
+  <desc id="d">A React and TypeScript browser app talks to an nginx container that reverse-proxies to a FastAPI container. FastAPI holds routers and a pure-Python service layer, stores data in PostgreSQL 15 and a file volume, and calls SAM 3 on fal.ai and a vision LLM through OpenRouter.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M1 1L9 5L1 9z" fill="#475569"/>
+    </marker>
+    <style>
+      .h{font-size:16px;font-weight:700;fill:#0f172a}
+      .s{font-size:12.5px;fill:#475569}
+      .p{font-size:12.5px;font-weight:500;fill:#0f172a}
+      .l{font-size:13px;font-weight:600}
+      .ln{stroke:#475569;stroke-width:1.6;fill:none}
+    </style>
+  </defs>
+
+  <!-- Browser -->
+  <rect x="20" y="40" width="170" height="122" rx="12" fill="#fff7ed" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="105" y="70" text-anchor="middle" class="h">Browser</text>
+  <text x="105" y="92" text-anchor="middle" class="s">React 18 + TypeScript</text>
+  <text x="105" y="110" text-anchor="middle" class="s">Vite SPA</text>
+  <text x="105" y="128" text-anchor="middle" class="s">Canvas photo editor</text>
+  <text x="105" y="146" text-anchor="middle" class="s">(desktop + tablet)</text>
+
+  <!-- Docker Compose boundary -->
+  <rect x="230" y="14" width="500" height="592" rx="14" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="7 6"/>
+  <text x="246" y="38" class="l" fill="#2563eb">Docker Compose (production stack)</text>
+
+  <!-- nginx -->
+  <rect x="260" y="56" width="440" height="78" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="480" y="86" text-anchor="middle" class="h">nginx 1.27 (web container)</text>
+  <text x="480" y="106" text-anchor="middle" class="s">Serves the static bundle, reverse-proxies /api</text>
+  <text x="480" y="123" text-anchor="middle" class="s">Single origin for the session cookie</text>
+
+  <!-- FastAPI -->
+  <rect x="260" y="162" width="440" height="282" rx="10" fill="#ecfdf5" stroke="#10b981" stroke-width="1.8"/>
+  <text x="480" y="190" text-anchor="middle" class="h">FastAPI + Uvicorn (api container)</text>
+  <text x="480" y="210" text-anchor="middle" class="s">Pydantic v2 schemas · SQLAlchemy 2 · Alembic</text>
+
+  <g>
+    <rect x="280" y="224" width="72" height="28" rx="7" fill="#ffffff" stroke="#10b981"/>
+    <rect x="362" y="224" width="72" height="28" rx="7" fill="#ffffff" stroke="#10b981"/>
+    <rect x="444" y="224" width="72" height="28" rx="7" fill="#ffffff" stroke="#10b981"/>
+    <rect x="526" y="224" width="72" height="28" rx="7" fill="#ffffff" stroke="#10b981"/>
+    <rect x="608" y="224" width="72" height="28" rx="7" fill="#ffffff" stroke="#10b981"/>
+    <text x="316" y="242.5" text-anchor="middle" class="p">auth</text>
+    <text x="398" y="242.5" text-anchor="middle" class="p">photos</text>
+    <text x="480" y="242.5" text-anchor="middle" class="p">regions</text>
+    <text x="562" y="242.5" text-anchor="middle" class="p">products</text>
+    <text x="644" y="242.5" text-anchor="middle" class="p">files</text>
+  </g>
+
+  <text x="280" y="280" class="l" fill="#047857">Service layer (pure Python · NumPy · OpenCV)</text>
+  <g fill="#ffffff" stroke="#cbd5e1">
+    <rect x="280" y="292" width="94" height="32" rx="7"/><rect x="382" y="292" width="94" height="32" rx="7"/>
+    <rect x="484" y="292" width="94" height="32" rx="7"/><rect x="586" y="292" width="94" height="32" rx="7"/>
+    <rect x="280" y="334" width="94" height="32" rx="7"/><rect x="382" y="334" width="94" height="32" rx="7"/>
+    <rect x="484" y="334" width="94" height="32" rx="7"/><rect x="586" y="334" width="94" height="32" rx="7"/>
+    <rect x="280" y="376" width="94" height="32" rx="7"/><rect x="382" y="376" width="94" height="32" rx="7"/>
+    <rect x="484" y="376" width="94" height="32" rx="7"/><rect x="586" y="376" width="94" height="32" rx="7"/>
+  </g>
+  <g text-anchor="middle" class="p">
+    <text x="327" y="312.5" class="p">fusion</text><text x="429" y="312.5" class="p">target</text>
+    <text x="531" y="312.5" class="p">partition</text><text x="633" y="312.5" class="p">occlusion</text>
+    <text x="327" y="354.5" class="p">camera</text><text x="429" y="354.5" class="p">walls</text>
+    <text x="531" y="354.5" class="p">scale</text><text x="633" y="354.5" class="p">checks</text>
+    <text x="327" y="396.5" class="p">placement</text><text x="429" y="396.5" class="p">patterns</text>
+    <text x="531" y="396.5" class="p">intent</text><text x="633" y="396.5" class="p">intent_llm</text>
+  </g>
+  <text x="480" y="430" text-anchor="middle" class="s">Thin routers validate and authorise · services stay framework-free and testable</text>
+
+  <!-- Storage -->
+  <rect x="260" y="478" width="210" height="104" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="365" y="508" text-anchor="middle" class="h">PostgreSQL 15</text>
+  <text x="365" y="530" text-anchor="middle" class="s">users · sessions · photos</text>
+  <text x="365" y="548" text-anchor="middle" class="s">regions · products · designs</text>
+  <text x="365" y="566" text-anchor="middle" class="s">12 Alembic migrations</text>
+
+  <rect x="490" y="478" width="210" height="104" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="595" y="508" text-anchor="middle" class="h">File storage volume</text>
+  <text x="595" y="530" text-anchor="middle" class="s">photos · masks (PNG)</text>
+  <text x="595" y="548" text-anchor="middle" class="s">debug overlays</text>
+  <text x="595" y="566" text-anchor="middle" class="s">LLM answer cache</text>
+
+  <!-- External AI -->
+  <text x="875" y="160" text-anchor="middle" class="l" fill="#7c3aed">External AI services</text>
+  <rect x="770" y="174" width="210" height="112" rx="12" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="875" y="204" text-anchor="middle" class="h">fal.ai · SAM 3</text>
+  <text x="875" y="226" text-anchor="middle" class="s">Text, box &amp; point prompts</text>
+  <text x="875" y="244" text-anchor="middle" class="s">Masks: roof, hedge, palm,</text>
+  <text x="875" y="262" text-anchor="middle" class="s">tree, car, sky</text>
+
+  <rect x="770" y="314" width="210" height="130" rx="12" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="875" y="344" text-anchor="middle" class="h">OpenRouter · LLM</text>
+  <text x="875" y="366" text-anchor="middle" class="s">Vision model: typed roof</text>
+  <text x="875" y="384" text-anchor="middle" class="s">lines on the house crop</text>
+  <text x="875" y="402" text-anchor="middle" class="s">(strict JSON schema)</text>
+  <text x="875" y="420" text-anchor="middle" class="s">+ instruction reading</text>
+
+  <!-- Arrows -->
+  <path class="ln" d="M190 95H256" marker-end="url(#a)"/>
+  <path class="ln" d="M480 134V158" marker-end="url(#a)"/>
+  <path class="ln" d="M365 444V474" marker-end="url(#a)"/>
+  <path class="ln" d="M595 444V474" marker-end="url(#a)"/>
+  <path class="ln" d="M700 230H766" marker-end="url(#a)"/>
+  <path class="ln" d="M700 379H766" marker-end="url(#a)"/>
+</svg>
