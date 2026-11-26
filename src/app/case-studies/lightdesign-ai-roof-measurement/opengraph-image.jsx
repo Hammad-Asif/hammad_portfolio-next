@@ -2,7 +2,7 @@ import { renderOgImage, ogSize, ogContentType } from "@/lib/og-image";
 
 export const size = ogSize;
 export const contentType = ogContentType;
-export const alt = "LightDesign AI roof measurement and lighting design case study";
+export const alt = "LightDesign AI roof measurement and Christmas light design case study";
 
 export default function Image() {
   return renderOgImage({

@@ -95,6 +95,7 @@ export function siteJsonLd() {
           "OCR",
           "Text classification",
           "Computer vision",
+      "Image segmentation (SAM)",
           "Python",
           "FastAPI",
           "React",
